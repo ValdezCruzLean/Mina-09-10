@@ -3,7 +3,8 @@ using UnityEngine.Rendering;
 
 public class LightZoneProtectionZone : MonoBehaviour
 {
-    [SerializeField] float radiusSphere = 0;
+    [SerializeField] float radiusSphere;
+    public float RadiusSphere => radiusSphere;
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
