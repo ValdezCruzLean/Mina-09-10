@@ -7,20 +7,19 @@ public class EnemyIA : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
     private Transform lampTransform;
-    private LightZoneProtectionZone lightZoneProtectionZone;
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        lightZoneProtectionZone = FindAnyObjectByType<LightZoneProtectionZone>();
-        if (lightZoneProtectionZone != null)
+        lampTransform = FindAnyObjectByType<Lamp>().transform;
+        if (LightZoneProtection.Instance != null)
         {
-            lampTransform = lightZoneProtectionZone.transform;
+            lampTransform = LightZoneProtection.Instance.transform;
         }
     }
     void Update()
     {
         /*Si no se encontraron los componentes entonces que se corte la funcion con el return*/
-        if (lampTransform == null || lightZoneProtectionZone == null)
+        if (lampTransform == null || LightZoneProtection.Instance == null)
         {
             return;
         }
@@ -29,7 +28,7 @@ public class EnemyIA : MonoBehaviour
     public void EnemyGoToPlayer()
     {
         float distance = Vector3.Distance(transform.position, lampTransform.position);
-        float stopRadius = lightZoneProtectionZone.RadiusSphere;
+        float stopRadius = LightZoneProtection.Instance.radiusSphere;
         if (distance > stopRadius)
         {
             navMeshAgent.isStopped = false;

@@ -4,7 +4,6 @@ using UnityEngine;
 public class Lamp : MonoBehaviour
 {
     Light pointLight;
-    public LightZoneProtectionZone lightZoneProtectionZone;
     [SerializeField]int valor = 0;
     private void Awake()
     {
@@ -13,7 +12,7 @@ public class Lamp : MonoBehaviour
     private void Update()
     {
         EffectPingPongLight();
-        pointLight.range = lightZoneProtectionZone.RadiusSphere;
+        pointLight.range = LightZoneProtection.Instance.radiusSphere;
     }
     void EffectPingPongLight()
     {

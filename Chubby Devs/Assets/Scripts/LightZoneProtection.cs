@@ -1,10 +1,17 @@
 using System;
 using UnityEngine;
 
-public class LightZoneProtectionZone : MonoBehaviour
+public class LightZoneProtection : MonoBehaviour
 {
-    [SerializeField] float radiusSphere;
-    public float RadiusSphere => radiusSphere;
+    public float radiusSphere;
+    public static LightZoneProtection Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
