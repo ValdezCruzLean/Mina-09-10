@@ -5,6 +5,7 @@ public class LightZoneProtection : MonoBehaviour
 {
     public float radiusSphere;
     public static LightZoneProtection Instance;
+
     private void Awake()
     {
         if (Instance == null)
