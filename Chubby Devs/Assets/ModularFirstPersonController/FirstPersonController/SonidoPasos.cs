@@ -47,6 +47,16 @@ public class SonidoPasos : MonoBehaviour
         }*/
 
         bool seMueve = Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0;
+        bool corre = Input.GetKey(KeyCode.LeftShift);
+
+        if (corre)
+        {
+            pasos.pitch = 1.5f;
+        }
+        else
+        {
+            pasos.pitch = 1f;
+        }       
 
         if (seMueve && enSuelo)
         {
