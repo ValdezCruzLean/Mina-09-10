@@ -10,7 +10,6 @@ public class Lamp : MonoBehaviour
     [SerializeField] float normalIntensity = 1.5f;
 
     [SerializeField] float maxRange = 5f;
-    [SerializeField] float minRange = 2f;
 
     bool isPingPongActive = false;
 
@@ -41,8 +40,6 @@ public class Lamp : MonoBehaviour
         if (isPingPongActive)
         {
             pointLight.intensity = Mathf.PingPong(Time.time * pingPongSpeed, maxIntensity);
-            float pingRange = Mathf.PingPong(Time.time * pingPongSpeed, maxRange - minRange);
-            pointLight.range = minRange + pingRange;
         }
         LightZoneProtection.Instance.radiusSphere = pointLight.range;
     }
