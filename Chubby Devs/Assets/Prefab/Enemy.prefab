@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7816196279280495522}
   - component: {fileID: 3021207617256851340}
   - component: {fileID: 7350155994871440047}
+  - component: {fileID: 9097453156627705227}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3481293765927579123}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!23 &3928348265590567167
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -172,3 +173,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854972e0f4ae30e4eb8b17e84ef92b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animador: {fileID: 0}
+  triggerAnimacion: Aparecer
+  tiempoAntesDeDerrota: 2
+  escenaDerrota: Derrota
+--- !u!95 &9097453156627705227
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481293765927579123}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 3bc1499c59e6b404c9048e6d6ffff4ed, type: 3}
+  m_Controller: {fileID: 9100000, guid: 8f36461b6f0f9974493764d2f3942b4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
