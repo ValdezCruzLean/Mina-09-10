@@ -7,6 +7,8 @@ public class JumpTrigger : MonoBehaviour
     public AudioSource Scream;
     public GameObject ThePlayer;
     public GameObject JumpCam;
+
+    public JumpScareEnemy enemyScript;
     //public GameObject FlashImg;
 
     void OnTriggerEnter()
@@ -14,6 +16,8 @@ public class JumpTrigger : MonoBehaviour
         Scream.Play();
         JumpCam.SetActive(true);
         ThePlayer.SetActive(false);
+
+        enemyScript.TriggerJump();
         //FlashImg.SetActive(true);
         StartCoroutine(EndJump());
     }
