@@ -1,11 +1,12 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
+using UnityEditor.Experimental.GraphView;
 public class NoteHUD : MonoBehaviour
 {
     public static NoteHUD Instance;
-
+    public Image noteImage; //imagen de la nota
     public GameObject hudPanel;
     public TextMeshProUGUI noteText;
     public TextMeshProUGUI counterText;
@@ -45,6 +46,8 @@ public class NoteHUD : MonoBehaviour
     public void ShowSingleNote(NoteData note)
     {
         hudPanel.SetActive(true);
+        noteImage.sprite = note.noteImage;
+        noteImage.enabled = note.noteImage != null;
         noteText.text = note.noteText;
         counterText.text = $"Nueva nota";
         Time.timeScale = 0f;
@@ -78,8 +81,12 @@ public class NoteHUD : MonoBehaviour
 
     void UpdateHUD()
     {
+        var note = playerNotes[currentIndex];
+        noteImage.sprite = note.noteImage;
+        noteImage.enabled = note.noteImage != null;
         noteText.text = playerNotes[currentIndex].noteText;
         counterText.text = $"Nota {currentIndex + 1}/{playerNotes.Count}";
+       
     }
 }
 
