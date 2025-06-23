@@ -7,6 +7,10 @@ public class MenuPausa : MonoBehaviour
     public MonoBehaviour scriptCamara;
     public GameObject MenuSalir;
 
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
