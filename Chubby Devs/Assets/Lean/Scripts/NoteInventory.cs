@@ -17,6 +17,7 @@ public class NoteInventory : MonoBehaviour
         if (!notes.Contains(note))
         {
             notes.Add(note);
+            notes.Sort((a, b) => a.name.CompareTo(b.name));
             NoteHUD.Instance.ShowSingleNote(note);
         }
     }
