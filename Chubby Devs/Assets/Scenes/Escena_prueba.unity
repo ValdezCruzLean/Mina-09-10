@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 2023375441}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -257,15 +257,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1318
+      value: 1331.7
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1048
+      value: 1136.7
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1411,6 +1411,10 @@ MonoBehaviour:
     No trates de encontrarlos... O tambien te van a llevar a vos... Aunque sea salvate
     vos..."
   - "Mendoza:\n\nPero qu\xE9 le pasa? Viejo loco."
+  - 'Yuyo:
+
+
+    La luz... La luz te va a salvar... Los aleja... Usa la luz...'
   playerMovementScript: {fileID: 817032545}
 --- !u!65 &234557227
 BoxCollider:
@@ -3235,9 +3239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7993bb32a7ab6084281b4d20fd0f4a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hora: 10.5
+  Hora: 12.6
   Sol: {fileID: 2023375442}
-  DuracionDelDiaEnMinutos: 20
+  DuracionDelDiaEnMinutos: 5
 --- !u!4 &667961025
 Transform:
   m_ObjectHideFlags: 0
