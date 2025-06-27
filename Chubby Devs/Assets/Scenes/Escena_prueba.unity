@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.5
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -450,8 +450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: -100, y: -100}
+  m_AnchoredPosition: {x: 50, y: -5}
+  m_SizeDelta: {x: -100, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74222587
 MonoBehaviour:
@@ -500,8 +500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1320,10 +1320,16 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1632638605}
   dialogueText: {fileID: 74222587}
   dialogueLines:
-  - 'Yuyo: Me quieren agitar, me incitan a gritar'
-  - 'Player: Soy como una roca, palabras no me tocan'
-  - 'Yuyo: Adentro hay un volcan, que pronto va a estallar, yo quiero estar tranquilo'
-  - 'Player: No se que es eso pero tambien me lamentaria de ser boliviano'
+  - "Player: \n\nBuenas tardes, se\xF1or. Mi nombre es Mendoza. Busco a mis amigos.
+    Nos pusimos de acuerdo para encontrarnos ac\xE1 pero no me responden el celular.
+    De casualidad sabr\xE1 algo?"
+  - "Hombre misterioso: \n\nLlamame Yuyo, pibe. A tus amigos yo los habia visto.
+    Yo les adverti... No me hicieron caso... Fueron ellos... \n"
+  - "Mendoza: \n\nComo? De que habla? Quienes ellos?"
+  - "Yuyo: \n\nYo les dije pibe... Se los llevaron ellos... Se quedaron en el hotel...
+    No trates de encontrarlos... O tambien te van a llevar a vos... Aunque sea salvate
+    vos..."
+  - "Mendoza:\n\nPero qu\xE9 le pasa? Viejo loco."
   playerMovementScript: {fileID: 817032545}
 --- !u!65 &234557227
 BoxCollider:
@@ -3248,7 +3254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camaraJugador: {fileID: 92920264}
-  rangoVision: 50
+  rangoVision: 60
   capaEnemigo:
     serializedVersion: 2
     m_Bits: 128
