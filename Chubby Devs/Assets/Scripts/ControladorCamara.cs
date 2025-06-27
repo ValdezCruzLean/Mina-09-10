@@ -6,6 +6,7 @@ public class ControladorCamara : MonoBehaviour
     public Camera camaraJugador;
     public Transform jugador;
     public GameObject controladorMovimientoJugador; // objeto con el script de movimiento
+    public GameObject pasosJugador;
     public float duracion = 3f;
 
     private bool eventoActivo = false;
@@ -22,6 +23,7 @@ public class ControladorCamara : MonoBehaviour
 
         //controladorMovimientoJugador.SetActive(false); // desactiva movimiento
         controladorMovimientoJugador.GetComponent<FirstPersonController>().enabled = false;
+        pasosJugador.GetComponent<SonidoPasos>().enabled = false;
         StartCoroutine(SeguirEnemigo());
     }
 
@@ -44,6 +46,7 @@ public class ControladorCamara : MonoBehaviour
 
         //controladorMovimientoJugador.SetActive(true);
         controladorMovimientoJugador.GetComponent<FirstPersonController>().enabled = true;
+        pasosJugador.GetComponent<SonidoPasos>().enabled = true;
         eventoActivo = false;
     }
 }
