@@ -9,6 +9,8 @@ public class JumpTrigger : MonoBehaviour
     public GameObject JumpCam;
 
     public JumpScareEnemy enemyScript;
+
+    public GameObject activador;
     //public GameObject FlashImg;
 
     void OnTriggerEnter()
@@ -25,8 +27,10 @@ public class JumpTrigger : MonoBehaviour
     IEnumerator EndJump()
     {
         yield return new WaitForSeconds(2.03f);
+        activador.SetActive(false);
         ThePlayer.SetActive(true);
         JumpCam.SetActive(false);
+        
         //FlashImg.SetActive(false);
     }
 }
