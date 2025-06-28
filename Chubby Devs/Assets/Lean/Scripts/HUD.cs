@@ -28,8 +28,8 @@ public class HUD : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Escena_prueba")
         {
-            puntosCadaveres.text = " Cadaveres: " + ScriptGameManager.instance.ObjetosTotalesEncontrados.ToString() + "/7";
-            puntosObjetos.text = " Objetos: " + ScriptGameManager.instance.CadaveresTotalesEncontrados.ToString() +"/5";
+            puntosCadaveres.text = " Cadaveres: " + ScriptGameManager.instance.ObjetosTotalesEncontrados.ToString() + "/8";
+            puntosObjetos.text = " Objetos: " + ScriptGameManager.instance.CadaveresTotalesEncontrados.ToString() +"/6";
             puntosV.text = "Vida: "+ ScriptGameManager.instance.PuntosTotalesV.ToString();
 
             /*if (ScriptGameManager.instance.PuntosTotalesD == 10)
