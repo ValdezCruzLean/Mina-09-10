@@ -4,6 +4,8 @@ public class RecoleccionObjeto : MonoBehaviour
 {
     [SerializeField]float distancia;
     public AnimationInteraction AnimationInteraction;
+
+    public CanvasFosforos canvasFosforos;
     private void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -15,9 +17,10 @@ public class RecoleccionObjeto : MonoBehaviour
             if (hit.collider.CompareTag("Fosforo") || hit.collider.CompareTag("Interactable"))
             {
                 AnimationInteraction.animator.SetBool("isRecoger", true);
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && (canvasFosforos.cantidadFosforos <= canvasFosforos.limiteFosforo && canvasFosforos.cantidadFosforos != canvasFosforos.limiteFosforo))
                 {
                     Destroy(hit.collider.gameObject);
+                    canvasFosforos.SumarFosforo();
                 }
             }
             else

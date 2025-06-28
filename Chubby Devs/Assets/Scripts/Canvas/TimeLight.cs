@@ -34,6 +34,6 @@ public class TimeLight : MonoBehaviour
     }
     public void UpdateTime() 
     {
-        timeText.text = seconds.ToString("f0");
+        timeText.text = "Tiempo:"+seconds.ToString("f0");
     }
 }
