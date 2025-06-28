@@ -1467,7 +1467,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9126083838178739933}
-  - component: {fileID: 4686281382480092693}
   m_Layer: 0
   m_Name: RightLampGrip
   m_TagString: Untagged
@@ -1490,21 +1489,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4958589990461967269}
   m_LocalEulerAnglesHint: {x: 87.696, y: -733.653, z: -38.757}
---- !u!114 &4686281382480092693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4430757426668300936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bac846d665b1b274b884a1cc5f56a397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objetivo: {fileID: 7296865098071763876}
-  controlesDeshabilitar:
-  - {fileID: 4459864850019384740}
 --- !u!1 &4459864850019384750
 GameObject:
   m_ObjectHideFlags: 0

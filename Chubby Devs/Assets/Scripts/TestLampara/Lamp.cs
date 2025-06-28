@@ -3,15 +3,18 @@ using UnityEngine;
 
 public class Lamp : MonoBehaviour
 {
+    public CanvasFosforos canvasFosforos;
+    public TimeLight timeLight;
+
     Light pointLight;
 
     [SerializeField] float pingPongSpeed = 2f;
     [SerializeField] float maxIntensity = 2f;
     [SerializeField] float normalIntensity = 1.5f;
-
     [SerializeField] float maxRange = 5f;
 
     bool isPingPongActive = false;
+    bool lamparaEncendida = false;
 
     private void Awake()
     {
@@ -20,13 +23,26 @@ public class Lamp : MonoBehaviour
 
     private void Update()
     {
-        if (TimeLight.Instance.seconds >= 15)
+        if (!lamparaEncendida && canvasFosforos.quiereEncenderLampara && canvasFosforos.TieneFosforo())
         {
-            pointLight.intensity = 0f;
-            pointLight.range = 0f;
-            isPingPongActive = false;
+            lamparaEncendida = true;
+            canvasFosforos.RestarFosforo();
+            timeLight.ResetTimer();
+            canvasFosforos.quiereEncenderLampara = false;
         }
-        else if (TimeLight.Instance.seconds >= 6)
+
+        if (!lamparaEncendida)
+        {
+            ApagarLuz();
+            return;
+        }
+
+        if (timeLight.seconds >= 15)
+        {
+            ApagarLuz();
+            timeLight.DetenerTiempo();
+        }
+        else if (timeLight.seconds >= 6)
         {
             isPingPongActive = true;
         }
@@ -41,6 +57,15 @@ public class Lamp : MonoBehaviour
         {
             pointLight.intensity = Mathf.PingPong(Time.time * pingPongSpeed, maxIntensity);
         }
+
         LightZoneProtection.Instance.radiusSphere = pointLight.range;
+    }
+
+    private void ApagarLuz()
+    {
+        pointLight.intensity = 0f;
+        pointLight.range = 0f;
+        isPingPongActive = false;
+        lamparaEncendida = false;
     }
 }

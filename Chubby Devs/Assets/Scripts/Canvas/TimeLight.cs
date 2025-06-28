@@ -3,37 +3,45 @@ using UnityEngine.UI;
 
 public class TimeLight : MonoBehaviour
 {
-    public Text timeText;
-    public float seconds = 0;
     public static TimeLight Instance;
-    private bool readyToReset = false;
+    public float seconds = 0f;
+    public bool readyToReset = true;
+    public Text textoTiempo;
+
     private void Awake()
     {
         if (Instance == null)
-        {
             Instance = this;
-        }
+        else
+            Destroy(gameObject);
     }
-    private void Start()
-    {
-        UpdateTime();
-    }
+
     private void Update()
     {
-        seconds += Time.deltaTime;
-        if (seconds >= 15 && !readyToReset)
+        if (!readyToReset)
         {
-            readyToReset = true;
+            seconds += Time.deltaTime;
         }
-        if (readyToReset && Input.GetKeyDown(KeyCode.L))
+
+        if (textoTiempo != null)
         {
-            seconds = 0;
-            readyToReset = false;
+            textoTiempo.text = "Tiempo: " + Mathf.FloorToInt(seconds) + "s";
         }
-        UpdateTime();
     }
-    public void UpdateTime() 
+
+    public void ResetTimer()
     {
-        timeText.text = "Tiempo:"+seconds.ToString("f0");
+        seconds = 0f;
+        readyToReset = false;
+    }
+
+    public void IniciarTiempo()
+    {
+        readyToReset = false;
+    }
+
+    public void DetenerTiempo()
+    {
+        readyToReset = true;
     }
 }

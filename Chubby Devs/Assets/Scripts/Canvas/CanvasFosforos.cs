@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,20 +6,59 @@ public class CanvasFosforos : MonoBehaviour
 {
     public int cantidadFosforos = 0;
     public int limiteFosforo;
-    public bool isRecogerFosforo = true;
-    [SerializeField] Text textoUI;
+    public Text textoUI;
+
+    public bool quiereEncenderLampara = false;
 
     private void Start()
     {
-        textoUI.text = "Fosforos: " + cantidadFosforos.ToString();
+        ActualizarTexto();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (cantidadFosforos > 0)
+            {
+                quiereEncenderLampara = true;
+            }
+            else
+            {
+                textoUI.text = "No tiene fósforos";
+            }
+        }
+        else
+        {
+            quiereEncenderLampara = false;
+        }
+    }
+
     public void SumarFosforo()
     {
-        if (cantidadFosforos <= limiteFosforo && cantidadFosforos != limiteFosforo)
+        if (cantidadFosforos < limiteFosforo)
         {
             cantidadFosforos++;
-            //isRecogerFosforo = true;
-            textoUI.text = "Fosforos: " + cantidadFosforos.ToString();
+            ActualizarTexto();
         }
+    }
+
+    public void RestarFosforo()
+    {
+        if (cantidadFosforos > 0)
+        {
+            cantidadFosforos--;
+            ActualizarTexto();
+        }
+    }
+
+    public bool TieneFosforo()
+    {
+        return cantidadFosforos > 0;
+    }
+
+    private void ActualizarTexto()
+    {
+        textoUI.text = "Fósforos: " + cantidadFosforos;
     }
 }
