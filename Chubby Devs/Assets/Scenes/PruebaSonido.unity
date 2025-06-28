@@ -318,8 +318,7 @@ Transform:
   m_LocalPosition: {x: 1.0611, y: 1.3110796, z: 34.8}
   m_LocalScale: {x: 4.346534, y: 2.1543162, z: 4.346534}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1801816583}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650696579
@@ -1303,11 +1302,11 @@ Transform:
   m_GameObject: {fileID: 1801816582}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3182, y: 1, z: 1}
+  m_LocalPosition: {x: 1.0611, y: 1.3110796, z: 34.8}
+  m_LocalScale: {x: 14.422668, y: 2.1543162, z: 4.346534}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 521520093}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1801816584
 MonoBehaviour:
@@ -1977,6 +1976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcMovEnemigo2
       objectReference: {fileID: 0}
+    - target: {fileID: 2565742691890786791, guid: 2e988a2438df4bf42a9e964054dcc6b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4995427438431339790, guid: 2e988a2438df4bf42a9e964054dcc6b2, type: 3}
       propertyPath: enemigo
       value: 
@@ -2271,6 +2274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcMovEnemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 8333759667729642583, guid: 48fc3fdc7690e2f40b138ae927c409ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2499,6 +2506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcMovEnemigo3
       objectReference: {fileID: 0}
+    - target: {fileID: 3756549774341163362, guid: f1f58692cef944c41be7400670340783, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2565,6 +2576,7 @@ SceneRoots:
   - {fileID: 650696581}
   - {fileID: 822632692}
   - {fileID: 521520093}
+  - {fileID: 1801816583}
   - {fileID: 2085288947243624148}
   - {fileID: 674052128}
   - {fileID: 3286925036096429875}
