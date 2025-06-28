@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JumpTrigger : MonoBehaviour
 {
@@ -30,7 +31,8 @@ public class JumpTrigger : MonoBehaviour
         activador.SetActive(false);
         ThePlayer.SetActive(true);
         JumpCam.SetActive(false);
-        
+
         //FlashImg.SetActive(false);
+        SceneManager.LoadScene("EscenaPerder");
     }
 }
