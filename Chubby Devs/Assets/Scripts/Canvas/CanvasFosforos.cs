@@ -25,7 +25,7 @@ public class CanvasFosforos : MonoBehaviour
             }
             else
             {
-                textoUI.text = "No tiene fósforos";
+                textoUI.text = "No tiene fosforos";
             }
         }
         else
@@ -59,6 +59,6 @@ public class CanvasFosforos : MonoBehaviour
 
     private void ActualizarTexto()
     {
-        textoUI.text = "Fósforos: " + cantidadFosforos;
+        textoUI.text = "Fosforos: " + cantidadFosforos;
     }
 }
