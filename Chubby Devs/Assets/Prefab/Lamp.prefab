@@ -134,6 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479a913f1970a7040a24e22dc2b8dc53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasFosforos: {fileID: 0}
+  timeLight: {fileID: 0}
   pingPongSpeed: 2
   maxIntensity: 2
   normalIntensity: 1.5
@@ -182,7 +184,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6138349470270228624}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: afe474259aaaeb84e843f6d513369000, type: 3}
 --- !u!23 &1660804549225745384
 MeshRenderer:
   m_ObjectHideFlags: 0
