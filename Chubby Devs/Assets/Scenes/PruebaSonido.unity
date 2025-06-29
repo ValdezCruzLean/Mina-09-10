@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &114166769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8474729238987826427, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
+  m_PrefabInstance: {fileID: 3935991178034062755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &140073320 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8512711599379215050, guid: e684decb56ba7c3429cc6324301f3116, type: 3}
@@ -1605,6 +1610,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843cb85a45bb4e449a775ce689a5904c, type: 3}
+--- !u!1001 &1833051432619093908
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.921417
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.9421458
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.589825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334206892822466219, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019109860970986637, guid: 815d15119df095246879552b71ca74e2, type: 3}
+      propertyPath: m_Name
+      value: FOSFORO
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 815d15119df095246879552b71ca74e2, type: 3}
 --- !u!1001 &1990203020223180979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2010,7 +2072,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5527878548492233672, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.39
+      value: -13.96
       objectReference: {fileID: 0}
     - target: {fileID: 5527878548492233672, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2061,9 +2123,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4459864850833206317}
     - target: {fileID: 7776656889949449869, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
+      propertyPath: activador
+      value: 
+      objectReference: {fileID: 114166769}
+    - target: {fileID: 7776656889949449869, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: enemyScript
       value: 
       objectReference: {fileID: 1560317512}
+    - target: {fileID: 7776656889949449869, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
+      propertyPath: movimientoJugador
+      value: 
+      objectReference: {fileID: 4459864849620578362}
     - target: {fileID: 8474729238987826427, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: m_Name
       value: ActivadorScreamer1
@@ -2374,3 +2444,4 @@ SceneRoots:
   - {fileID: 3340310994123946835}
   - {fileID: 8386113847726649529}
   - {fileID: 2944565865228796888}
+  - {fileID: 1833051432619093908}

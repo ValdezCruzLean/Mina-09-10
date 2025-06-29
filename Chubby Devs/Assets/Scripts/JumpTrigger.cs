@@ -12,6 +12,7 @@ public class JumpTrigger : MonoBehaviour
     public JumpScareEnemy enemyScript;
 
     public GameObject activador;
+    public GameObject movimientoJugador;
     //public GameObject FlashImg;
 
     void OnTriggerEnter()
@@ -21,6 +22,7 @@ public class JumpTrigger : MonoBehaviour
         ThePlayer.SetActive(false);
 
         enemyScript.TriggerJump();
+        movimientoJugador.GetComponent<FirstPersonController>().enabled = false;
         //FlashImg.SetActive(true);
         StartCoroutine(EndJump());
     }
