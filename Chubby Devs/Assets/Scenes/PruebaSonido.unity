@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &114166769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8474729238987826427, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
+  m_PrefabInstance: {fileID: 3935991178034062755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &140073320 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8512711599379215050, guid: e684decb56ba7c3429cc6324301f3116, type: 3}
@@ -2010,7 +2015,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5527878548492233672, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.39
+      value: -13.96
       objectReference: {fileID: 0}
     - target: {fileID: 5527878548492233672, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2061,9 +2066,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4459864850833206317}
     - target: {fileID: 7776656889949449869, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
+      propertyPath: activador
+      value: 
+      objectReference: {fileID: 114166769}
+    - target: {fileID: 7776656889949449869, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: enemyScript
       value: 
       objectReference: {fileID: 1560317512}
+    - target: {fileID: 7776656889949449869, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
+      propertyPath: movimientoJugador
+      value: 
+      objectReference: {fileID: 4459864849620578362}
     - target: {fileID: 8474729238987826427, guid: acf8ae5bff9f08c4abe698203d72b1ea, type: 3}
       propertyPath: m_Name
       value: ActivadorScreamer1
