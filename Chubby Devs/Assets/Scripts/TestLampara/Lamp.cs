@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Lamp : MonoBehaviour
 {
     public CanvasFosforos canvasFosforos;
@@ -41,6 +41,7 @@ public class Lamp : MonoBehaviour
         {
             ApagarLuz();
             timeLight.DetenerTiempo();
+            SceneManager.LoadScene("EscenaPerder");
         }
         else if (timeLight.seconds >= 6)
         {
