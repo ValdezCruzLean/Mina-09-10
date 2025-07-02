@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using UnityEditor.Experimental.GraphView;
 public class NoteHUD : MonoBehaviour
 {
     public static NoteHUD Instance;
@@ -32,7 +31,7 @@ public class NoteHUD : MonoBehaviour
                 OpenHUD();
         }
 
-        // Solo permitir navegación si el HUD está abierto
+        // Solo permitir navegaciï¿½n si el HUD estï¿½ abierto
         if (hudPanel.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.RightArrow))
