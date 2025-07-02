@@ -7,7 +7,7 @@ public class CanvasFosforos : MonoBehaviour
     public int cantidadFosforos = 0;
     public int limiteFosforo;
     public Text textoUI;
-
+    public Lamp Lamp;
     public bool quiereEncenderLampara = false;
 
     private void Start()

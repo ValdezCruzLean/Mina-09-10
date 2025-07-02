@@ -13,8 +13,8 @@ public class Lamp : MonoBehaviour
     [SerializeField] float normalIntensity = 1.5f;
     [SerializeField] float maxRange = 5f;
 
-    bool isPingPongActive = false;
-    bool lamparaEncendida = false;
+    public bool isPingPongActive = false;
+    public bool lamparaEncendida = false;
 
     private void Awake()
     {
@@ -30,7 +30,12 @@ public class Lamp : MonoBehaviour
             timeLight.ResetTimer();
             canvasFosforos.quiereEncenderLampara = false;
         }
-
+        if (lamparaEncendida && timeLight.seconds >= 15 && canvasFosforos.quiereEncenderLampara && canvasFosforos.TieneFosforo())
+        {
+            canvasFosforos.RestarFosforo();
+            timeLight.ResetTimer();
+            canvasFosforos.quiereEncenderLampara = true;
+        }
         if (!lamparaEncendida)
         {
             ApagarLuz();
@@ -41,7 +46,7 @@ public class Lamp : MonoBehaviour
         {
             ApagarLuz();
             timeLight.DetenerTiempo();
-            //SceneManager.LoadScene("EscenaPerder");
+            SceneManager.LoadScene("EscenaPerder");
         }
         else if (timeLight.seconds >= 15)
         {
