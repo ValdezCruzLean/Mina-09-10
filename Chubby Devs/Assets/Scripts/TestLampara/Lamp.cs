@@ -37,13 +37,13 @@ public class Lamp : MonoBehaviour
             return;
         }
 
-        if (timeLight.seconds >= 15)
+        if (timeLight.seconds >= 30)
         {
             ApagarLuz();
             timeLight.DetenerTiempo();
-            SceneManager.LoadScene("EscenaPerder");
+            //SceneManager.LoadScene("EscenaPerder");
         }
-        else if (timeLight.seconds >= 6)
+        else if (timeLight.seconds >= 15)
         {
             isPingPongActive = true;
         }
