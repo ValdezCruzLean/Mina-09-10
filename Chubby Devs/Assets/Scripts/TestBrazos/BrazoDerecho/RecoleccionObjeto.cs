@@ -17,7 +17,7 @@ public class RecoleccionObjeto : MonoBehaviour,IAnimationInteraction
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, distancia))
         {
-            if (hit.collider.CompareTag("Fosforo") || hit.collider.CompareTag("Interactable"))
+            if (hit.collider.CompareTag("Fosforo") )
             {
                 IAnimationInteraction("isRecoger", true);
                 if (Input.GetKeyDown(KeyCode.R) && (canvasFosforos.cantidadFosforos <= canvasFosforos.limiteFosforo && canvasFosforos.cantidadFosforos != canvasFosforos.limiteFosforo))
