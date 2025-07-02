@@ -32,11 +32,11 @@ public class HUD : MonoBehaviour
             puntosObjetos.text = " OBJETOS: " + ScriptGameManager.instance.ObjetosTotalesEncontrados.ToString() +"/6";
             puntosV.text = "Vida: "+ ScriptGameManager.instance.PuntosTotalesV.ToString();
 
-            if (ScriptGameManager.instance.CadaveresTotalesEncontrados == 2 && ScriptGameManager.instance.ObjetosTotalesEncontrados == 6)
+            if (ScriptGameManager.instance.CadaveresTotalesEncontrados == 1 && ScriptGameManager.instance.ObjetosTotalesEncontrados == 1)
             {
                 //puntosD.text = "Enciende el Generador";
                 //Debug.Log("Continuará...");
-                SceneManager.LoadScene("MenuPrincipal");
+                SceneManager.LoadScene("PantallaContinuara");
             }
 
         }
