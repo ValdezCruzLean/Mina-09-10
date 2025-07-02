@@ -9,9 +9,9 @@ public class RecargaLamp : MonoBehaviour, IAnimationInteraction
     public CanvasFosforos canvasFosforos;
     private void Update()
     {
-        Recarga(); 
+        Recarga();
     }
-    public void Recarga() 
+    public void Recarga()
     {
         if (timeLight.readyToReset == false)
         {
