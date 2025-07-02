@@ -6,6 +6,7 @@ public class MenuInicial : MonoBehaviour
     {
         SceneManager.LoadScene(Escena_prueba);
     }
+   
     public void Salir ()
     {
         Application.Quit();
