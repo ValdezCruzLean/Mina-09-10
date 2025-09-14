@@ -432,8 +432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e7c03b9e0a1b64a946eec0bd86edfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeText: {fileID: 1502023557}
   seconds: 0
+  readyToReset: 1
+  textoTiempo: {fileID: 0}
 --- !u!114 &1006929906
 MonoBehaviour:
   m_ObjectHideFlags: 0
