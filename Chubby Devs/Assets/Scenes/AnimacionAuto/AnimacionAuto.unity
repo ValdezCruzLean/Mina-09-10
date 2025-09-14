@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 1539594206}
   - component: {fileID: 1539594205}
   - component: {fileID: 1539594208}
+  - component: {fileID: 1539594209}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -389,7 +390,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
@@ -409,7 +410,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 65
+  field of view: 55.340652
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -435,13 +436,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539594204}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15159923, y: -0.09369846, z: -0.0069718515, w: 0.98396635}
-  m_LocalPosition: {x: -0.174, y: 0.938, z: -0.333}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.24457699, y: 0.20232478, z: -0.04134257, w: 0.9473846}
+  m_LocalPosition: {x: -0.454, y: 1.007, z: -0.268}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 17.279, y: -11.264, z: -2.529}
+  m_LocalEulerAnglesHint: {x: 28.695, y: 24.455, z: 1.348}
 --- !u!114 &1539594208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,6 +487,28 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!95 &1539594209
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539594204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d6adea8ae0ccb14694e2aa0fcf5ab8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1957354251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -504,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2255551205418619698, guid: 20b7fabe1d4a4944f8cd9b7c0e31eccf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0014383323
+      value: -0.001438332
       objectReference: {fileID: 0}
     - target: {fileID: 2255551205418619698, guid: 20b7fabe1d4a4944f8cd9b7c0e31eccf, type: 3}
       propertyPath: m_LocalRotation.w
