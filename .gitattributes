@@ -1,3 +1,4 @@
 *.asset filter=lfs diff=lfs merge=lfs -text
 *[[:space:]].asset filter=lfs diff=lfs merge=lfs -text
 Chubby[[:space:]]Devs/Assets/Scenes/Escena_prueba/OcclusionCullingData.asset filter=lfs diff=lfs merge=lfs -text
+**/OcclusionCullingData.asset filter=lfs diff=lfs merge=lfs -text
