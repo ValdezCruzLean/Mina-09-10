@@ -525,6 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4059975097012581161}
+  - component: {fileID: 3403859196719331785}
   m_Layer: 0
   m_Name: silla
   m_TagString: Untagged
@@ -571,6 +572,27 @@ Transform:
   - {fileID: 6826078188972699412}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &3403859196719331785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422273984225827070}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 815.29517, y: 122.61817, z: 67.343956}
+  m_Center: {x: -368.9703, y: 60.730484, z: 22.650347}
 --- !u!1 &2885294645259306418
 GameObject:
   m_ObjectHideFlags: 0
