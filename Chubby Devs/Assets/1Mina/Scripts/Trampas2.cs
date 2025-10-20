@@ -16,6 +16,10 @@ public class Trampas2 : MonoBehaviour
     [Tooltip("Frecuencia del temblor.")]
     public float frecuenciaTemblor = 25f;
 
+    [Header("Desactivación Automática")]
+    [Tooltip("Tiempo (en segundos) después de empezar a caer para desactivar la plataforma.")]
+    public float tiempoAntesDeDesactivar = 1f;
+
     private bool activado = false;   // Ya fue activada por el jugador
     private bool cayendo = false;    // Ya empezó a caer
     private Vector3 posicionOriginal;
@@ -77,11 +81,20 @@ public class Trampas2 : MonoBehaviour
         cayendo = true;
         rb.isKinematic = false;
         rb.useGravity = true;
+
+        // Llamamos a Desactivar() después del tiempo configurado
+        Invoke(nameof(Desactivar), tiempoAntesDeDesactivar);
     }
 
-    // Opcional: para reiniciar la plataforma
+    void Desactivar()
+    {
+        gameObject.SetActive(false);
+    }
+
+    // Opcional: para reiniciar la plataforma (si la reactivas luego por script)
     public void Reiniciar()
     {
+        CancelInvoke(nameof(Desactivar));
         cayendo = false;
         activado = false;
         tiempoTranscurrido = 0f;
@@ -89,5 +102,6 @@ public class Trampas2 : MonoBehaviour
         rb.isKinematic = true;
         rb.useGravity = false;
         transform.position = posicionOriginal;
+        gameObject.SetActive(true);
     }
 }
