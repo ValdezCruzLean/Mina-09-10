@@ -374,10 +374,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonController
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 42723084305530699, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6601166418678669184, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1864564109}
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
 --- !u!1001 &29624694
 PrefabInstance:
@@ -3443,6 +3447,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7527e6153429ac543bc7dfce5410c111, type: 3}
+--- !u!114 &230569628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8913653250746502844, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 28385870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e52e6400cc6b0439724c468815c775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &234557223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: df2d44c34d8eae644822de20b2a65843, type: 3}
@@ -26816,6 +26831,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861061962}
   m_CullTransparentMesh: 1
+--- !u!1 &1864564107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6601166418678669184, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 28385870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1864564109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864564107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a002231ce1685544c92bc674c5a8b439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distancia: 10
+  canvasFosforos: {fileID: 230569628}
 --- !u!64 &1866862146
 MeshCollider:
   m_ObjectHideFlags: 0
