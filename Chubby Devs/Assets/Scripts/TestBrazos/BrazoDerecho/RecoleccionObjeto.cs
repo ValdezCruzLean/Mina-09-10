@@ -3,10 +3,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class RecoleccionObjeto : MonoBehaviour,IAnimationInteraction
+public class RecoleccionObjeto : MonoBehaviour
 {
     [SerializeField] float distancia;
-    public Animator controller;
 
     public CanvasFosforos canvasFosforos;
     private void Update()
@@ -17,25 +16,14 @@ public class RecoleccionObjeto : MonoBehaviour,IAnimationInteraction
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, distancia))
         {
-            if (hit.collider.CompareTag("Fosforo") )
+            if (hit.collider.CompareTag("Fosforo"))
             {
-                IAnimationInteraction("isRecoger", true);
                 if (Input.GetKeyDown(KeyCode.R) && (canvasFosforos.cantidadFosforos <= canvasFosforos.limiteFosforo && canvasFosforos.cantidadFosforos != canvasFosforos.limiteFosforo))
                 {
                     Destroy(hit.collider.gameObject);
                     canvasFosforos.SumarFosforo();
                 }
             }
-            else
-            {
-                IAnimationInteraction("isRecoger", false);
-            }
         }
-    }
-    public void IAnimationInteraction(string _nameAnimation, bool _isActivo)
-    {
-        string nameAnimation = _nameAnimation;
-        bool isActivo = _isActivo;
-        controller.SetBool(nameAnimation, isActivo);
     }
 }
