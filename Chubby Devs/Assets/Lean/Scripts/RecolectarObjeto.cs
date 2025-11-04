@@ -1,21 +1,37 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RecolectarObjeto : MonoBehaviour
 {
     [SerializeField] private int puntoObjeto = 1;
+    [SerializeField] private string mensajeHUD = "Presiona E para recoger";
 
-    /* Este metodo implementado de la interfaz TakeDamage. 
-        Se ejecuta cuando el jugador interactua con un trampa u enemigo.*/
-    private void OnCollisionEnter(Collision collision)
+    private bool puedeRecoger = false;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            {
-                ScriptGameManager.instance.SumarObjetos(puntoObjeto);
+            puedeRecoger = true;
+            HUDManager.instance.MostrarMensaje(mensajeHUD);
+        }
+    }
 
-                Destroy(gameObject);        // Destruye el objeto moneda para eliminarlo del juego.
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            puedeRecoger = false;
+            HUDManager.instance.OcultarMensaje();
+        }
+    }
 
-            }
+    private void Update()
+    {
+        if (puedeRecoger && Input.GetKeyDown(KeyCode.E))
+        {
+            ScriptGameManager.instance.SumarObjetos(puntoObjeto);
+            gameObject.SetActive(false); // ✅ En lugar de Destroy()
+            HUDManager.instance.OcultarMensaje();
         }
     }
 }
