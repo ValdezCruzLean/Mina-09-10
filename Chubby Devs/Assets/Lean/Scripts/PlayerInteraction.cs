@@ -8,6 +8,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private NotePickup currentNote;
 
+    /*no toque nada*/
     void Update()
     {
        // Debug.DrawRay(transform.position, transform.forward * rayDistance, Color.green);
