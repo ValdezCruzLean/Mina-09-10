@@ -19,12 +19,12 @@ public class InventarioHerramientas : MonoBehaviour
     void Update()
     {
         // Cambiar herramienta activa
-        if (Input.GetKeyDown(KeyCode.Alpha2) && tieneMartillo)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && tieneMartillo)
         {
             herramientaActual = "Martillo";
             hud.ActualizarHerramienta("Martillo");
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1) && tieneCortaCadenas)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && tieneCortaCadenas)
         {
             herramientaActual = "Corta Cadenas";
             hud.ActualizarHerramienta("Corta Cadenas");
