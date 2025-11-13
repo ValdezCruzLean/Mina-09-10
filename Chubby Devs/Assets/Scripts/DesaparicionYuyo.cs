@@ -1,10 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class DesaparicionYuyo : MonoBehaviour
 {
-    public GameObject objetoADesaparecer;     // El objeto que desaparece
-    public Camera camara;                     // La cámara que se gira
-    public MonoBehaviour controlDeCamara;     // El script de control de la cámara (ej. MouseLook)
+    public GameObject objetoADesaparecer;
+    public Camera camara;
+    public MonoBehaviour controlDeCamara;
+    public Transform puntoObjetivo;
     public float velocidadRotacion = 2f;
 
     private int contadorEntradas = 0;
@@ -17,7 +18,7 @@ public class DesaparicionYuyo : MonoBehaviour
         {
             contadorEntradas++;
 
-            if (contadorEntradas == 2) // Solo la segunda vez
+            if (contadorEntradas == 2)
             {
                 if (objetoADesaparecer != null)
                     objetoADesaparecer.SetActive(false);
@@ -25,9 +26,13 @@ public class DesaparicionYuyo : MonoBehaviour
                 if (controlDeCamara != null)
                     controlDeCamara.enabled = false;
 
-                // Calcular la rotación 180° en Y desde donde está la cámara
-                rotacionObjetivo = Quaternion.Euler(0, camara.transform.eulerAngles.y + 180f, 0);
-                girarCamara = true;
+                // Calcular rotaciÃ³n hacia el punto
+                if (puntoObjetivo != null)
+                {
+                    Vector3 direccion = puntoObjetivo.position - camara.transform.position;
+                    rotacionObjetivo = Quaternion.LookRotation(direccion);
+                    girarCamara = true;
+                }
             }
         }
     }
@@ -36,18 +41,22 @@ public class DesaparicionYuyo : MonoBehaviour
     {
         if (girarCamara)
         {
-            camara.transform.rotation = Quaternion.Slerp(camara.transform.rotation, rotacionObjetivo, Time.deltaTime * velocidadRotacion);
+            camara.transform.rotation = Quaternion.Slerp(
+                camara.transform.rotation,
+                rotacionObjetivo,
+                Time.deltaTime * velocidadRotacion
+            );
 
-            // Si ya casi llegó, detenemos
+            // Cuando llega al objetivo
             if (Quaternion.Angle(camara.transform.rotation, rotacionObjetivo) < 1f)
             {
                 girarCamara = false;
-                // Si querés reactivar el control de cámara después:
+
+                // Reactivar el control sin restablecer rotaciÃ³n
                 if (controlDeCamara != null)
                     controlDeCamara.enabled = true;
             }
         }
     }
 }
-
 
