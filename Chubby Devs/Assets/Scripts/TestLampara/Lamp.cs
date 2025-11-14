@@ -46,7 +46,7 @@ public class Lamp : MonoBehaviour
         {
             ApagarLuz();
             timeLight.DetenerTiempo();
-            SceneManager.LoadScene("EscenaPerder");
+            //SceneManager.LoadScene("EscenaPerder");
         }
         else if (timeLight.seconds >= 25)
         {
@@ -64,7 +64,7 @@ public class Lamp : MonoBehaviour
             pointLight.intensity = Mathf.PingPong(Time.time * pingPongSpeed, maxIntensity);
         }
 
-        LightZoneProtection.Instance.radiusSphere = pointLight.range;
+        //LightZoneProtection.Instance.radiusSphere = pointLight.range;
     }
 
     private void ApagarLuz()
