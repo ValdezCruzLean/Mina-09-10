@@ -6,11 +6,22 @@ public class ObjetoInteractuable : MonoBehaviour
     public enum TipoInteraccion { Cadenas, Maderas, Cerradura }
     public TipoInteraccion tipo;
 
+    [Header("Configuración de Fade")]
+    public float fadeDuration = 1.5f;       // Tiempo total del desvanecimiento
+    public float fadeSpeed = 1f;            // Velocidad del fade (1 = normal)
+
+    [Header("Sonido")]
+    public AudioClip sonidoRomper;
+    private AudioSource audioSource;
+
     private HUDManagerMina hud;
 
     void Start()
     {
         hud = FindFirstObjectByType<HUDManagerMina>();
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
     }
 
     public void Interactuar(InventarioHerramientas inventario)
@@ -43,16 +54,27 @@ public class ObjetoInteractuable : MonoBehaviour
     private IEnumerator DestruirObjeto(InventarioHerramientas inv, string herramientaUsada)
     {
         Renderer rend = GetComponent<Renderer>();
-        Color color = rend.material.color;
+        Material mat = rend.material;
+        Color color = mat.color;
 
-        for (float t = 0; t < 1; t += Time.deltaTime)
+        // Reproducir sonido
+        if (sonidoRomper != null)
+            audioSource.PlayOneShot(sonidoRomper);
+
+        float t = 0;
+
+        while (t < fadeDuration)
         {
-            color.a = Mathf.Lerp(1, 0, t);
-            rend.material.color = color;
+            float alpha = Mathf.Lerp(1f, 0f, t / fadeDuration);
+            color.a = alpha;
+            mat.color = color;
+
+            t += Time.deltaTime * fadeSpeed;
             yield return null;
         }
 
         gameObject.SetActive(false);
+
         inv.QuitarHerramienta(herramientaUsada);
         hud.MostrarMensaje($"{herramientaUsada} se ha roto");
     }
