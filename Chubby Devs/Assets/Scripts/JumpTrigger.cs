@@ -15,7 +15,10 @@ public class JumpTrigger : MonoBehaviour
     public GameObject movimientoJugador;
     //public GameObject FlashImg;
 
-    void OnTriggerEnter()
+    public Animator transitionAnimator;
+
+
+    void OnTriggerEnter(Collider other)
     {
         Scream.Play();
         JumpCam.SetActive(true);
@@ -30,11 +33,15 @@ public class JumpTrigger : MonoBehaviour
     IEnumerator EndJump()
     {
         yield return new WaitForSeconds(2.03f);
-        activador.SetActive(false);
+        
         ThePlayer.SetActive(true);
         JumpCam.SetActive(false);
 
+        transitionAnimator.SetTrigger("StartTransition");
+        yield return new WaitForSeconds(1.0f);
+
         //FlashImg.SetActive(false);
         SceneManager.LoadScene("EscenaPerder");
+        activador.SetActive(false);
     }
 }
