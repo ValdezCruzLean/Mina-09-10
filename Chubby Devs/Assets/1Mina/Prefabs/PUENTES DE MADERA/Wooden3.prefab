@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 852851562355677522}
   - component: {fileID: 7096057146396328535}
   - component: {fileID: 7556422286148704264}
+  - component: {fileID: 8097678146747412623}
   m_Layer: 0
   m_Name: Wooden3
   m_TagString: Untagged
@@ -28,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2164162940013681447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70155495, y: -0, z: -0, w: 0.7126153}
+  m_LocalRotation: {x: 0.70155627, y: 0, z: 0, w: 0.71261406}
   m_LocalPosition: {x: -76.66872, y: -8.065256, z: 45.861427}
-  m_LocalScale: {x: 1.2062871, y: 1.2062874, z: 1.2062874}
+  m_LocalScale: {x: 1.2062873, y: 1.2062875, z: 1.2062875}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.104, y: 0, z: 0}
 --- !u!33 &2683698221529469811
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -127,3 +128,24 @@ MonoBehaviour:
   intensidadTemblor: 0.1
   frecuenciaTemblor: 25
   tiempoAntesDeDesactivar: 5
+--- !u!65 &8097678146747412623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164162940013681447}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.2673, y: 7.947122, z: 0.78604174}
+  m_Center: {x: 0.0076495283, y: 0.0115093775, z: -12.264376}
