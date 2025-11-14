@@ -18,13 +18,13 @@ public class RecoleccionObjeto : MonoBehaviour
         {
             if (hit.collider.CompareTag("Fosforo"))
             {
-                if (Input.GetKeyDown(KeyCode.R) && (canvasFosforos.cantidadFosforos <= canvasFosforos.limiteFosforo && canvasFosforos.cantidadFosforos != canvasFosforos.limiteFosforo))
+                if (Input.GetKeyDown(KeyCode.E) && (canvasFosforos.cantidadFosforos <= canvasFosforos.limiteFosforo && canvasFosforos.cantidadFosforos != canvasFosforos.limiteFosforo))
                 {
                     Destroy(hit.collider.gameObject);
                     canvasFosforos.SumarFosforo();
                 }
             }
-            if (hit.collider.CompareTag("LamparaViejo") && Input.GetKeyDown(KeyCode.R))
+            if (hit.collider.CompareTag("LamparaViejo") && Input.GetKeyDown(KeyCode.E))
             {
                 Destroy(hit.collider.gameObject);
                 manoActivador.SetActive(true);
