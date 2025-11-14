@@ -8,55 +8,78 @@ public class DesaparicionYuyo : MonoBehaviour
     public Transform puntoObjetivo;
     public float velocidadRotacion = 2f;
 
+    public Rigidbody rbFarol;
+    public float velocidadRotacionMano = 2f; // velocidad de la mano
+
     private int contadorEntradas = 0;
-    private bool girarCamara = false;
-    private Quaternion rotacionObjetivo;
+    private bool girando = false;
+    private Quaternion rotObjetivo;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+
+        contadorEntradas++;
+
+        if (contadorEntradas == 2)
         {
-            contadorEntradas++;
+            if (objetoADesaparecer != null)
+                objetoADesaparecer.SetActive(false);
 
-            if (contadorEntradas == 2)
+            if (controlDeCamara != null)
+                controlDeCamara.enabled = false;
+
+            if (rbFarol != null)
             {
-                if (objetoADesaparecer != null)
-                    objetoADesaparecer.SetActive(false);
-
-                if (controlDeCamara != null)
-                    controlDeCamara.enabled = false;
-
-                // Calcular rotación hacia el punto
-                if (puntoObjetivo != null)
-                {
-                    Vector3 direccion = puntoObjetivo.position - camara.transform.position;
-                    rotacionObjetivo = Quaternion.LookRotation(direccion);
-                    girarCamara = true;
-                }
+                rbFarol.isKinematic = true;
+                rbFarol.linearVelocity = Vector3.zero;
+                rbFarol.angularVelocity = Vector3.zero;
             }
+
+            Vector3 dir = puntoObjetivo.position - camara.transform.position;
+            rotObjetivo = Quaternion.LookRotation(dir);
+
+            girando = true;
         }
     }
 
     void Update()
     {
-        if (girarCamara)
+        if (!girando) return;
+
+        // Rotación cámara suavemente
+        camara.transform.rotation = Quaternion.RotateTowards(
+            camara.transform.rotation,
+            rotObjetivo,
+            velocidadRotacion * Time.deltaTime * 60f
+        );
+
+        // Rotación player suavemente (solo Y) usando velocidad de la mano
+        if (camara.transform.parent != null)
         {
-            camara.transform.rotation = Quaternion.Slerp(
-                camara.transform.rotation,
-                rotacionObjetivo,
-                Time.deltaTime * velocidadRotacion
+            Quaternion targetPlayerRot = Quaternion.Euler(
+                0f,
+                camara.transform.rotation.eulerAngles.y,
+                0f
             );
 
-            // Cuando llega al objetivo
-            if (Quaternion.Angle(camara.transform.rotation, rotacionObjetivo) < 1f)
-            {
-                girarCamara = false;
+            camara.transform.parent.rotation = Quaternion.RotateTowards(
+                camara.transform.parent.rotation,
+                targetPlayerRot,
+                velocidadRotacionMano * Time.deltaTime * 60f
+            );
+        }
 
-                // Reactivar el control sin restablecer rotación
-                if (controlDeCamara != null)
-                    controlDeCamara.enabled = true;
-            }
+        // Finalización
+        if (Quaternion.Angle(camara.transform.rotation, rotObjetivo) < 0.5f)
+        {
+            girando = false;
+
+            if (rbFarol != null)
+                rbFarol.isKinematic = false;
+
+            if (controlDeCamara != null)
+                controlDeCamara.enabled = true;
         }
     }
 }
-
