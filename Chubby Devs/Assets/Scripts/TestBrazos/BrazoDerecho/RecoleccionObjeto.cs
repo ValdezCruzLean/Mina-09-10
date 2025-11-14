@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 public class RecoleccionObjeto : MonoBehaviour
 {
     [SerializeField] float distancia;
-
+    [SerializeField] GameObject manoActivador;
     public CanvasFosforos canvasFosforos;
     private void Update()
     {
@@ -23,6 +23,11 @@ public class RecoleccionObjeto : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     canvasFosforos.SumarFosforo();
                 }
+            }
+            if (hit.collider.CompareTag("LamparaViejo") && Input.GetKeyDown(KeyCode.R))
+            {
+                Destroy(hit.collider.gameObject);
+                manoActivador.SetActive(true);
             }
         }
     }
