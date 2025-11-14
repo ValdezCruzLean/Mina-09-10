@@ -18,9 +18,9 @@ public class MenuInicial : MonoBehaviour
     {
         music.PlayOneShot(switchAudio);
     }
-    public void Jugar(string Escena_prueba)
+    public void Jugar()
     {
-        SceneManager.LoadScene(Escena_prueba);
+        SceneManager.LoadScene(1);
     }
    
     public void Salir ()
