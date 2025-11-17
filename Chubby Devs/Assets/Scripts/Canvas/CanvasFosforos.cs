@@ -22,6 +22,7 @@ public class CanvasFosforos : MonoBehaviour
             if (cantidadFosforos > 0)
             {
                 quiereEncenderLampara = true;
+                TimeLight.Instance.MostrarBarraCompleta();
             }
             else
             {
@@ -59,6 +60,7 @@ public class CanvasFosforos : MonoBehaviour
 
     private void ActualizarTexto()
     {
-        textoUI.text = "Fosforos: " + cantidadFosforos;
+        textoUI.text = " " + cantidadFosforos;
+        //textoUI.text = "Fosforos: " + cantidadFosforos;
     }
 }

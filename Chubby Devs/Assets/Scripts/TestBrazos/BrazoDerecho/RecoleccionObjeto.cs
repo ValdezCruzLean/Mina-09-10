@@ -28,6 +28,11 @@ public class RecoleccionObjeto : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
                 manoActivador.SetActive(true);
+
+                TimeLight.Instance.MostrarSoloSilueta();
+
+                //TimeLight.Instance.MostrarBarraLampara(true);
+                //TimeLight.Instance.ResetTimer();
             }
         }
     }
