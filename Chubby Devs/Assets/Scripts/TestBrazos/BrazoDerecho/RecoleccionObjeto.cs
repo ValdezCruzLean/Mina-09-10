@@ -8,6 +8,7 @@ public class RecoleccionObjeto : MonoBehaviour
     [SerializeField] float distancia;
     [SerializeField] GameObject manoActivador;
     public CanvasFosforos canvasFosforos;
+    public AnimacionLamparaMovimiento lamparaMovimiento;
     private void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -28,7 +29,7 @@ public class RecoleccionObjeto : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
                 manoActivador.SetActive(true);
-
+                lamparaMovimiento.StartAnimation();
                 TimeLight.Instance.MostrarSoloSilueta();
 
                 //TimeLight.Instance.MostrarBarraLampara(true);
