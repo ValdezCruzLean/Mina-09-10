@@ -27,6 +27,7 @@ public class JumpTrigger : MonoBehaviour
         enemyScript.TriggerJump();
         movimientoJugador.GetComponent<FirstPersonController>().enabled = false;
         //FlashImg.SetActive(true);
+        StartCoroutine(JumpCam.GetComponent<CameraShake>().Shake(1.0f, 0.3f));
         StartCoroutine(EndJump());
     }
 
