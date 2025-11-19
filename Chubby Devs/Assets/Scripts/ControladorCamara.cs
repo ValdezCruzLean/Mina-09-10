@@ -36,6 +36,12 @@ public class ControladorCamara : MonoBehaviour
             if (enemigoObjetivo != null)
             {
                 //camaraJugador.transform.LookAt(enemigoObjetivo.transform.position);
+
+                // 1. ROTAR al jugador hacia el enemigo (solo eje horizontal)
+                Vector3 objetivo = enemigoObjetivo.position;
+                objetivo.y = jugador.position.y; 
+                jugador.LookAt(objetivo);
+
                 camaraJugador.transform.LookAt(enemigoObjetivo.position);
             }
 
