@@ -9,7 +9,9 @@ public class DesaparicionYuyo : MonoBehaviour
     public float velocidadRotacion = 2f;
 
     public Rigidbody rbFarol;
-    public float velocidadRotacionMano = 2f; // velocidad de la mano
+    public float velocidadRotacionMano = 2f;
+
+    public int vecesNecesarias = 2;   // 🔹 Ahora es público y configurable
 
     private int contadorEntradas = 0;
     private bool girando = false;
@@ -21,7 +23,7 @@ public class DesaparicionYuyo : MonoBehaviour
 
         contadorEntradas++;
 
-        if (contadorEntradas == 2)
+        if (contadorEntradas >= vecesNecesarias)   // 🔹 Usa el valor configurado
         {
             if (objetoADesaparecer != null)
                 objetoADesaparecer.SetActive(false);
@@ -47,14 +49,12 @@ public class DesaparicionYuyo : MonoBehaviour
     {
         if (!girando) return;
 
-        // Rotación cámara suavemente
         camara.transform.rotation = Quaternion.RotateTowards(
             camara.transform.rotation,
             rotObjetivo,
             velocidadRotacion * Time.deltaTime * 60f
         );
 
-        // Rotación player suavemente (solo Y) usando velocidad de la mano
         if (camara.transform.parent != null)
         {
             Quaternion targetPlayerRot = Quaternion.Euler(
@@ -70,7 +70,6 @@ public class DesaparicionYuyo : MonoBehaviour
             );
         }
 
-        // Finalización
         if (Quaternion.Angle(camara.transform.rotation, rotObjetivo) < 0.5f)
         {
             girando = false;
