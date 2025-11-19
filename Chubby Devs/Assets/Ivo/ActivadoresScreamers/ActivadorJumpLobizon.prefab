@@ -17,7 +17,7 @@ GameObject:
   m_Layer: 0
   m_Name: ActivadorJumpLobizon
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.49, y: 6.52, z: -2.79}
-  m_LocalScale: {x: 13.572401, y: 10.2427635, z: 4.8537}
+  m_LocalScale: {x: 1.4895245, y: 2.8175695, z: 1.678992}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3627280057090975319}
@@ -130,6 +130,7 @@ MonoBehaviour:
   enemyScript: {fileID: 0}
   activador: {fileID: 2731371628073371643}
   movimientoJugador: {fileID: 0}
+  transitionAnimator: {fileID: 0}
 --- !u!114 &3210116140818895019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warningSound: {fileID: 2966562035437987445}
   player: {fileID: 0}
-  distanciaMaxima: 10
+  distanciaMaxima: 4
 --- !u!1 &2791408823085999963
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,10 +199,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.0250964
-  MaxDistance: 500
+  MinDistance: 1
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -234,7 +235,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -285,11 +286,11 @@ PrefabInstance:
     - target: {fileID: 634762149356790518, guid: 52ed1c6d96bd35e40b5462baa734a4d9, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 2c58e6a37c1c34641a0c7ac3da11235e, type: 3}
+      objectReference: {fileID: 8300000, guid: 79930f6300037ff46a3d5818bc5cda3a, type: 3}
     - target: {fileID: 634762149356790518, guid: 52ed1c6d96bd35e40b5462baa734a4d9, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2c58e6a37c1c34641a0c7ac3da11235e, type: 3}
+      objectReference: {fileID: 8300000, guid: 79930f6300037ff46a3d5818bc5cda3a, type: 3}
     - target: {fileID: 5962216012048872387, guid: 52ed1c6d96bd35e40b5462baa734a4d9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07367892

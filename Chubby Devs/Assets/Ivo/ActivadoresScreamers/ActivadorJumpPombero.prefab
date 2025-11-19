@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.49, y: 6.52, z: -2.79}
-  m_LocalScale: {x: 13.572401, y: 10.2427635, z: 4.8537}
+  m_LocalScale: {x: 1.4895245, y: 2.8175695, z: 1.678992}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4943872269519261434}
@@ -130,6 +130,7 @@ MonoBehaviour:
   enemyScript: {fileID: 0}
   activador: {fileID: 3112000492380536654}
   movimientoJugador: {fileID: 0}
+  transitionAnimator: {fileID: 0}
 --- !u!114 &6959205971619633538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warningSound: {fileID: 3235610027565996405}
   player: {fileID: 0}
-  distanciaMaxima: 10
+  distanciaMaxima: 4
 --- !u!1 &6618626763785212518
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,10 +199,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.0250964
-  MaxDistance: 500
+  MinDistance: 1
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -234,7 +235,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -285,11 +286,11 @@ PrefabInstance:
     - target: {fileID: 634762149356790518, guid: 52ed1c6d96bd35e40b5462baa734a4d9, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 2416582606430f54488d63280c9ddf86, type: 3}
+      objectReference: {fileID: 8300000, guid: 568e3d221ddb4d6409c018acb7435c82, type: 3}
     - target: {fileID: 634762149356790518, guid: 52ed1c6d96bd35e40b5462baa734a4d9, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2416582606430f54488d63280c9ddf86, type: 3}
+      objectReference: {fileID: 8300000, guid: 568e3d221ddb4d6409c018acb7435c82, type: 3}
     - target: {fileID: 5962216012048872387, guid: 52ed1c6d96bd35e40b5462baa734a4d9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.073678926

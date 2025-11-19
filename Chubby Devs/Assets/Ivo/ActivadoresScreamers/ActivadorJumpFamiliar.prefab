@@ -17,7 +17,7 @@ GameObject:
   m_Layer: 0
   m_Name: ActivadorJumpFamiliar
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.68, y: 6.52, z: -12.63}
-  m_LocalScale: {x: 13.572401, y: 10.2427635, z: 4.8537}
+  m_LocalScale: {x: 0.9500442, y: 1.8501387, z: 0.49220654}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7332259310491289794}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warningSound: {fileID: 5793901174889178432}
   player: {fileID: 0}
-  distanciaMaxima: 10
+  distanciaMaxima: 4
 --- !u!1 &5156759042166522207
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +188,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7e183a318f904d845b294b7f828dc50c, type: 3}
-  m_Resource: {fileID: 8300000, guid: 7e183a318f904d845b294b7f828dc50c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8e1d94dd1e5041c46a17c09fdabec60b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8e1d94dd1e5041c46a17c09fdabec60b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -199,10 +199,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.0250964
-  MaxDistance: 500
+  MinDistance: 1
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -235,7 +235,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -317,8 +317,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 427888cce1b3d5c4dbcfa63c41e09cad, type: 3}
-  m_Resource: {fileID: 8300000, guid: 427888cce1b3d5c4dbcfa63c41e09cad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ca48a3e616611ca4eb8b20b9dc3906e0, type: 3}
+  m_Resource: {fileID: 8300000, guid: ca48a3e616611ca4eb8b20b9dc3906e0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
