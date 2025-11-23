@@ -143,15 +143,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c5e7e34d95eb4041bb2aa8c5b91153f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 598.77
+      value: 53.819946
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c5e7e34d95eb4041bb2aa8c5b91153f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.115
+      value: -20.473303
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c5e7e34d95eb4041bb2aa8c5b91153f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 453.23
+      value: 51.869293
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c5e7e34d95eb4041bb2aa8c5b91153f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -159,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c5e7e34d95eb4041bb2aa8c5b91153f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c5e7e34d95eb4041bb2aa8c5b91153f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -219,7 +219,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntoObjeto: 1
+  mensajeHUD: Presiona E para recoger
 --- !u!4 &3141256644506359990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c5e7e34d95eb4041bb2aa8c5b91153f, type: 3}
