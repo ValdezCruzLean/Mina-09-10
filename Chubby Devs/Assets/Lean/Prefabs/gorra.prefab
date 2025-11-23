@@ -143,15 +143,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 598.821
+      value: 58.510254
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.086
+      value: -21.705929
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 450.87
+      value: 46.113586
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -159,15 +159,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91cdb9b878ff39348a231779ef7056db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -234,7 +234,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -253,3 +253,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntoObjeto: 1
+  mensajeHUD: Presiona E para recoger
