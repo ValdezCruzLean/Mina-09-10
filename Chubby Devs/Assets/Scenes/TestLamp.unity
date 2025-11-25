@@ -382,7 +382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seconds: 0
   readyToReset: 1
-  textoTiempo: {fileID: 0}
+  barraLampara: {fileID: 0}
+  barraLamparaSilueta: {fileID: 0}
+  tiempoMaximo: 40
 --- !u!114 &1006929906
 MonoBehaviour:
   m_ObjectHideFlags: 0

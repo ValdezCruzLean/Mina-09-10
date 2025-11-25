@@ -8,7 +8,7 @@ public class HUD : MonoBehaviour
 {
     /*Esto declara una variable publica de tipo TextMeshProUGUI llamada puntos. 
       * Se utiliza para mostrar informaci?n textual en la interfaz de usuario del juego.*/
-    public TextMeshProUGUI puntosCadaveres;
+   // public TextMeshProUGUI puntosCadaveres;
     public TextMeshProUGUI puntosObjetos;
     public TextMeshProUGUI puntosV;
     public GameObject objetoAEliminar;
@@ -29,10 +29,10 @@ public class HUD : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Escena_prueba")
         {
-            puntosObjetos.text = " OBJETOS: " + ScriptGameManager.instance.ObjetosTotalesEncontrados.ToString() +"/6";
+            puntosObjetos.text = " OBJETOS: " + ScriptGameManager.instance.ObjetosTotalesEncontrados.ToString() +"/12";
             puntosV.text = "Vida: "+ ScriptGameManager.instance.PuntosTotalesV.ToString();
 
-            if ( ScriptGameManager.instance.ObjetosTotalesEncontrados == 6)
+            if ( ScriptGameManager.instance.ObjetosTotalesEncontrados == 12)
             {
                 //puntosD.text = "Enciende el Generador";
                 //Debug.Log("Continuará...");
@@ -47,10 +47,10 @@ public class HUD : MonoBehaviour
     }
     /*Este es un metodo publico que permite actualizar el texto del objeto puntos. 
      * Toma un argumento puntosTotales y establece el texto del objeto puntos en el valor de puntosTotales.*/
-    public void ActualizarCadaveresEncontrados(int puntosTotales)
+   /* public void ActualizarCadaveresEncontrados(int puntosTotales)
     {
         puntosCadaveres.text = puntosTotales.ToString();
-    }
+    }*/
     public void ActualizarObjetosEncontrados(int puntosTotales)
     {
         puntosObjetos.text = puntosTotales.ToString();

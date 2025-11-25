@@ -6,11 +6,11 @@ public class EncontrarCadaver : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+      /*  if (collision.gameObject.CompareTag("Player"))
         {
             ScriptGameManager.instance.SumarCadaveres(puntoCadaver);
 
             gameObject.SetActive(false);  // ✅ Desactiva el objeto en vez de destruirlo
-        }
+        }*/
     }
 }
