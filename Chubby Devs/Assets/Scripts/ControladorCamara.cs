@@ -23,7 +23,11 @@ public class ControladorCamara : MonoBehaviour
 
         //controladorMovimientoJugador.SetActive(false); // desactiva movimiento
         controladorMovimientoJugador.GetComponent<FirstPersonController>().enabled = false;
+        
         pasosJugador.GetComponent<SonidoPasos>().enabled = false;
+        AudioSource audio = pasosJugador.GetComponent<AudioSource>();
+        if (audio != null) audio.Stop();
+
         StartCoroutine(SeguirEnemigo());
     }
 
