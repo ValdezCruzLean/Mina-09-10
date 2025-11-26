@@ -51,20 +51,20 @@ public class ScriptGameManager : MonoBehaviour
         }
     }
    
-    public void SumarCadaveres(int puntosASumar)
+   /* public void SumarCadaveres(int puntosASumar)
     {
         cadaveresTotalesEncontrados += puntosASumar;
         Debug.Log(cadaveresTotalesEncontrados);
-        hud.ActualizarCadaveresEncontrados(cadaveresTotalesEncontrados);
+       // hud.ActualizarCadaveresEncontrados(cadaveresTotalesEncontrados);
 
 
         /* if (SceneManager.GetActiveScene().name == "Level1" && puntosDesechos >= 1)
          {
              SceneManager.LoadScene("YouWin");
-         }*/
+         }
 
 
-    }
+    }*/
     public void SumarObjetos(int puntosASumar)
     {
         objetosTotalesEncontrados += puntosASumar;
@@ -96,15 +96,15 @@ public class ScriptGameManager : MonoBehaviour
         hud.ActualizarObjetosEncontrados(objetosTotalesEncontrados);
 
     }
-    public void RestarCadaveres(int puntosARestar)
+   /* public void RestarCadaveres(int puntosARestar)
     {
         cadaveresTotalesEncontrados -= puntosARestar;
 
         Debug.Log(cadaveresTotalesEncontrados);
-        hud.ActualizarCadaveresEncontrados(cadaveresTotalesEncontrados);
+        //hud.ActualizarCadaveresEncontrados(cadaveresTotalesEncontrados);
 
 
-    }
+    }*/
     public void RestarPuntosV(int puntosARestar)
     {
         puntosVida -= puntosARestar;

@@ -11,17 +11,13 @@ public class ObjetoInteractuable : MonoBehaviour
     public float fadeSpeed = 1f;            // Velocidad del fade (1 = normal)
 
     [Header("Sonido")]
-    public AudioClip sonidoRomper;
-    private AudioSource audioSource;
+    public AudioSource audioSource;   // AHORA SE ASIGNA DESDE EL INSPECTOR
 
     private HUDManagerMina hud;
 
     void Start()
     {
         hud = FindFirstObjectByType<HUDManagerMina>();
-
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
     }
 
     public void Interactuar(InventarioHerramientas inventario)
@@ -57,9 +53,9 @@ public class ObjetoInteractuable : MonoBehaviour
         Material mat = rend.material;
         Color color = mat.color;
 
-        // Reproducir sonido
-        if (sonidoRomper != null)
-            audioSource.PlayOneShot(sonidoRomper);
+        // Reproducir sonido desde AudioSource
+        if (audioSource != null)
+            audioSource.Play();
 
         float t = 0;
 
