@@ -13376,6 +13376,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!95 &490602221 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5201022219432260214, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+  m_PrefabInstance: {fileID: 1336833440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &491176764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17225,6 +17230,10 @@ PrefabInstance:
       propertyPath: movimientoJugador
       value: 
       objectReference: {fileID: 1738577067}
+    - target: {fileID: 1954052746206234290, guid: 00627133b347d644f914d7dc97e47f0a, type: 3}
+      propertyPath: transitionAnimator
+      value: 
+      objectReference: {fileID: 490602221}
     - target: {fileID: 3112000492380536654, guid: 00627133b347d644f914d7dc97e47f0a, type: 3}
       propertyPath: m_Name
       value: ActivadorJumpPombero
@@ -20398,6 +20407,10 @@ PrefabInstance:
       propertyPath: movimientoJugador
       value: 
       objectReference: {fileID: 1738577067}
+    - target: {fileID: 4621950081538910011, guid: e2791b472b183014fac39c5f361ca3ea, type: 3}
+      propertyPath: transitionAnimator
+      value: 
+      objectReference: {fileID: 490602221}
     - target: {fileID: 4837017101248829214, guid: e2791b472b183014fac39c5f361ca3ea, type: 3}
       propertyPath: m_Volume
       value: 0.605
@@ -39227,6 +39240,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
   m_PrefabInstance: {fileID: 1401818979}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1336833440
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 625.9101
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.527401
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 454.07446
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 76780527658131957, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240687898225701196, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
+      propertyPath: m_Name
+      value: Escena
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b0bbb1a505e4c24f8a10dafcc3703de, type: 3}
 --- !u!1001 &1338511741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53134,6 +53204,10 @@ PrefabInstance:
       propertyPath: movimientoJugador
       value: 
       objectReference: {fileID: 1738577067}
+    - target: {fileID: 4621950081538910011, guid: e2791b472b183014fac39c5f361ca3ea, type: 3}
+      propertyPath: transitionAnimator
+      value: 
+      objectReference: {fileID: 490602221}
     - target: {fileID: 4837017101248829214, guid: e2791b472b183014fac39c5f361ca3ea, type: 3}
       propertyPath: m_Volume
       value: 0.276
@@ -58953,7 +59027,7 @@ Transform:
   m_GameObject: {fileID: 1931680729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -163.9, y: -39.3, z: -91.6}
+  m_LocalPosition: {x: -163.9, y: -31.4, z: -91.6}
   m_LocalScale: {x: 3.9079, y: 3.9079, z: 3.9079}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58971,6 +59045,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d62238890994c9468d5086a2159188d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnimator: {fileID: 490602221}
+  duracionFade: 1
+  escenaPerder: 5
 --- !u!65 &1931680732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68053,3 +68130,4 @@ SceneRoots:
   - {fileID: 412168089}
   - {fileID: 1364402801}
   - {fileID: 1773594293}
+  - {fileID: 1336833440}
