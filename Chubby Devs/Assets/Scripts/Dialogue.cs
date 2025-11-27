@@ -1,29 +1,40 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using TMPro;
 
 public class NPCDialogue : MonoBehaviour
 {
+    [Header("UI & Dialogue")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     [TextArea(3, 6)] public string[] dialogueLines;
-    public MonoBehaviour playerMovementScript; // Asign· ac· el script de movimiento del jugador
+
+    [Header("Player")]
+    public MonoBehaviour playerMovementScript;
+
+    [Header("Animator")]
+    public Animator npcAnimator;
+    public string idleStateName = "Iddle"; // pon EXACTO el nombre del estado
+    public string talkStateName = "Talk";  // pon EXACTO el nombre del estado
 
     private int currentLineIndex = 0;
     private bool playerInRange = false;
     private bool isDialogueActive = false;
 
+    void Start()
+    {
+        if (npcAnimator == null)
+            Debug.LogWarning("NPCDialogue: npcAnimator no asignado.");
+        // Asegurarnos de que empiece en idle
+        if (npcAnimator != null)
+            npcAnimator.Play(idleStateName, 0, 0f);
+    }
+
     void Update()
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (!isDialogueActive)
-            {
-                StartDialogue();
-            }
-            else
-            {
-                AdvanceDialogue();
-            }
+            if (!isDialogueActive) StartDialogue();
+            else AdvanceDialogue();
         }
     }
 
@@ -32,10 +43,16 @@ public class NPCDialogue : MonoBehaviour
         isDialogueActive = true;
         dialoguePanel.SetActive(true);
         currentLineIndex = 0;
-        dialogueText.text = dialogueLines[currentLineIndex];
+        if (dialogueLines.Length > 0)
+            dialogueText.text = dialogueLines[currentLineIndex];
 
-        if (playerMovementScript != null)
-            playerMovementScript.enabled = false; // Desactiva movimiento
+        if (playerMovementScript != null) playerMovementScript.enabled = false;
+
+        if (npcAnimator != null)
+        {
+            // Forzamos el estado Talk en la layer 0 sin transici√≥n (0s)
+            npcAnimator.CrossFade(talkStateName, 0f, 0, 0f);
+        }
     }
 
     void AdvanceDialogue()
@@ -56,16 +73,18 @@ public class NPCDialogue : MonoBehaviour
         isDialogueActive = false;
         dialoguePanel.SetActive(false);
 
-        if (playerMovementScript != null)
-            playerMovementScript.enabled = true; // Reactiva movimiento
+        if (playerMovementScript != null) playerMovementScript.enabled = true;
+
+        if (npcAnimator != null)
+        {
+            // Volvemos al idle forzadamente
+            npcAnimator.CrossFade(idleStateName, 0f, 0, 0f);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-        }
+        if (other.CompareTag("Player")) playerInRange = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -73,11 +92,11 @@ public class NPCDialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-
-            if (isDialogueActive)
-                EndDialogue(); // Cierra si el jugador se va
-
+            if (isDialogueActive) EndDialogue();
             dialoguePanel.SetActive(false);
+
+            if (npcAnimator != null)
+                npcAnimator.CrossFade(idleStateName, 0f, 0, 0f);
         }
     }
 }
