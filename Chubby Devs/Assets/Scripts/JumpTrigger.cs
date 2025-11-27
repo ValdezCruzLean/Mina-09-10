@@ -41,8 +41,18 @@ public class JumpTrigger : MonoBehaviour
         transitionAnimator.SetTrigger("StartTransition");
         yield return new WaitForSeconds(1.0f);
 
-        //FlashImg.SetActive(false);
-        SceneManager.LoadScene("EscenaPerder");
+        string escenaActual = SceneManager.GetActiveScene().name;
+
+        if (escenaActual == "Mina")
+        {
+            SceneManager.LoadScene(5); // si está en Mina, cargar escena 5
+        }
+        else
+        {
+            SceneManager.LoadScene("EscenaPerder");  // si no, cargar EscenaPerder
+        }
+        //SceneManager.LoadScene("EscenaPerder");
+
         activador.SetActive(false);
     }
 }
