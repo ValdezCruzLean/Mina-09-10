@@ -44207,16 +44207,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 1622755693}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0884
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0884
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0884
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2084961
+      value: -0.258
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14785512
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.24908447
+      value: 0.562
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44300,6 +44312,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1129762941490597078}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1129762941490597079}
   m_SourcePrefab: {fileID: 100100000, guid: 0fad7876ac4c3fa44b62a65e74bea36c, type: 3}
 --- !u!4 &1215278802 stripped
 Transform:
@@ -56886,7 +56901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1622755693
 Transform:
   m_ObjectHideFlags: 0
@@ -56896,8 +56911,8 @@ Transform:
   m_GameObject: {fileID: 1622755692}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 641.0595, y: 0.14784129, z: 455.68808}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 641.0595, y: 0.14784129, z: 454.793}
+  m_LocalScale: {x: 1.274, y: 1.274, z: 1.274}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1129762941490597075}
@@ -65712,7 +65727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ccdbd768b9cabc4eb27a5e687406b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoADesaparecer: {fileID: 234557223}
+  objetoADesaparecer: {fileID: 353085912625895017}
   personaje: {fileID: 817032546}
   puntoObjetivo: {fileID: 2118344410}
   velocidadRotacion: 2
@@ -68012,7 +68027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df2d44c34d8eae644822de20b2a65843, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 640.2274
+      value: 640.373
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df2d44c34d8eae644822de20b2a65843, type: 3}
       propertyPath: m_LocalPosition.y
@@ -68020,7 +68035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df2d44c34d8eae644822de20b2a65843, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 455.52277
+      value: 457.079
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df2d44c34d8eae644822de20b2a65843, type: 3}
       propertyPath: m_LocalRotation.w
@@ -68080,7 +68095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df2d44c34d8eae644822de20b2a65843, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df2d44c34d8eae644822de20b2a65843, type: 3}
       propertyPath: m_TagString
@@ -78803,12 +78818,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.81050766, y: 1.9288343, z: 1.1659765}
-  m_Center: {x: -0.0947462, y: 0.46441728, z: 0.08298826}
+  m_Size: {x: 1.1115211, y: 2.2710145, z: 2.7129335}
+  m_Center: {x: -0.06574574, y: 0.6355064, z: 0.8564676}
 --- !u!95 &1129762941490597078
 Animator:
   serializedVersion: 7
@@ -78831,6 +78846,53 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1129762941490597079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353085912625895017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c988f5966cf54984582892729ef1724a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 1632638605}
+  dialogueText: {fileID: 74222587}
+  dialogueLines:
+  - "Player: \n\nBuenas tardes, se\xF1or. Mi nombre es Mendoza. Busco a mis amigos.
+    Nos pusimos de acuerdo para encontrarnos ac\xE1 pero no me responden el celular.
+    De casualidad sabr\xE1 algo?"
+  - "Hombre misterioso: \n\nLlamame Yuyo, pibe. A tus amigos yo los habia visto.
+    Yo les adverti... No me hicieron caso... Fueron ellos... \n"
+  - "Mendoza: \n\nComo? De que habla? Quienes ellos?"
+  - "Yuyo: \n\n\nLlevate el farol, pibe\u2026 Y dentro de la casa hay unos f\xF3sforos,
+    agarralos tambi\xE9n\u2026 La luz te va a cubrir.\n"
+  - 'Mendoza:
+
+
+    Pero donde encuentro a mis amigos?'
+  - 'Yuyo:
+
+    En el pabellon pibe... En el pabellon... queda subiendo la monte
+    de la izquiera de casa... Pero cuidado pibe tambien los vi merodeando otros edificios.'
+  - 'Mendoza:
+
+
+    Gracias Don
+
+'
+  - "Yuyo:\n\nS\xED, pibe\u2026 Te los llevaron\u2026 Est\xE1n perdidos entre esos
+    edificios\u2026 No te quedes quieto\u2026 Us\xE1 la l\xE1mpara, prend\xE9 los
+    f\xF3sforos si hace falta\u2026 Movete antes de que sea tarde\u2026\n"
+  - 'Mendoza:
+
+
+    Pero que le pasa? Viejo loco'
+  - "Yuyo:\n\nLa luz\u2026 La luz te va a salvar\u2026 Los aleja\u2026 Us\xE1 la
+    l\xE1mpara\u2026 no la\_apagues\_nunca\u2026"
+  playerMovementScript: {fileID: 817032545}
 --- !u!23 &1143877076822257355
 MeshRenderer:
   m_ObjectHideFlags: 0
