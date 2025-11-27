@@ -13,8 +13,8 @@ public class NPCDialogue : MonoBehaviour
 
     [Header("Animator")]
     public Animator npcAnimator;
-    public string idleStateName = "Iddle"; // pon EXACTO el nombre del estado
-    public string talkStateName = "Talk";  // pon EXACTO el nombre del estado
+    public string idleStateName = "Iddle"; 
+    public string talkStateName = "Talk";
 
     private int currentLineIndex = 0;
     private bool playerInRange = false;
@@ -22,9 +22,6 @@ public class NPCDialogue : MonoBehaviour
 
     void Start()
     {
-        if (npcAnimator == null)
-            Debug.LogWarning("NPCDialogue: npcAnimator no asignado.");
-        // Asegurarnos de que empiece en idle
         if (npcAnimator != null)
             npcAnimator.Play(idleStateName, 0, 0f);
     }
@@ -43,16 +40,15 @@ public class NPCDialogue : MonoBehaviour
         isDialogueActive = true;
         dialoguePanel.SetActive(true);
         currentLineIndex = 0;
+
         if (dialogueLines.Length > 0)
             dialogueText.text = dialogueLines[currentLineIndex];
 
-        if (playerMovementScript != null) playerMovementScript.enabled = false;
+        if (playerMovementScript != null)
+            playerMovementScript.enabled = false;
 
         if (npcAnimator != null)
-        {
-            // Forzamos el estado Talk en la layer 0 sin transición (0s)
-            npcAnimator.CrossFade(talkStateName, 0f, 0, 0f);
-        }
+            npcAnimator.CrossFade(talkStateName, 0.1f);
     }
 
     void AdvanceDialogue()
@@ -73,18 +69,17 @@ public class NPCDialogue : MonoBehaviour
         isDialogueActive = false;
         dialoguePanel.SetActive(false);
 
-        if (playerMovementScript != null) playerMovementScript.enabled = true;
+        if (playerMovementScript != null)
+            playerMovementScript.enabled = true;
 
         if (npcAnimator != null)
-        {
-            // Volvemos al idle forzadamente
-            npcAnimator.CrossFade(idleStateName, 0f, 0, 0f);
-        }
+            npcAnimator.CrossFade(idleStateName, 0.2f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) playerInRange = true;
+        if (other.CompareTag("Player"))
+            playerInRange = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -92,11 +87,14 @@ public class NPCDialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            if (isDialogueActive) EndDialogue();
+
+            if (isDialogueActive)
+                EndDialogue();
+
             dialoguePanel.SetActive(false);
 
             if (npcAnimator != null)
-                npcAnimator.CrossFade(idleStateName, 0f, 0, 0f);
+                npcAnimator.CrossFade(idleStateName, 0.2f);
         }
     }
 }
