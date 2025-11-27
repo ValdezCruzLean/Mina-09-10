@@ -22,7 +22,11 @@ public class MenuInicial : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-   
+    public void JugarMina()
+    {
+        SceneManager.LoadScene("Mina");
+    }
+
     public void Salir ()
     {
         Application.Quit();
