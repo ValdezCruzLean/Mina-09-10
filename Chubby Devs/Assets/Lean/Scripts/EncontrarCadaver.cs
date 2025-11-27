@@ -2,7 +2,7 @@
 
 public class EncontrarCadaver : MonoBehaviour
 {
-    [SerializeField] private int puntoCadaver = 1;
+   // [SerializeField] private int puntoCadaver = 1;
 
     private void OnCollisionEnter(Collision collision)
     {
