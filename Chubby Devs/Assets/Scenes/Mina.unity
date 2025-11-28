@@ -1229,6 +1229,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8044735669179115664, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_Volume
+      value: 0.592
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044735669179115664, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 7016c4731074a8043a10435d0fbdc16e, type: 3}
+    - target: {fileID: 8044735669179115664, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7016c4731074a8043a10435d0fbdc16e, type: 3}
+    - target: {fileID: 8044735669179115664, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 6540675007259744681, guid: 17991264f2997e14687869e221f1aa8d, type: 2}
@@ -20165,7 +20177,7 @@ GameObject:
   - component: {fileID: 701350697}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -59665,7 +59677,7 @@ GameObject:
   - component: {fileID: 1874502274}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2
