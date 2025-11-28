@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.016
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 24789696}
   m_Layer: 0
   m_Name: Cube (23)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1112,6 +1112,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 906592369187428092, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1450780233598239156, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_ClearFlags
       value: 2
@@ -1162,7 +1166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.6
+      value: 15.8
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1170,7 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -77.84
+      value: -88.4
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2070,6 +2074,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0347
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0272
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -2088,7 +2104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.338
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2617,7 +2633,7 @@ GameObject:
   - component: {fileID: 82927877}
   m_Layer: 0
   m_Name: Cube (21)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3297,6 +3313,10 @@ PrefabInstance:
       value: Wooden (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -3751,6 +3771,18 @@ PrefabInstance:
     - target: {fileID: 226639038164221966, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_Name
       value: FOSFORO (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0284
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0279
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
@@ -4816,6 +4848,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0293
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.027
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -4834,7 +4878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.25
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5649,6 +5693,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7077,6 +7125,10 @@ PrefabInstance:
       value: Wooden2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -7101,6 +7153,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_Name
       value: Wooden (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8344,6 +8400,10 @@ PrefabInstance:
       value: Wooden2 (16)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -8408,7 +8468,7 @@ GameObject:
   - component: {fileID: 271913057}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9201,15 +9261,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -65.656204
+      value: -65.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 96.92
+      value: 96.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.20356
+      value: 22.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11757,6 +11817,10 @@ PrefabInstance:
       value: Wooden3 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -12788,7 +12852,7 @@ Transform:
   m_GameObject: {fileID: 434569480}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7075329, y: 0.004282845, z: -0.006696624, w: 0.7066357}
-  m_LocalPosition: {x: 16.869995, y: -3.6414, z: 130.7}
+  m_LocalPosition: {x: 16.869995, y: -3.6414, z: 134.6}
   m_LocalScale: {x: 14.428728, y: 9.980175, z: 9.430515}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13284,7 +13348,7 @@ GameObject:
   - component: {fileID: 443731521}
   m_Layer: 0
   m_Name: Puntes
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13822,6 +13886,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1471622849}
+  - {fileID: 627299067}
   - {fileID: 1425645195}
   - {fileID: 221047702}
   - {fileID: 1986010566}
@@ -14722,6 +14787,10 @@ PrefabInstance:
       value: Wooden (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -14922,6 +14991,10 @@ PrefabInstance:
       value: Wooden2 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -15094,6 +15167,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18532,6 +18609,92 @@ Transform:
   - {fileID: 1845222581}
   m_Father: {fileID: 1901883200}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &627299066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627299067}
+  - component: {fileID: 627299069}
+  - component: {fileID: 627299068}
+  m_Layer: 0
+  m_Name: ParedLowPoly (42)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2
+  m_IsActive: 1
+--- !u!4 &627299067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627299066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0156227965, y: 0.70693415, z: -0.70693415, w: 0.0156227965}
+  m_LocalPosition: {x: -35.3, y: -46.2, z: 4.4}
+  m_LocalScale: {x: 20.27409, y: 9.863783, z: 9.711637}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 472230346}
+  m_LocalEulerAnglesHint: {x: 90, y: 104.5, z: -72.96802}
+--- !u!23 &627299068
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627299066}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2ead7eb2b5a7d454d94973f8f9feba9c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &627299069
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627299066}
+  m_Mesh: {fileID: -3636305217176235263, guid: 22de387a9e3b7154790693cfba459360, type: 3}
 --- !u!1 &629139179
 GameObject:
   m_ObjectHideFlags: 0
@@ -20198,7 +20361,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 81c7c586ecd21814eb7f1676b16f6ad5, type: 2}
   m_EnableTreeColliders: 1
@@ -20942,7 +21105,7 @@ Transform:
   m_GameObject: {fileID: 725549505}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7075329, y: 0.004282845, z: -0.006696624, w: 0.7066357}
-  m_LocalPosition: {x: -15.93, y: -3.4994, z: 132.4}
+  m_LocalPosition: {x: -15.93, y: -3.4994, z: 134.7}
   m_LocalScale: {x: 14.428728, y: 9.980175, z: 9.528025}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21150,6 +21313,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21486,15 +21653,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60.6
+      value: -60.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 94.87
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.093277
+      value: -20.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22542,6 +22709,10 @@ PrefabInstance:
       value: Wooden (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -22814,6 +22985,92 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 779535682}
   sonarUnaSolaVez: 0
+--- !u!1 &782506416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782506417}
+  - component: {fileID: 782506420}
+  - component: {fileID: 782506419}
+  m_Layer: 0
+  m_Name: ParedLowPoly (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2
+  m_IsActive: 1
+--- !u!4 &782506417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782506416}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.49970767, y: 0.5002922, z: -0.5002922, w: 0.49970767}
+  m_LocalPosition: {x: -173.25, y: -28, z: -84.2}
+  m_LocalScale: {x: 15.015595, y: 10.038371, z: 7.005543}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1311151560}
+  m_LocalEulerAnglesHint: {x: 90, y: 159.4, z: 69.333}
+--- !u!23 &782506419
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782506416}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2ead7eb2b5a7d454d94973f8f9feba9c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &782506420
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782506416}
+  m_Mesh: {fileID: -3636305217176235263, guid: 22de387a9e3b7154790693cfba459360, type: 3}
 --- !u!1001 &783772112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23978,7 +24235,7 @@ GameObject:
   - component: {fileID: 813822651}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24214,11 +24471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb7bf2dea5a199d4087fd6b2836126f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 92.7
+      value: 90.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb7bf2dea5a199d4087fd6b2836126f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -56.1
+      value: -55.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb7bf2dea5a199d4087fd6b2836126f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25570,6 +25827,10 @@ PrefabInstance:
       value: Wooden4
       objectReference: {fileID: 0}
     - target: {fileID: 8851880612409575567, guid: ef9fcb94cdb44304bb024fa0712808e4, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851880612409575567, guid: ef9fcb94cdb44304bb024fa0712808e4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -25694,6 +25955,10 @@ PrefabInstance:
     - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
       propertyPath: m_Name
       value: Roca  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -25883,6 +26148,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -26454,6 +26723,10 @@ PrefabInstance:
       value: Wooden2 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -26871,6 +27144,92 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53586081307f1543bb0315828b57953, type: 3}
+--- !u!1 &907736537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907736538}
+  - component: {fileID: 907736540}
+  - component: {fileID: 907736539}
+  m_Layer: 0
+  m_Name: ParedLowPoly (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2
+  m_IsActive: 1
+--- !u!4 &907736538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907736537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.49970767, y: 0.5002922, z: -0.5002922, w: 0.49970767}
+  m_LocalPosition: {x: -173.3789, y: -28, z: -190.4204}
+  m_LocalScale: {x: 26.94292, y: 10.038371, z: 7.005543}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1311151560}
+  m_LocalEulerAnglesHint: {x: 90, y: 159.4, z: 69.333}
+--- !u!23 &907736539
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907736537}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2ead7eb2b5a7d454d94973f8f9feba9c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &907736540
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907736537}
+  m_Mesh: {fileID: -3636305217176235263, guid: 22de387a9e3b7154790693cfba459360, type: 3}
 --- !u!4 &909348421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
@@ -27510,7 +27869,7 @@ GameObject:
   - component: {fileID: 937832235}
   m_Layer: 0
   m_Name: ParedLowPoly (39)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2
@@ -28281,6 +28640,10 @@ PrefabInstance:
       value: Wooden (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -28541,7 +28904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b33531f75d6eb341b2d2f305141815f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 95.60549
+      value: 95.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b33531f75d6eb341b2d2f305141815f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28726,6 +29089,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_Name
       value: Wooden (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -29076,7 +29443,7 @@ GameObject:
   - component: {fileID: 972566322}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29331,6 +29698,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -29590,6 +29961,92 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.6818295, y: 0.7913398, z: 5.5860815}
   m_Center: {x: -2.4250834, y: 0.20071405, z: -2.340942}
+--- !u!1 &995819873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 995819874}
+  - component: {fileID: 995819877}
+  - component: {fileID: 995819876}
+  m_Layer: 0
+  m_Name: ParedLowPoly (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2
+  m_IsActive: 1
+--- !u!4 &995819874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995819873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5200814, y: 0.5200814, z: -0.4790776, w: -0.4790776}
+  m_LocalPosition: {x: -167.78, y: 45.03, z: 4.45}
+  m_LocalScale: {x: 10.863694, y: 9.863785, z: 13.152006}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1311151560}
+  m_LocalEulerAnglesHint: {x: 180, y: 85.3, z: -90}
+--- !u!23 &995819876
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995819873}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2ead7eb2b5a7d454d94973f8f9feba9c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &995819877
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995819873}
+  m_Mesh: {fileID: -3636305217176235263, guid: 22de387a9e3b7154790693cfba459360, type: 3}
 --- !u!4 &996117139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
@@ -29795,15 +30252,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -103.1
+      value: -103.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 91.78
+      value: 91.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.3
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29872,15 +30329,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: abdebbd57b5e97d4283558792297599b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -122.52
+      value: -122.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: abdebbd57b5e97d4283558792297599b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 98.705
+      value: 97.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: abdebbd57b5e97d4283558792297599b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.219
+      value: 37.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: abdebbd57b5e97d4283558792297599b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30778,6 +31235,10 @@ PrefabInstance:
       value: Wooden (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -31349,6 +31810,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.267
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0309
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0289
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -31367,7 +31840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.482
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31471,6 +31944,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32151,6 +32628,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_Name
       value: Wooden (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32909,6 +33390,10 @@ PrefabInstance:
       value: Wooden (11)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -33635,7 +34120,7 @@ GameObject:
   - component: {fileID: 1108314801}
   m_Layer: 0
   m_Name: Cube (16)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34632,15 +35117,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -64.91732
+      value: -65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 96.92
+      value: 96.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5734482
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36295,6 +36780,10 @@ PrefabInstance:
       value: Wooden (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -37758,6 +38247,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
   m_PrefabInstance: {fileID: 785394904}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1214234939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 785428085442346011, guid: b498d1f0eeb7dee428a57026f82f56c0, type: 3}
+  m_PrefabInstance: {fileID: 1614958775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1214234942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214234939}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 85.411736, y: 108.859604, z: 127.32706}
+  m_Center: {x: -5.2343855, y: 50.318462, z: 1.3096659}
 --- !u!4 &1214865532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7720653724025634135, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
@@ -39747,7 +40262,7 @@ GameObject:
   - component: {fileID: 1291996265}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39964,6 +40479,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0287
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -39982,7 +40509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.741
+      value: -2.73
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -40337,11 +40864,14 @@ Transform:
   - {fileID: 500469235}
   - {fileID: 645211932}
   - {fileID: 804661552}
+  - {fileID: 995819874}
   - {fileID: 522201618}
   - {fileID: 2108128517}
   - {fileID: 1839884545}
   - {fileID: 1586575374}
   - {fileID: 1606112418}
+  - {fileID: 782506417}
+  - {fileID: 907736538}
   - {fileID: 1510399304}
   - {fileID: 713629063}
   - {fileID: 336106933}
@@ -40967,6 +41497,10 @@ PrefabInstance:
       value: Wooden2 (13)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -41063,6 +41597,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_Name
       value: Wooden (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -41325,7 +41863,7 @@ GameObject:
   - component: {fileID: 1349979205}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42280,6 +42818,10 @@ PrefabInstance:
       value: Wooden
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -42461,15 +43003,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 494725ab39cb33d4c999e6e483e8593a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -154.26364
+      value: -154
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 494725ab39cb33d4c999e6e483e8593a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 93.36
+      value: 92.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 494725ab39cb33d4c999e6e483e8593a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.737724
+      value: -30.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 494725ab39cb33d4c999e6e483e8593a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43037,6 +43579,10 @@ PrefabInstance:
       value: Wooden (10)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -43338,6 +43884,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_Name
       value: Wooden (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -44632,6 +45182,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0326
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0283
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -44650,7 +45212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.074
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -44887,7 +45449,7 @@ GameObject:
   - component: {fileID: 1442411090}
   m_Layer: 0
   m_Name: Cube (24)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45526,6 +46088,10 @@ PrefabInstance:
       value: Wooden (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -45886,7 +46452,7 @@ GameObject:
   - component: {fileID: 1470395415}
   m_Layer: 0
   m_Name: ParedLowPoly (40)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2
@@ -45900,7 +46466,7 @@ Transform:
   m_GameObject: {fileID: 1470395413}
   serializedVersion: 2
   m_LocalRotation: {x: 0.008320134, y: -0.47193894, z: -0.015539773, w: 0.881455}
-  m_LocalPosition: {x: 157.1319, y: 11.9588, z: 92.5482}
+  m_LocalPosition: {x: 157.1319, y: 10.8, z: 92.5482}
   m_LocalScale: {x: 8.397984, y: 4.5984507, z: 9.106434}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46754,6 +47320,10 @@ PrefabInstance:
       value: Wooden2 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -46932,6 +47502,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -47832,6 +48406,10 @@ PrefabInstance:
       value: Wooden (16)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -48517,6 +49095,10 @@ PrefabInstance:
       value: Wooden2 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -48646,8 +49228,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8930244, y: 0.8879503, z: 5.586082}
-  m_Center: {x: -4.8194923, y: 0.15240876, z: -2.3409426}
+  m_Size: {x: 2.6734414, y: 0.7103847, z: 5.5860815}
+  m_Center: {x: -4.7096996, y: 0.063627586, z: -2.3409429}
 --- !u!1 &1557042086
 GameObject:
   m_ObjectHideFlags: 0
@@ -48742,6 +49324,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -50506,8 +51092,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8930254, y: 0.8879514, z: 5.586083}
-  m_Center: {x: -4.8194933, y: 0.15240878, z: -2.3409438}
+  m_Size: {x: 2.8271592, y: 0.77839035, z: 5.5860834}
+  m_Center: {x: -4.7865686, y: 0.20718539, z: -2.3409436}
 --- !u!1001 &1607529345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50519,6 +51105,10 @@ PrefabInstance:
     - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
       propertyPath: m_Name
       value: Wooden3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51355,6 +51945,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2398714131137079000, guid: b498d1f0eeb7dee428a57026f82f56c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1325831681}
+    - targetCorrespondingSourceObject: {fileID: 785428085442346011, guid: b498d1f0eeb7dee428a57026f82f56c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1214234942}
   m_SourcePrefab: {fileID: 100100000, guid: b498d1f0eeb7dee428a57026f82f56c0, type: 3}
 --- !u!4 &1615424263 stripped
 Transform:
@@ -51376,6 +51969,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51666,7 +52263,7 @@ GameObject:
   - component: {fileID: 1624038832}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53406,6 +54003,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_Name
       value: Wooden (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -56323,7 +56924,7 @@ GameObject:
   - component: {fileID: 1773284156}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57083,15 +57684,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -78.3
+      value: -79.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 97.3
+      value: 95.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.8
+      value: 34.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f84f4e04b8a59c43b8a354f82931a7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -57294,8 +57895,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.049982492, y: 0.02259597, z: 0.029263467}
-  m_Center: {x: -0.0019243505, y: -0.0009928435, z: -0.020895313}
+  m_Size: {x: 0.049982492, y: 0.02259597, z: 0.035306014}
+  m_Center: {x: -0.00192429, y: -0.0009928374, z: -0.023916567}
 --- !u!1001 &1803566923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57807,6 +58408,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.257
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0302
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0294
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -57825,7 +58438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.619
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -59255,6 +59868,10 @@ PrefabInstance:
       value: Wooden2 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -59548,7 +60165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1874502274
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59633,7 +60250,7 @@ Transform:
   m_GameObject: {fileID: 1874502273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.1258, y: 3.85, z: -57.7484}
+  m_LocalPosition: {x: 4.1258, y: 4.4, z: -57.7484}
   m_LocalScale: {x: 11.921348, y: 3.9875, z: 10.703963}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -59653,7 +60270,7 @@ GameObject:
   - component: {fileID: 1876934322}
   m_Layer: 0
   m_Name: ParedLowPoly (41)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2
@@ -59882,7 +60499,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f46e7da074464574a863bcedc2982adb, type: 3}
   m_Resource: {fileID: 8300000, guid: f46e7da074464574a863bcedc2982adb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.9
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -60369,6 +60986,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -61428,6 +62049,10 @@ PrefabInstance:
       value: Wooden (5)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -61865,6 +62490,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0281
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -61879,11 +62516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.95
+      value: 50.27
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.374
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62353,6 +62990,10 @@ PrefabInstance:
       value: Wooden (14)
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -62452,6 +63093,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -63942,6 +64587,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0307
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0273
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -63960,7 +64617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.739
+      value: -2.73
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64506,6 +65163,10 @@ PrefabInstance:
       value: Wooden2 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -64873,6 +65534,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -65442,6 +66107,10 @@ PrefabInstance:
       value: Roca  (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -65804,7 +66473,7 @@ GameObject:
   - component: {fileID: 2067147853}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67556,6 +68225,10 @@ PrefabInstance:
       value: Wooden2 (17)
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -67853,6 +68526,10 @@ PrefabInstance:
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_Name
       value: Wooden (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -68185,15 +68862,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -88.16
+      value: -88.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 95.72
+      value: 93.86
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -56.6
+      value: -57.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_LocalRotation.w
@@ -68945,6 +69622,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.243
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0285
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0278
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -68963,7 +69652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.055
+      value: -2.78
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69014,6 +69703,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.261
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0321
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.028
+      objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.455046
@@ -69032,7 +69733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.895
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69531,6 +70232,10 @@ PrefabInstance:
     - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
       propertyPath: m_Name
       value: Wooden3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2164162940013681447, guid: fa8f4f24474f71a4f8ef7d3d7f80a13b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -70087,6 +70792,10 @@ PrefabInstance:
       value: Wooden4
       objectReference: {fileID: 0}
     - target: {fileID: 8851880612409575567, guid: ef9fcb94cdb44304bb024fa0712808e4, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851880612409575567, guid: ef9fcb94cdb44304bb024fa0712808e4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -70372,6 +71081,10 @@ PrefabInstance:
     - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
       propertyPath: m_Name
       value: 'Roca '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 7229984432319366013, guid: a4ebfa66027899d4992fce34282bad23, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -70986,6 +71699,10 @@ PrefabInstance:
       value: Wooden
       objectReference: {fileID: 0}
     - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734116394905753578, guid: 768dc5e19b3829e408c7f36ad0db5d7a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -71085,6 +71802,10 @@ PrefabInstance:
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_Name
       value: Wooden2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 2561812042344933453, guid: d54220f4b40cd2942a26f02434e9abb0, type: 3}
       propertyPath: m_StaticEditorFlags
