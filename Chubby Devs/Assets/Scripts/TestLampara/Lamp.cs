@@ -42,7 +42,7 @@ public class Lamp : MonoBehaviour
             return;
         }
 
-        if (timeLight.seconds >= 40)
+        if (timeLight.seconds >= 60)
         {
             ApagarLuz();
             timeLight.DetenerTiempo();

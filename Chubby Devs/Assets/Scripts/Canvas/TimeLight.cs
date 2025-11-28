@@ -11,7 +11,7 @@ public class TimeLight : MonoBehaviour
     public Image barraLampara;
     public GameObject barraLamparaSilueta;
 
-    public float tiempoMaximo = 40f;
+    public float tiempoMaximo = 60f;
 
     private void Awake()
     {
