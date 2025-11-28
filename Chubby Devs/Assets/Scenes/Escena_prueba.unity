@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.09545213, g: 0.103773594, b: 0.103773594, a: 1}
   m_AmbientGroundColor: {r: 0.028301895, g: 0.028079396, b: 0.027634397, a: 1}
   m_AmbientIntensity: 0.7
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: eac2ef371405749e0bd050b4c3272f16, type: 2}
   m_HaloStrength: 0.242
@@ -32,7 +32,7 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
@@ -1083,6 +1083,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 4600455343889730594, guid: 17991264f2997e14687869e221f1aa8d, type: 2}
+    - target: {fileID: 3535139464591344061, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: tiempoMaximo
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 3866351411260160995, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -5339,8 +5343,8 @@ Transform:
   m_GameObject: {fileID: 160291535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.15562752, z: -0, w: 0.9878158}
-  m_LocalPosition: {x: -4.91, y: 3.39, z: -6.56}
-  m_LocalScale: {x: 3.2951622, y: 3.701481, z: 0.25662118}
+  m_LocalPosition: {x: -5.059, y: 3.39, z: -6.872}
+  m_LocalScale: {x: 3.7314417, y: 3.9454463, z: 0.25662118}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 854986181}
@@ -5402,7 +5406,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c172caeeece18e740a0808c1a0adf936, type: 2}
+  - {fileID: 2100000, guid: 54c3d2a022f3aeb4199706beec5ab672, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6200,8 +6204,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.46021342}
-  m_Center: {x: 8.7766886e-16, y: 0, z: -0.038009685}
+  m_Size: {x: 1, y: 2.7264946, z: 0.46021342}
+  m_Center: {x: 8.77668e-16, y: 0.8632473, z: -0.038009696}
 --- !u!4 &196704638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4059975097012581161, guid: 7f1f1f69581e0734b861f842200a0205, type: 3}
@@ -22088,7 +22092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &667961024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23640,7 +23644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcadfe307020174c8ace9ead58dcd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipPasos: {fileID: 8300000, guid: c015fd03d7b0ac740904cb4b03b99d3e, type: 3}
+  clipPasos: {fileID: 8300000, guid: 7016c4731074a8043a10435d0fbdc16e, type: 3}
   player: {fileID: 163504113}
 --- !u!65 &731881139
 BoxCollider:
@@ -64959,7 +64963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcadfe307020174c8ace9ead58dcd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipPasos: {fileID: 8300000, guid: c015fd03d7b0ac740904cb4b03b99d3e, type: 3}
+  clipPasos: {fileID: 8300000, guid: 7016c4731074a8043a10435d0fbdc16e, type: 3}
   player: {fileID: 163504113}
 --- !u!65 &2085898204
 BoxCollider:
@@ -66024,6 +66028,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 146158c62f2e4f04e80f7d21c00d4f45, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fa266e1f0591eca48a6c65d34c194cde, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -66109,7 +66117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcadfe307020174c8ace9ead58dcd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipPasos: {fileID: 8300000, guid: c015fd03d7b0ac740904cb4b03b99d3e, type: 3}
+  clipPasos: {fileID: 8300000, guid: 7016c4731074a8043a10435d0fbdc16e, type: 3}
   player: {fileID: 163504113}
 --- !u!65 &2115115795
 BoxCollider:
