@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class Trampas : MonoBehaviour
 {
-    [Header("Configuración de la Plataforma")]
-    [Tooltip("Tiempo (en segundos) antes de que la plataforma empiece a caer.")]
+    //---- Configuracion de la Plataforma -----
+    //Segundos antes de que la plataforma empiece a caer
     public float tiempoAntesDeCaer = 2f;
-
-    [Tooltip("Velocidad de caída de la plataforma.")]
+    //Velocidad de caida de la plataforma
     public float velocidadDeCaida = 5f;
 
-    [Header("Efecto de Temblor")]
-    [Tooltip("Intensidad del temblor antes de caer.")]
+    //------- Efecto de Temblor --------
+    //Intensidad del temblor antes de caer
     public float intensidadTemblor = 0.1f;
-
-    [Tooltip("Frecuencia del temblor.")]
+    //Frecuencia del temblor
     public float frecuenciaTemblor = 25f;
 
     private bool jugadorEncima = false;
@@ -56,7 +54,7 @@ public class Trampas : MonoBehaviour
             }
         }
 
-        // Si ya está cayendo, aplicamos movimiento hacia abajo
+        // Si ya esta cayendo, aplicamos movimiento hacia abajo
         if (cayendo)
         {
             transform.position += Vector3.down * velocidadDeCaida * Time.deltaTime;
@@ -86,7 +84,7 @@ public class Trampas : MonoBehaviour
         rb.useGravity = true;
     }
 
-    // Opcional: para reiniciar la plataforma (si la quieres reutilizar)
+    // Opcional para reiniciar la plataforma (si la quieres reutilizar)
     public void Reiniciar()
     {
         cayendo = false;

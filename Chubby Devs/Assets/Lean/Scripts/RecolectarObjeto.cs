@@ -30,7 +30,7 @@ public class RecolectarObjeto : MonoBehaviour
         if (puedeRecoger && Input.GetKeyDown(KeyCode.E))
         {
             ScriptGameManager.instance.SumarObjetos(puntoObjeto);
-            gameObject.SetActive(false); // ✅ En lugar de Destroy()
+            gameObject.SetActive(false); // Desactiva el objeto en vez de destruirlo 
             HUDManager.instance.OcultarMensaje();
         }
     }

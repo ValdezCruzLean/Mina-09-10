@@ -2,14 +2,14 @@
 
 public class AutoRotateToTarget : MonoBehaviour
 {
-    [Header("Target al que debe rotar el jugador")]
+    //Target al que debe rotar el jugador
     public Transform targetToLook;
 
-    [Header("Velocidad de rotación automática")]
+   //Velocidad de rotacion automatica
     public float rotationSpeed = 5f;
 
     private bool isRotating = false;
-    private bool hasRotatedOnce = false;   // ← NUEVO: evita que vuelva a rotar
+    private bool hasRotatedOnce = false;   //Evita que vuelva a rotar
 
     private MonoBehaviour playerLookScript;
 
@@ -45,13 +45,13 @@ public class AutoRotateToTarget : MonoBehaviour
             if (playerLookScript != null)
                 playerLookScript.enabled = true;
 
-            hasRotatedOnce = true;  // ← marca que ya se usó
+            hasRotatedOnce = true;  // marca que ya se usó
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // si ya rotó una vez, no volver a activar nada
+        // si ya roto una vez, no volver a activar nada
         if (hasRotatedOnce) return;
 
         if (other.CompareTag("Wendigo"))

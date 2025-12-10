@@ -8,12 +8,12 @@ public class FollowCheckpoints : MonoBehaviour
     public Transform[] checkpoints;
     // Velocidad de movimiento
     public float speed = 5f;
-    // Velocidad de rotación
+    // Velocidad de rotacion
     public float rotationSpeed = 5f;
-    // Índice del checkpoint actual
+    // Indice del checkpoint actual
     private int currentCheckpointIndex = 0;
 
-    // Umbral para considerar que llegó al checkpoint
+    // Umbral para considerar que llego al checkpoint
     public float checkpointRadius = 0.1f;
 
     void Update()
@@ -31,14 +31,14 @@ public class FollowCheckpoints : MonoBehaviour
         // Mover el prefab hacia el checkpoint usando MoveTowards
         transform.position = Vector3.MoveTowards(transform.position, targetCheckpoint.position, speed * Time.deltaTime);
 
-        // Dirección hacia el siguiente checkpoint
+        // Direccion hacia el siguiente checkpoint
         Vector3 direction = (targetCheckpoint.position - transform.position).normalized;
 
-        // Si la dirección no es cero, rotar hacia esa dirección
+        // Si la direccion no es cero, rotar hacia esa direccion
         if (direction != Vector3.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(direction);
-            // Rotación suave hacia la nueva dirección
+            // Rotacion suave hacia la nueva direccion
             transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
@@ -48,7 +48,7 @@ public class FollowCheckpoints : MonoBehaviour
             // Cambiar al siguiente checkpoint
             currentCheckpointIndex++;
 
-            // Si hemos alcanzado el último checkpoint, reiniciar
+            // Si hemos alcanzado el ultimo checkpoint, reiniciar
             if (currentCheckpointIndex >= checkpoints.Length)
             {
                 currentCheckpointIndex = 0; // O puedes detener el movimiento si prefieres

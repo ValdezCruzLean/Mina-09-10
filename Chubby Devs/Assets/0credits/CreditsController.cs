@@ -5,13 +5,13 @@ using System.Collections;
 
 public class CreditsController : MonoBehaviour
 {
-    [Header("Título del Juego")]
-    public CanvasGroup tituloGroup; // Para el fade del título
+    //Título del Juego
+    public CanvasGroup tituloGroup; // Para el fade del titulo
     public float tituloFadeInTime = 2f;
     public float tituloFadeOutTime = 2f;
     public float tiempoVisibleTitulo = 2f;
 
-    [Header("Créditos")]
+    //Creditos del juego
     public RectTransform contenidoCreditos; // Lo que sube
     public float velocidadScroll = 40f;     // Velocidad del scroll
     public float delayAntesDeCreditos = 1f;
@@ -25,22 +25,22 @@ public class CreditsController : MonoBehaviour
 
     private IEnumerator SecuenciaCreditos()
     {
-        // 1. Asegurar que el título esté invisible al inicio
+        // Asegurar que el título este invisible al inicio
         tituloGroup.alpha = 0f;
 
-        // 2. Fade-in del título
+        // Fade in del titulo
         yield return StartCoroutine(FadeCanvasGroup(tituloGroup, 0f, 1f, tituloFadeInTime));
 
-        // 3. Tiempo visible
+        // Tiempo visible
         yield return new WaitForSeconds(tiempoVisibleTitulo);
 
-        // 4. Fade-out del título
+        // Fade out del título
         yield return StartCoroutine(FadeCanvasGroup(tituloGroup, 1f, 0f, tituloFadeOutTime));
 
-        // 5. Espera
+        // Espera para que los creditos no suban de inmediato
         yield return new WaitForSeconds(delayAntesDeCreditos);
 
-        // 6. Iniciar scroll de créditos
+        // Iniciar scroll de créditos
         empezarScroll = true;
     }
 
