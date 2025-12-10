@@ -8,12 +8,10 @@ public class RecolectarObjetosAmigos : MonoBehaviour
 
     
     public Camera camaraJugador;         // La camara del jugador
-    public TMP_Text textoInteraccion;    // "Presiona E para recoger"
+    public TMP_Text textoInteraccion;    // texto de Presiona E para recoger
 
     
     public int puntosASumar = 1;
-
-    // Interno
     private GameObject objetoDetectado;
 
     void Start()

@@ -31,7 +31,7 @@ public class NoteHUD : MonoBehaviour
                 OpenHUD();
         }
 
-        // Solo permitir navegaci�n si el HUD est� abierto
+        // Solo permitir navegacion si el HUD esta abierto
         if (hudPanel.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.RightArrow))

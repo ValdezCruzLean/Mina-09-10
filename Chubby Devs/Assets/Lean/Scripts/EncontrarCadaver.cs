@@ -10,7 +10,7 @@ public class EncontrarCadaver : MonoBehaviour
         {
             ScriptGameManager.instance.SumarCadaveres(puntoCadaver);
 
-            gameObject.SetActive(false);  // ✅ Desactiva el objeto en vez de destruirlo
+            gameObject.SetActive(false);  //  Desactiva el objeto en vez de destruirlo
         }*/
     }
 }

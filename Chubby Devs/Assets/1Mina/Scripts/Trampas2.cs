@@ -2,26 +2,24 @@ using UnityEngine;
 
 public class Trampas2 : MonoBehaviour
 {
-    [Header("Configuración de la Plataforma")]
-    [Tooltip("Tiempo (en segundos) antes de que la plataforma empiece a caer.")]
+    //------- Configuración de la Plataforma ---------------
+    //Segundos antes de que la plataforma empiece a caer
     public float tiempoAntesDeCaer = 2f;
-
-    [Tooltip("Velocidad de caída de la plataforma.")]
+    //Velocidad de caida de la plataforma
     public float velocidadDeCaida = 5f;
 
-    [Header("Efecto de Temblor")]
-    [Tooltip("Intensidad del temblor antes de caer.")]
+    //-------- Efecto de Temblor ----------------
+    //Intensidad del temblor antes de caer
     public float intensidadTemblor = 0.1f;
-
-    [Tooltip("Frecuencia del temblor.")]
+    //Frecuencia del temblor
     public float frecuenciaTemblor = 25f;
 
-    [Header("Desactivación Automática")]
-    [Tooltip("Tiempo (en segundos) después de empezar a caer para desactivar la plataforma.")]
+    //--------- Desactivación Automática  ----------------------
+    //Segundos despues de empezar a caer para desactivar la plataforma
     public float tiempoAntesDeDesactivar = 1f;
 
     private bool activado = false;   // Ya fue activada por el jugador
-    private bool cayendo = false;    // Ya empezó a caer
+    private bool cayendo = false;    // Ya empezo a caer
     private Vector3 posicionOriginal;
     private float tiempoTranscurrido = 0f;
     private float tiempoTemblando = 0f;
@@ -61,7 +59,7 @@ public class Trampas2 : MonoBehaviour
             }
         }
 
-        // Si ya está cayendo, aplicamos movimiento hacia abajo
+        // Si ya esta cayendo, aplicamos movimiento hacia abajo
         if (cayendo)
         {
             transform.position += Vector3.down * velocidadDeCaida * Time.deltaTime;
@@ -82,7 +80,7 @@ public class Trampas2 : MonoBehaviour
         rb.isKinematic = false;
         rb.useGravity = true;
 
-        // Llamamos a Desactivar() después del tiempo configurado
+        // Llamamos a Desactivar() despues del tiempo configurado
         Invoke(nameof(Desactivar), tiempoAntesDeDesactivar);
     }
 

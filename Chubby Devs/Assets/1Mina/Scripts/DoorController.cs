@@ -2,14 +2,14 @@
 
 public class DoorController : MonoBehaviour
 {
-    [Header("Door Settings")]
+    //Configuraciones de la puerta 
     public float openAngle = 90f;
     public float openSpeed = 2f;
     public bool openForward = true;
     public bool openRight = false;
 
-    [Header("Door Unlock Object")]
-    public GameObject unlockObject; // Objeto a vigilar (candado, llave, etc.)
+    //Puerta cerrada (tiene candado)
+    public GameObject unlockObject; // Objeto a vigilar (candado)
 
     private bool openDoor = false;
     private bool hasOpened = false;
@@ -18,7 +18,7 @@ public class DoorController : MonoBehaviour
 
     void Start()
     {
-        // Calculamos dirección de apertura
+        // Calculamos direccion de apertura
         Vector3 axis = Vector3.up;
 
         if (!openForward) axis = -axis;
@@ -28,28 +28,28 @@ public class DoorController : MonoBehaviour
 
         if (unlockObject != null)
         {
-            Debug.Log("🔒 Objeto de desbloqueo asignado: " + unlockObject.name);
+            Debug.Log(" Objeto de desbloqueo: " + unlockObject.name);
         }
         else
         {
-            Debug.LogWarning("⚠ No se asignó ningún objeto de desbloqueo. La puerta se abrirá inmediatamente.");
+            Debug.LogWarning("No se hay ningun objeto de desbloqueo. La puerta se abrira de inmediato.");
             openDoor = true;
         }
     }
 
     void Update()
     {
-        // ✔ Si el objeto fue desactivado
+        // Si el objeto fue desactivado la puerta se abre
         if (!openDoor && unlockObject != null && !unlockObject.activeInHierarchy)
         {
-            Debug.Log("✔ El objeto fue DESACTIVADO → Abriendo puerta...");
+            Debug.Log("El objeto fue desactivado y la puerta se esta abriendo");
             openDoor = true;
         }
 
-        // ✔ Si el objeto fue destruido
+        // Si el objeto fue destruido la puerta se abre 
         if (!openDoor && unlockObject == null)
         {
-            Debug.Log("✔ El objeto fue DESTRUIDO → Abriendo puerta...");
+            Debug.Log("El objeto fue destruido y la puerta se esta abriendo");
             openDoor = true;
         }
 
@@ -61,7 +61,7 @@ public class DoorController : MonoBehaviour
             if (Quaternion.Angle(transform.rotation, targetRotation) < 1f)
             {
                 hasOpened = true;
-                Debug.Log("✅ Puerta completamente abierta.");
+                Debug.Log(" Puerta abierta.");
             }
         }
     }

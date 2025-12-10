@@ -2,10 +2,10 @@
 
 public class ActivarUICuandoObjetosDesactivados : MonoBehaviour
 {
-    [Header("Objetos que deben desactivarse")]
+    //Array de objetos que deben desactivarse
     public GameObject[] objetosARevisar;
 
-    [Header("UI a activar cuando todos estén desactivados")]
+    //UI a activar cuando todos esten desactivados
     public GameObject uiAActivar;
 
     private bool uiActivada = false;
@@ -23,7 +23,7 @@ public class ActivarUICuandoObjetosDesactivados : MonoBehaviour
     {
         foreach (GameObject obj in objetosARevisar)
         {
-            if (obj.activeSelf) // Si alguno está activo → aún no
+            if (obj.activeSelf) // Si alguno de los objetos esta activo ann no se visualiza ui
                 return false;
         }
         return true;

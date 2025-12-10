@@ -6,12 +6,12 @@ public class ObjetoInteractuable : MonoBehaviour
     public enum TipoInteraccion { Cadenas, Maderas, Cerradura }
     public TipoInteraccion tipo;
 
-    [Header("Configuración de Fade")]
+    //Configuración de Fade
     public float fadeDuration = 1.5f;       // Tiempo total del desvanecimiento
-    public float fadeSpeed = 1f;            // Velocidad del fade (1 = normal)
+    public float fadeSpeed = 1f;            // Velocidad del fade 1 = normal
 
-    [Header("Sonido")]
-    public AudioSource audioSource;   // AHORA SE ASIGNA DESDE EL INSPECTOR
+  
+    public AudioSource audioSource;   // Sonido del objeto
 
     private HUDManagerMina hud;
 

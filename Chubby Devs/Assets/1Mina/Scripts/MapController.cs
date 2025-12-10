@@ -34,7 +34,7 @@ public class MapController : MonoBehaviour
 
     void UpdatePlayerIcon()
     {
-        // Normalizar la posición del jugador entre 0 y 1
+        // Normalizar la posicion del jugador entre 0 y 1
         float normalizedX = Mathf.InverseLerp(worldMinX, worldMaxX, player.position.x);
         float normalizedZ = Mathf.InverseLerp(worldMinZ, worldMaxZ, player.position.z);
 
@@ -48,7 +48,7 @@ public class MapController : MonoBehaviour
 
         playerIconUI.anchoredPosition = new Vector2(posX, posY);
 
-        // Rotar icono segun dirección del jugador
+        // Rotar icono segun direccion del jugador
         playerIconUI.localEulerAngles = new Vector3(0, 0, -player.eulerAngles.y);
     }
 }

@@ -1,11 +1,11 @@
 using UnityEngine;
 
 public class ReproducirAudio : MonoBehaviour
-{
-    [Header("Configuración")]
+{   
+    //Recibe Audio por parametros
     [SerializeField] private AudioSource audioSource;
 
-    [Tooltip("Si está activado, el audio solo se reproducirá una vez.")]
+    //Si está activado, el audio solo se reproducira una vez
     [SerializeField] private bool sonarUnaSolaVez = true;
 
     private bool audioReproducido = false;
@@ -14,7 +14,7 @@ public class ReproducirAudio : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Si está configurado para sonar una sola vez
+            // Si esta configurado para sonar una sola vez
             if (sonarUnaSolaVez)
             {
                 if (!audioReproducido)
