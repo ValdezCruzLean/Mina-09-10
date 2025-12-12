@@ -131,6 +131,14 @@ MonoBehaviour:
   activador: {fileID: 4280471728813817160}
   movimientoJugador: {fileID: 0}
   transitionAnimator: {fileID: 0}
+  blackFade: {fileID: 0}
+  HUD: {fileID: 0}
+  otroHUD: {fileID: 0}
+  bloodSplash: {fileID: 0}
+  bloodFadeInTime: 0.12
+  bloodFadeOutTime: 0.8
+  bloodVisibleTime: 0.25
+  bloodDelay: 0.2
 --- !u!114 &5132612405077508871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +195,7 @@ AudioSource:
   m_GameObject: {fileID: 5156759042166522207}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6540675007259744681, guid: 17991264f2997e14687869e221f1aa8d, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8e1d94dd1e5041c46a17c09fdabec60b, type: 3}
   m_Resource: {fileID: 8300000, guid: 8e1d94dd1e5041c46a17c09fdabec60b, type: 3}
   m_PlayOnAwake: 0
@@ -316,7 +324,7 @@ AudioSource:
   m_GameObject: {fileID: 5982164059528006702}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3359654176622323264, guid: 17991264f2997e14687869e221f1aa8d, type: 2}
   m_audioClip: {fileID: 8300000, guid: ca48a3e616611ca4eb8b20b9dc3906e0, type: 3}
   m_Resource: {fileID: 8300000, guid: ca48a3e616611ca4eb8b20b9dc3906e0, type: 3}
   m_PlayOnAwake: 0
