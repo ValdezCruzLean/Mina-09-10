@@ -17,6 +17,18 @@ public class JumpTrigger : MonoBehaviour
 
     public Animator transitionAnimator;
 
+    public GameObject blackFade;
+
+    public GameObject HUD;
+    public GameObject otroHUD;
+
+    public GameObject bloodSplash;
+    public float bloodFadeInTime = 0.12f;
+    public float bloodFadeOutTime = 0.8f;
+    public float bloodVisibleTime = 0.25f;
+
+    public float bloodDelay = 0.20f;
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -24,22 +36,43 @@ public class JumpTrigger : MonoBehaviour
         JumpCam.SetActive(true);
         ThePlayer.SetActive(false);
 
+        blackFade.SetActive(true);
+
+        if (HUD != null && otroHUD !=null)
+            HUD.SetActive(false);
+            otroHUD.SetActive(false);
+
+
         enemyScript.TriggerJump();
         movimientoJugador.GetComponent<FirstPersonController>().enabled = false;
         //FlashImg.SetActive(true);
+        //StartCoroutine(ShowBloodSplash());
         StartCoroutine(JumpCam.GetComponent<CameraShake>().Shake(1.0f, 0.3f));
+
+        if (bloodSplash != null)
+            //StartCoroutine(ShowBloodSplash());
+            StartCoroutine(ShowBloodSplashWithDelay());
+
         StartCoroutine(EndJump());
+    }
+
+    IEnumerator ShowBloodSplashWithDelay()
+    {
+        yield return new WaitForSeconds(bloodDelay);  // <<< retrasa el efecto
+        yield return StartCoroutine(ShowBloodSplash());
     }
 
     IEnumerator EndJump()
     {
         yield return new WaitForSeconds(2.03f);
         
-        ThePlayer.SetActive(true);
-        JumpCam.SetActive(false);
+        
 
         transitionAnimator.SetTrigger("StartTransition");
         yield return new WaitForSeconds(1.0f);
+
+        ThePlayer.SetActive(true);
+        JumpCam.SetActive(false);
 
         string escenaActual = SceneManager.GetActiveScene().name;
 
@@ -55,4 +88,44 @@ public class JumpTrigger : MonoBehaviour
 
         activador.SetActive(false);
     }
+
+    IEnumerator ShowBloodSplash()
+    {
+        // Intentar obtener CanvasGroup (funciona aunque el objeto esté inactivo)
+        CanvasGroup cg = bloodSplash.GetComponent<CanvasGroup>();
+        if (cg == null)
+        {
+            // si no tiene CanvasGroup, lo añadimos (opcional)
+            cg = bloodSplash.AddComponent<CanvasGroup>();
+        }
+
+        // Asegurarnos que la imagen empieza invisible
+        cg.alpha = 0f;
+        bloodSplash.SetActive(true);
+
+        // Fade in
+        float t = 0f;
+        while (t < bloodFadeInTime)
+        {
+            t += Time.deltaTime;
+            cg.alpha = Mathf.Lerp(0f, 1f, t / bloodFadeInTime);
+            yield return null;
+        }
+        cg.alpha = 1f;
+
+        // Mantener visible un rato
+        yield return new WaitForSeconds(bloodVisibleTime);
+
+        // Fade out
+        t = 0f;
+        while (t < bloodFadeOutTime)
+        {
+            t += Time.deltaTime;
+            cg.alpha = Mathf.Lerp(1f, 0f, t / bloodFadeOutTime);
+            yield return null;
+        }
+        cg.alpha = 0f;
+        bloodSplash.SetActive(false);
+    }
+
 }
