@@ -1733,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.73
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1741,7 +1741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -113.12
+      value: -104.44
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7868,6 +7868,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_Name
       value: piedra3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 86c8e6022820a124d84f4abcf3c3c783, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -48159,6 +48163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1829734648}
     m_Modifications:
+    - target: {fileID: 1385373272859908, guid: dd97834f6f07b5f48967e131f371b7f0, type: 3}
+      propertyPath: m_TagString
+      value: Suelo
+      objectReference: {fileID: 0}
     - target: {fileID: 1385373272859908, guid: dd97834f6f07b5f48967e131f371b7f0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 111
