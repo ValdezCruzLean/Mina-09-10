@@ -34,12 +34,17 @@ public class MenuPausa : MonoBehaviour
             if (panelOpciones.activeSelf)
             {
                 panelOpciones.SetActive(false);
+                panelPausa.SetActive(true);
+
+                EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(primerBoton);
                 return;
             }
             if (!Pausa)
             {
-                ObjetoMenuPausa.SetActive(true);
+                panelPausa.SetActive(true);
+                panelOpciones.SetActive(false);
+                //ObjetoMenuPausa.SetActive(true);
                 Pausa = true;
 
                 Time.timeScale = 0;
@@ -84,9 +89,34 @@ public class MenuPausa : MonoBehaviour
         }
     }
 
+    public void AbrirOpciones()
+    {
+        // Apaga el menú de pausa
+        panelPausa.SetActive(false);
+
+        // Enciende opciones
+        panelOpciones.SetActive(true);
+
+        // Limpia selección anterior
+        EventSystem.current.SetSelectedGameObject(null);
+
+        // Selecciona primer botón de opciones
+        EventSystem.current.SetSelectedGameObject(primerBotonOpciones);
+    }
+
+    public void VolverDeOpciones()
+    {
+        panelOpciones.SetActive(false);
+        panelPausa.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(primerBoton);
+    }
+
     public void Resumir()
     {
-        ObjetoMenuPausa.SetActive(false);
+        panelPausa.SetActive(false);
+        //ObjetoMenuPausa.SetActive(false);
         panelOpciones.SetActive(false);
         MenuSalir.SetActive(false);
 
@@ -97,6 +127,8 @@ public class MenuPausa : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         scriptCamara.enabled = true;
+
+        EventSystem.current.SetSelectedGameObject(null);
        /* AudioSource[] sonidos = FindObjectOfType<AudioSource>();
 
         for (int i = 0; i < sonidos.Length; i++)
@@ -113,5 +145,7 @@ public class MenuPausa : MonoBehaviour
         Application.Quit();
         Debug.Log("Se salio campeon");
     }
+
+
 }
 
