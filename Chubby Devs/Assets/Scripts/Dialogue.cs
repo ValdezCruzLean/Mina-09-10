@@ -20,6 +20,8 @@ public class NPCDialogue : MonoBehaviour
     private bool playerInRange = false;
     private bool isDialogueActive = false;
 
+    public bool dialogoCompletado { get; private set; }
+
     void Start()
     {
         if (npcAnimator != null)
@@ -74,6 +76,8 @@ public class NPCDialogue : MonoBehaviour
 
         if (npcAnimator != null)
             npcAnimator.CrossFade(idleStateName, 0.2f);
+
+        dialogoCompletado = true;
     }
 
     private void OnTriggerEnter(Collider other)
