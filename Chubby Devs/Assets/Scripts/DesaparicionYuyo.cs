@@ -11,9 +11,14 @@ public class DesaparicionYuyo : MonoBehaviour
     private bool girando = false;
     private Quaternion rotObjetivo;
 
+    public NPCDialogue npcDialogue;
+
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
+
+        if (npcDialogue != null && !npcDialogue.dialogoCompletado)
+        return;
 
         contadorEntradas++;
 
