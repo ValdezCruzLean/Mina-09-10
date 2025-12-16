@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class MenuPerder : MonoBehaviour
 {
+    [Header("Botones")]
+    public GameObject botonInicial;   // Reintentar (recomendado)
+    
+    private Vector3 lastMousePosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     void Start()
@@ -13,14 +17,33 @@ public class MenuPerder : MonoBehaviour
         Time.timeScale = 1f;
 
         EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(botonInicial);
 
-        // Si usas UI con navegación por teclado/gamepad, selecciona un botón
+        lastMousePosition = Input.mousePosition;
+
+        // Si usas UI con navegaciï¿½n por teclado/gamepad, selecciona un botï¿½n
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if ((Input.mousePosition - lastMousePosition).sqrMagnitude > 1f)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        lastMousePosition = Input.mousePosition;
+
+        // ðŸŽ® Recuperar selecciÃ³n con joystick
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        bool joystickMoved = Mathf.Abs(h) > 0.3f || Mathf.Abs(v) > 0.3f;
+
+        if (joystickMoved && EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(botonInicial);
+        }
     }
 }
