@@ -17,7 +17,11 @@ public class CanvasFosforos : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        bool encenderInput =
+            Input.GetKeyDown(KeyCode.R) ||
+            Input.GetKeyDown(KeyCode.JoystickButton3); // 🎮 B    
+
+        if (encenderInput)
         {
             if (cantidadFosforos > 0)
             {

@@ -11,7 +11,7 @@ public class MapController : MonoBehaviour
     [Header("Referencias del Mundo")]
     public Transform player;                // Transform del jugador
 
-    [Header("Límites del Mapa en el Mundo REAL")]
+    [Header("Lï¿½mites del Mapa en el Mundo REAL")]
     public float worldMinX;
     public float worldMaxX;
     public float worldMinZ;
@@ -21,8 +21,12 @@ public class MapController : MonoBehaviour
 
     void Update()
     {
+        bool mapInput =
+        Input.GetKeyDown(KeyCode.M) ||
+        Input.GetKeyDown(KeyCode.JoystickButton6); // SELECT
+
         // Abrir y cerrar mapa con tecla M
-        if (Input.GetKeyDown(KeyCode.M))
+        if (mapInput)
         {
             isOpen = !isOpen;
             mapUI.SetActive(isOpen);
@@ -38,7 +42,7 @@ public class MapController : MonoBehaviour
         float normalizedX = Mathf.InverseLerp(worldMinX, worldMaxX, player.position.x);
         float normalizedZ = Mathf.InverseLerp(worldMinZ, worldMaxZ, player.position.z);
 
-        // Obtener el tamaño del mapa UI
+        // Obtener el tamaï¿½o del mapa UI
         float mapWidth = mapImageUI.rect.width;
         float mapHeight = mapImageUI.rect.height;
 
