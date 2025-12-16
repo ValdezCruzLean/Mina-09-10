@@ -48,6 +48,8 @@ public class MenuPausa : MonoBehaviour
                 Pausa = true;
 
                 Time.timeScale = 0;
+                AudioListener.pause = true;
+                
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
 
