@@ -23,7 +23,11 @@ public class NoteHUD : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+         bool toggleHUD =
+        Input.GetKeyDown(KeyCode.Tab) ||
+        Input.GetKeyDown(KeyCode.JoystickButton2); // 🎮 X
+
+        if (toggleHUD)
         {
             if (hudPanel.activeSelf)
                 CloseHUD();
@@ -34,10 +38,18 @@ public class NoteHUD : MonoBehaviour
         // Solo permitir navegacion si el HUD esta abierto
         if (hudPanel.activeSelf)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            bool next =
+                Input.GetKeyDown(KeyCode.RightArrow) ||
+                Input.GetKeyDown(KeyCode.JoystickButton5); // 🎮 RB
+
+            bool prev =
+                Input.GetKeyDown(KeyCode.LeftArrow) ||
+                Input.GetKeyDown(KeyCode.JoystickButton4); // 🎮 LB
+
+            if (next)
                 NextNote();
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (prev)
                 PreviousNote();
         }
     }

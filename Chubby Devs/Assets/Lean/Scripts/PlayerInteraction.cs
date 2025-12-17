@@ -11,6 +11,9 @@ public class PlayerInteraction : MonoBehaviour
     /*no toque nada*/
     void Update()
     {
+        bool recogerInput =
+            Input.GetKeyDown(KeyCode.E) ||
+            Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
        // Debug.DrawRay(transform.position, transform.forward * rayDistance, Color.green);
 
         Ray ray = new Ray(transform.position, transform.forward);
@@ -24,7 +27,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 interactionUI.SetActive(true);
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (recogerInput)
                 {
                     currentNote.PickUp();
                     interactionUI.SetActive(false);

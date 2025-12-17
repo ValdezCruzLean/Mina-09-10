@@ -28,6 +28,9 @@ public class FirstPersonController : MonoBehaviour
     public bool invertCamera = false;
     public bool cameraCanMove = true;
     public float mouseSensitivity = 2f;
+    //-------------------------------------------
+    public float controllerSensitivityMultiplier = 2f;
+    //---------------------------------------
     public float maxLookAngle = 50f;
 
     // Crosshair
@@ -77,6 +80,9 @@ public class FirstPersonController : MonoBehaviour
     public float sprintCooldown = .5f;
     public float sprintFOV = 80f;
     public float sprintFOVStepTime = 10f;
+    //-----------------------
+    public float sprintMultiplier = 1.5f;
+    //------------------------
 
     // Sprint Bar
     public bool useSprintBar = true;
@@ -212,7 +218,7 @@ public class FirstPersonController : MonoBehaviour
         // Control camera movement
         if(cameraCanMove)
         {
-            yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
+            /*yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
             if (!invertCamera)
             {
@@ -222,7 +228,29 @@ public class FirstPersonController : MonoBehaviour
             {
                 // Inverted Y
                 pitch += mouseSensitivity * Input.GetAxis("Mouse Y");
+            }*/
+
+            // --- Entrada combinada Mouse + Stick ---
+            float lookX = Input.GetAxis("Mouse X") 
+                        + Input.GetAxis("RightStickHorizontal") * controllerSensitivityMultiplier;
+
+            float lookY = Input.GetAxis("Mouse Y") 
+                        + Input.GetAxis("RightStickVertical") * controllerSensitivityMultiplier;
+
+            // Rotación horizontal (YAW)
+            yaw = transform.localEulerAngles.y + lookX * mouseSensitivity;
+
+            // Rotación vertical (PITCH)
+            if (!invertCamera)
+            {
+                pitch -= mouseSensitivity * lookY;
             }
+            else
+            {
+                pitch += mouseSensitivity * lookY;
+            }
+
+
 
             // Clamp pitch between lookAngle
             pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
@@ -330,8 +358,9 @@ public class FirstPersonController : MonoBehaviour
 
         #region Jump
 
+        bool jumpInput = Input.GetKeyDown(jumpKey) || Input.GetKeyDown(KeyCode.JoystickButton0);
         // Gets input and calls jump method
-        if(enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
+        if(enableJump && jumpInput && isGrounded)
         {
             Jump();
         }
@@ -388,9 +417,12 @@ public class FirstPersonController : MonoBehaviour
             {
                 isWalking = false;
             }
-
+            
+            //Variable propia
+            float rtValue = Input.GetAxis("RightTrigger");
+            bool sprintInput = Input.GetKey(sprintKey) || rtValue > 0.2f;
             // All movement calculations shile sprint is active
-            if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown)
+            if (enableSprint && sprintInput && sprintRemaining > 0f && !isSprintCooldown)
             {
                 targetVelocity = transform.TransformDirection(targetVelocity) * sprintSpeed;
 

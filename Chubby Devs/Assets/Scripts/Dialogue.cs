@@ -30,7 +30,11 @@ public class NPCDialogue : MonoBehaviour
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        bool interaccionInput =
+            Input.GetKeyDown(KeyCode.E) ||
+            Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
+            
+        if (playerInRange && interaccionInput)
         {
             if (!isDialogueActive) StartDialogue();
             else AdvanceDialogue();

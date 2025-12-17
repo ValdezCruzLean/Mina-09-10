@@ -15,6 +15,12 @@ public class RecoleccionObjeto : MonoBehaviour
     {
         recogerLampara.gameObject.SetActive(false);
         recogerAceite.gameObject.SetActive(false);
+
+        bool recogerInput =
+            Input.GetKeyDown(KeyCode.E) ||
+            Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
+
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction * distancia, Color.red);
 
@@ -24,7 +30,8 @@ public class RecoleccionObjeto : MonoBehaviour
             if (hit.collider.CompareTag("LamparaViejo"))
             {
                 recogerLampara.gameObject.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E))
+
+                if (recogerInput)
                 {
                     Destroy(hit.collider.gameObject);
                     manoActivador.SetActive(true);
@@ -36,7 +43,7 @@ public class RecoleccionObjeto : MonoBehaviour
             if (hit.collider.CompareTag("Fosforo"))
             {
                 recogerAceite.gameObject.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E) && canvasFosforos.cantidadFosforos < canvasFosforos.limiteFosforo)
+                if (recogerInput && canvasFosforos.cantidadFosforos < canvasFosforos.limiteFosforo)
                 {
                     Destroy(hit.collider.gameObject);
                     canvasFosforos.SumarFosforo();

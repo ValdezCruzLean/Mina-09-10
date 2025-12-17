@@ -47,7 +47,11 @@ public class SonidoPasos : MonoBehaviour
         }*/
 
         bool seMueve = Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0;
-        bool corre = Input.GetKey(KeyCode.LeftShift);
+
+        float rt = Input.GetAxis("RightTrigger");
+        bool correJoystick = rt > 0.2f;
+        //float rtValue = Input.GetAxis("RightTrigger");
+        bool corre = Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("RightTrigger") > 0.2f;;
 
         if (corre)
         {

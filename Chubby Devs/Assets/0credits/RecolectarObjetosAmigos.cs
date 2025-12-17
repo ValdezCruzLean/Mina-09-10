@@ -46,7 +46,11 @@ public class RecolectarObjetosAmigos : MonoBehaviour
 
     void RevisarEntrada()
     {
-        if (objetoDetectado != null && Input.GetKeyDown(KeyCode.E))
+        bool recogerInput =
+            Input.GetKeyDown(KeyCode.E) ||
+            Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
+
+        if (objetoDetectado != null && recogerInput)
         {
             ScriptGameManager.instance.SumarObjetos(puntosASumar);
 
