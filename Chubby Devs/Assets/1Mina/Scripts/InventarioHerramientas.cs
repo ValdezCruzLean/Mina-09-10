@@ -16,7 +16,7 @@ public class InventarioHerramientas : MonoBehaviour
         hud.ActualizarHerramienta(herramientaActual);
     }
 
-    void Update()
+    /*void Update()
     {
         // Cambiar herramienta activa
         if (Input.GetKeyDown(KeyCode.Alpha1) && tieneMartillo)
@@ -35,6 +35,12 @@ public class InventarioHerramientas : MonoBehaviour
             herramientaActual = "Llave";
             hud.ActualizarHerramienta("Llave");
         }
+    }*/
+
+    public void ActualizarHUD(string nombre)
+    {
+        herramientaActual = nombre;
+        hud.ActualizarHerramienta(nombre);
     }
 
     public void AgregarHerramienta(string nombre)
@@ -48,13 +54,13 @@ public class InventarioHerramientas : MonoBehaviour
 
         hud.MostrarMensaje($"Has recogido un {nombre}");
 
-        // Equipar automáticamente si no tiene nada
+        // Equipar automï¿½ticamente si no tiene nada
         var equipamiento = GetComponent<EquipamientoJugador>();
         if (herramientaActual == "Ninguna")
         {
             equipamiento.EquiparHerramienta(nombre);
-            herramientaActual = nombre;
-            hud.ActualizarHerramienta(nombre);
+            //herramientaActual = nombre;
+            //hud.ActualizarHerramienta(nombre);
         }
     }
 

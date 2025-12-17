@@ -14538,6 +14538,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011601738, y: 0.011707192, z: 0.010000003}
   m_Center: {x: -0.00080181187, y: 0.0008536037, z: 0.00000047683716}
+--- !u!1 &316843505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8519191470247299104, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+  m_PrefabInstance: {fileID: 2652239942304945156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &317658465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26125,6 +26130,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7872654549541452104, guid: 2d4212d6747abe4428141041e26bddb3, type: 3}
   m_PrefabInstance: {fileID: 1620956032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &616534067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3735924055667652633, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+  m_PrefabInstance: {fileID: 2652239942304945156}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &619601398
 PrefabInstance:
@@ -52200,6 +52210,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164998575}
   m_Mesh: {fileID: 9007096253204719957, guid: e11b87f458b517144bce9708a483e250, type: 3}
+--- !u!1 &1165375385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 322862447196405227, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+  m_PrefabInstance: {fileID: 2652239942304945156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1166626928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80745,6 +80760,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7872654549541452104, guid: 2d4212d6747abe4428141041e26bddb3, type: 3}
   m_PrefabInstance: {fileID: 2015917517}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2019201608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1079472353440743822, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+  m_PrefabInstance: {fileID: 2652239942304945156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2021520912
 GameObject:
   m_ObjectHideFlags: 0
@@ -99309,9 +99329,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 311332848145354051, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: panelPausa
+      value: 
+      objectReference: {fileID: 1165375385}
+    - target: {fileID: 311332848145354051, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: primerBoton
+      value: 
+      objectReference: {fileID: 2019201608}
+    - target: {fileID: 311332848145354051, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
       propertyPath: scriptCamara
       value: 
       objectReference: {fileID: 817032545}
+    - target: {fileID: 311332848145354051, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: panelOpciones
+      value: 
+      objectReference: {fileID: 316843505}
+    - target: {fileID: 311332848145354051, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: primerBotonOpciones
+      value: 
+      objectReference: {fileID: 616534067}
     - target: {fileID: 815368588113149989, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.391794

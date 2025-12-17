@@ -263,9 +263,11 @@ public class FirstPersonController : MonoBehaviour
 
         if (enableZoom)
         {
+            float ltValue = Input.GetAxis("LeftTrigger");
+            bool ltPressed = ltValue > 0.2f;
             // Changes isZoomed when key is pressed
             // Behavior for toogle zoom
-            if(Input.GetKeyDown(zoomKey) && !holdToZoom && !isSprinting)
+            /*if(Input.GetKeyDown(zoomKey) && !holdToZoom && !isSprinting)
             {
                 if (!isZoomed)
                 {
@@ -275,11 +277,19 @@ public class FirstPersonController : MonoBehaviour
                 {
                     isZoomed = false;
                 }
+            }*/
+            // --- TOGGLE ZOOM ---
+            if (!holdToZoom && !isSprinting)
+            {
+                if (Input.GetKeyDown(zoomKey) || ltPressed && !isZoomed)
+                {
+                    isZoomed = !isZoomed;
+                }
             }
 
             // Changes isZoomed when key is pressed
             // Behavior for hold to zoom
-            if(holdToZoom && !isSprinting)
+            /*if(holdToZoom && !isSprinting)
             {
                 if(Input.GetKeyDown(zoomKey))
                 {
@@ -289,17 +299,42 @@ public class FirstPersonController : MonoBehaviour
                 {
                     isZoomed = false;
                 }
+            }*/
+            // --- HOLD ZOOM ---
+            if (holdToZoom && !isSprinting)
+            {
+                if (Input.GetKey(zoomKey) || ltPressed)
+                {
+                    isZoomed = true;
+                }
+                else
+                {
+                    isZoomed = false;
+                }
             }
 
+
             // Lerps camera.fieldOfView to allow for a smooth transistion
-            if(isZoomed)
+            /*if(isZoomed)
             {
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, zoomFOV, zoomStepTime * Time.deltaTime);
             }
             else if(!isZoomed && !isSprinting)
             {
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, fov, zoomStepTime * Time.deltaTime);
+            }*/
+            // Transición suave del FOV
+            if (isZoomed)
+            {
+                playerCamera.fieldOfView =
+                    Mathf.Lerp(playerCamera.fieldOfView, zoomFOV, zoomStepTime * Time.deltaTime);
             }
+            else if (!isZoomed && !isSprinting)
+            {
+                playerCamera.fieldOfView =
+                    Mathf.Lerp(playerCamera.fieldOfView, fov, zoomStepTime * Time.deltaTime);
+            }
+
         }
 
         #endregion
