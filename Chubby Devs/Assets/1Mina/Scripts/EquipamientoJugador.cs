@@ -15,6 +15,9 @@ public class EquipamientoJugador : MonoBehaviour
 
     private InventarioHerramientas inventario;
 
+    private float cooldownDpad = 0.3f;
+    private float tiempoDpad;
+
     void Start()
     {
         inventario = GetComponent<InventarioHerramientas>();
@@ -29,6 +32,34 @@ public class EquipamientoJugador : MonoBehaviour
             EquiparHerramienta("Corta Cadenas");
         else if (Input.GetKeyDown(KeyCode.Alpha3) && inventario.tieneLlave)
             EquiparHerramienta("Llave");
+
+         // --- Joystick D-Pad ---
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+
+        if (Time.time > tiempoDpad)
+{
+            if (h < -0.5f && inventario.tieneMartillo)
+            {
+                EquiparHerramienta("Martillo");
+                tiempoDpad = Time.time + cooldownDpad;
+            }
+            else if (h > 0.5f && inventario.tieneCortaCadenas)
+            {
+                EquiparHerramienta("Corta Cadenas");
+                tiempoDpad = Time.time + cooldownDpad;
+            }
+            else if (v > 0.5f && inventario.tieneLlave)
+            {
+                EquiparHerramienta("Llave");
+                tiempoDpad = Time.time + cooldownDpad;
+            }
+            else if (v < -0.5f)
+            {
+                QuitarHerramienta();
+                tiempoDpad = Time.time + cooldownDpad;
+            }
+}
     }
 
     public void EquiparHerramienta(string nombre)

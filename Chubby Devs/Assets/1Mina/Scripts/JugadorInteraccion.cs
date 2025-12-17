@@ -16,6 +16,10 @@ public class JugadorInteraccion : MonoBehaviour
 
     void Update()
     {
+        bool interactuarInput =
+            Input.GetKeyDown(KeyCode.E) ||
+            Input.GetKeyDown(KeyCode.JoystickButton1); // B
+
         Ray rayo = new Ray(camaraJugador.transform.position, camaraJugador.transform.forward);
         RaycastHit hit;
 
@@ -25,7 +29,7 @@ public class JugadorInteraccion : MonoBehaviour
             {
                 hud.MostrarMensaje("Recoger objeto con letra E");
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (interactuarInput)
                 {
                     string nombre = hit.collider.gameObject.name;
                     inventario.AgregarHerramienta(nombre);
@@ -34,7 +38,7 @@ public class JugadorInteraccion : MonoBehaviour
             }
             else if (hit.collider.CompareTag("Interactuable"))
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (interactuarInput)
                 {
                     hit.collider.GetComponent<ObjetoInteractuable>().Interactuar(inventario);
                 }
