@@ -20,6 +20,10 @@ public class MenuInicial : MonoBehaviour
     }
     public void Jugar()
     {
+        SceneManager.LoadScene(1);
+    }
+    public void ReiniciarPrimerNivel()
+    {
         SceneManager.LoadScene("Escena_prueba");
     }
     public void JugarMina()
