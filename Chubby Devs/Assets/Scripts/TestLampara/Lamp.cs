@@ -48,7 +48,7 @@ public class Lamp : MonoBehaviour
             timeLight.DetenerTiempo();
             //SceneManager.LoadScene("EscenaPerder");
         }
-        else if (timeLight.seconds >= 25)
+        else if (timeLight.seconds >= 40)
         {
             isPingPongActive = true;
         }
