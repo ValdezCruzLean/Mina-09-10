@@ -140,6 +140,7 @@ public class MenuPausa : MonoBehaviour
     }
     public void Menu(string MenuPrincipal)
     {
+        AudioListener.pause = false;
         SceneManager.LoadScene(MenuPrincipal);
     }
     public void Salir()
