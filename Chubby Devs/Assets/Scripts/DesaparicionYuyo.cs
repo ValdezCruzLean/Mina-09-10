@@ -22,7 +22,7 @@ public class DesaparicionYuyo : MonoBehaviour
 
         contadorEntradas++;
 
-        if (contadorEntradas == 2)
+        if (contadorEntradas == 1)
         {
             if (objetoADesaparecer != null)
                 objetoADesaparecer.SetActive(false);
