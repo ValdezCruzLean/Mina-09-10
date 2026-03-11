@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.SceneManagement;
 
+public enum InputDevice { KeyboardMouse, Joystick }
+
 public class ScriptGameManager : MonoBehaviour
 {
     /*Variable tipo Hud para representar el objeto Hud de nuestro juego*/
@@ -17,14 +19,14 @@ public class ScriptGameManager : MonoBehaviour
     public int CadaveresTotalesEncontrados { get { return cadaveresTotalesEncontrados; } }
     public int PuntosTotalesV { get { return puntosVida; } }
 
-    /*Esta variable privada almacena la cantidad total de objetos de compañeros encontrados en el juego.*/
+    /*Esta variable privada almacena la cantidad total de objetos de compaï¿½eros encontrados en el juego.*/
     private int objetosTotalesEncontrados;
     /*Esta variable privada almacena la cantidad total de cadaveres localizados en el juego.*/
     private int cadaveresTotalesEncontrados;
     /*Esta variable privada almacena la cantidad total de vida del jugador en el juego.*/
     private int puntosVida = 100;
   
-
+    public static InputDevice CurrentDevice;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,24 @@ public class ScriptGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.anyKeyDown || Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+        {
+            CurrentDevice = InputDevice.KeyboardMouse;
+        }
 
+        for (int i = 0; i < 20; i++)
+        {
+            if (Input.GetKeyDown((KeyCode)( (int)KeyCode.JoystickButton0 + i)))
+            {
+                CurrentDevice = InputDevice.Joystick;
+                break;
+            }
+        }
+
+        if (Mathf.Abs(Input.GetAxis("RightStickHorizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("RightStickVertical")) > 0.1f)
+        {
+            CurrentDevice = InputDevice.Joystick;
+        }
     }
     /*Este metodo se llama al comienzo de la ejecucion del juego, antes del metodo Start. 
      * Se comprueba si ya existe una instancia de ScriptGameManager y, en caso contrario, se establece esta instancia como la actual. 

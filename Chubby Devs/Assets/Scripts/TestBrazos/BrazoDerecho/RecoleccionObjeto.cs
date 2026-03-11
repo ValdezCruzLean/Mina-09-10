@@ -11,6 +11,7 @@ public class RecoleccionObjeto : MonoBehaviour
     public CanvasFosforos canvasFosforos;
     public AnimacionLamparaMovimiento lamparaMovimiento;
     [SerializeField] Text recogerLampara, recogerAceite;
+
     private void Update()
     {
         recogerLampara.gameObject.SetActive(false);
@@ -21,7 +22,8 @@ public class RecoleccionObjeto : MonoBehaviour
             Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
 
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         Debug.DrawRay(ray.origin, ray.direction * distancia, Color.red);
 
         RaycastHit hit;
@@ -29,6 +31,10 @@ public class RecoleccionObjeto : MonoBehaviour
         {
             if (hit.collider.CompareTag("LamparaViejo"))
             {
+                recogerLampara.text = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
+                    ? "Presiona (B) para recoger" 
+                    : "Presiona [E] para recoger";
+
                 recogerLampara.gameObject.SetActive(true);
 
                 if (recogerInput)
@@ -42,7 +48,12 @@ public class RecoleccionObjeto : MonoBehaviour
 
             if (hit.collider.CompareTag("Fosforo"))
             {
+                recogerAceite.text = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
+                    ? "Recoger aceite (B)" 
+                    : "Recoger aceite [E]";
+
                 recogerAceite.gameObject.SetActive(true);
+
                 if (recogerInput && canvasFosforos.cantidadFosforos < canvasFosforos.limiteFosforo)
                 {
                     Destroy(hit.collider.gameObject);
