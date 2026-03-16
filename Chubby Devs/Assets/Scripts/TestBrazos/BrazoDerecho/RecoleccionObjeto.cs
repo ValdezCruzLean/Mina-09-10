@@ -11,6 +11,7 @@ public class RecoleccionObjeto : MonoBehaviour
     public CanvasFosforos canvasFosforos;
     public AnimacionLamparaMovimiento lamparaMovimiento;
     [SerializeField] Text recogerLampara, recogerAceite;
+    private bool mensajeLamparaMostrado = false;
 
     private void Update()
     {
@@ -43,6 +44,11 @@ public class RecoleccionObjeto : MonoBehaviour
                     manoActivador.SetActive(true);
                     lamparaMovimiento.StartAnimation();
                     TimeLight.Instance.MostrarSoloSilueta();
+
+                    if (OnboardingManager.Instance != null)
+                    {
+                        OnboardingManager.Instance.MostrarConsejo("Recoge el aceite.");
+                    }
                 }
             }
 
@@ -58,6 +64,12 @@ public class RecoleccionObjeto : MonoBehaviour
                 {
                     Destroy(hit.collider.gameObject);
                     canvasFosforos.SumarFosforo();
+
+                    if (OnboardingManager.Instance != null && !mensajeLamparaMostrado)
+                    {
+                        OnboardingManager.Instance.MostrarConsejo("Aceite obtenido. Presiona {LIGHT} para encender la lámpara.");
+                        mensajeLamparaMostrado = true;
+                    }
                 }
             }
         }

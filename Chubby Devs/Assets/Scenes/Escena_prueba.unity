@@ -1855,6 +1855,10 @@ PrefabInstance:
       value: FirstPersonController
       objectReference: {fileID: 0}
     - target: {fileID: 4611675659839702668, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611675659839702668, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: recogerAceite
       value: 
       objectReference: {fileID: 322790908}
@@ -11143,6 +11147,7 @@ MonoBehaviour:
   npcAnimator: {fileID: 0}
   idleStateName: Iddle
   talkStateName: Talk
+  scriptRecoleccion: {fileID: 0}
 --- !u!4 &238535201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3360976210726062734, guid: 447b1bf2d3253fb46b6cbd43fb6efd61, type: 3}
@@ -14982,7 +14987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &322790907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27748,11 +27753,11 @@ RectTransform:
   - {fileID: 2008266519}
   m_Father: {fileID: 2042145479}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 159, y: 136}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -209, y: -113}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &642750289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47698,6 +47703,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1082819082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4611675659839702668, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 28385870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082819071}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a002231ce1685544c92bc674c5a8b439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &1084061571
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70322,7 +70338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1663128693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -82086,8 +82102,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -82152,11 +82168,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 642750288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -95.00012, y: -19.99997}
-  m_SizeDelta: {x: 277.2, y: 50}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 167.09998, y: 30}
+  m_SizeDelta: {x: 629.1, y: 50}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1001 &2009518970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93080,6 +93096,7 @@ MonoBehaviour:
   npcAnimator: {fileID: 1129762941490597078}
   idleStateName: Iddle
   talkStateName: Talk
+  scriptRecoleccion: {fileID: 1082819082}
 --- !u!23 &1143877076822257355
 MeshRenderer:
   m_ObjectHideFlags: 0

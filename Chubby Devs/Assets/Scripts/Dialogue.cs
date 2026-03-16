@@ -29,6 +29,8 @@ public class NPCDialogue : MonoBehaviour
 
     public bool dialogoCompletado { get; private set; }
 
+    public RecoleccionObjeto scriptRecoleccion;
+
     void Start()
     {
         if (npcAnimator != null)
@@ -117,6 +119,21 @@ public class NPCDialogue : MonoBehaviour
             npcAnimator.CrossFade(idleStateName, 0.2f);
 
         dialogoCompletado = true;
+
+        ActivarObjetivoLampara();
+    }
+
+    void ActivarObjetivoLampara()
+    {
+        if (scriptRecoleccion != null)
+        {
+            scriptRecoleccion.enabled = true;
+
+            if (OnboardingManager.Instance != null)
+            {
+                OnboardingManager.Instance.MostrarConsejo("Recoge la lámpara.");
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

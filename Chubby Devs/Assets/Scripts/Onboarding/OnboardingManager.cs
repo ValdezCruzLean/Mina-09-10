@@ -22,19 +22,15 @@ public class OnboardingManager : MonoBehaviour
         panelOnboarding.SetActive(false);
     }
 
-    // El método mágico que llamarás desde otros scripts
     public void MostrarConsejo(string mensaje)
     {
-        // Detener la cuenta regresiva si ya había un mensaje
         if (rutinaOcultar != null) StopCoroutine(rutinaOcultar);
 
-        // Adaptar el texto según el dispositivo
         string mensajeAdaptado = AdaptarTexto(mensaje);
         
         textoOnboarding.text = mensajeAdaptado;
         panelOnboarding.SetActive(true);
 
-        // Iniciar cuenta para desaparecer
         rutinaOcultar = StartCoroutine(OcultarDespuesDeTiempo());
     }
 
@@ -43,8 +39,9 @@ public class OnboardingManager : MonoBehaviour
         string teclaAccion = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
         string teclaCerrar = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(X)" : "[TAB]";
         
-        // Aquí puedes reemplazar etiquetas personalizadas
-        return original.Replace("{INTERACT}", teclaAccion).Replace("{CLOSE}", teclaCerrar);
+        string teclaLampara = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(Y)" : "[R]";
+
+        return original.Replace("{INTERACT}", teclaAccion).Replace("{CLOSE}", teclaCerrar).Replace("{LIGHT}", teclaLampara);;
     }
 
     IEnumerator OcultarDespuesDeTiempo()
