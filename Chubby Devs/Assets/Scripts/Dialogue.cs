@@ -6,6 +6,13 @@ public class NPCDialogue : MonoBehaviour
     [Header("UI & Dialogue")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
+
+    public TextMeshProUGUI continuarDialogoText;
+
+    public GameObject interactionPrompt;
+    public TextMeshProUGUI interactionText;
+
+
     [TextArea(3, 6)] public string[] dialogueLines;
 
     [Header("Player")]
@@ -22,6 +29,8 @@ public class NPCDialogue : MonoBehaviour
 
     public bool dialogoCompletado { get; private set; }
 
+    public RecoleccionObjeto scriptRecoleccion;
+
     void Start()
     {
         if (npcAnimator != null)
@@ -33,11 +42,39 @@ public class NPCDialogue : MonoBehaviour
         bool interaccionInput =
             Input.GetKeyDown(KeyCode.E) ||
             Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
+
+
+
+        if (playerInRange && !isDialogueActive)
+        {
+            interactionPrompt.SetActive(true);
+            string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
+            interactionText.text = $"Presiona {tecla} para hablar";
+        }
+        else
+        {
+            interactionPrompt.SetActive(false);
+        }    
             
+
+        if (isDialogueActive)
+        {
+            ActualizarTextoContinuar();
+        }
+
         if (playerInRange && interaccionInput)
         {
             if (!isDialogueActive) StartDialogue();
             else AdvanceDialogue();
+        }
+    }
+
+    void ActualizarTextoContinuar()
+    {
+        if (continuarDialogoText != null)
+        {
+            string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
+            continuarDialogoText.text = $"Presiona {tecla} para continuar";
         }
     }
 
@@ -82,6 +119,21 @@ public class NPCDialogue : MonoBehaviour
             npcAnimator.CrossFade(idleStateName, 0.2f);
 
         dialogoCompletado = true;
+
+        ActivarObjetivoLampara();
+    }
+
+    void ActivarObjetivoLampara()
+    {
+        if (scriptRecoleccion != null)
+        {
+            scriptRecoleccion.enabled = true;
+
+            if (OnboardingManager.Instance != null)
+            {
+                OnboardingManager.Instance.MostrarConsejo("Recoge la lámpara.");
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

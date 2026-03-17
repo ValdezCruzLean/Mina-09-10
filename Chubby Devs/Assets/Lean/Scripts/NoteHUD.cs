@@ -10,6 +10,8 @@ public class NoteHUD : MonoBehaviour
     public TextMeshProUGUI noteText;
     public TextMeshProUGUI counterText;
 
+    [SerializeField] private TextMeshProUGUI textoCerrarHUD;
+
     private int currentIndex = 0;
     private List<NoteData> playerNotes => NoteInventory.Instance.GetNotes();
 
@@ -38,6 +40,8 @@ public class NoteHUD : MonoBehaviour
         // Solo permitir navegacion si el HUD esta abierto
         if (hudPanel.activeSelf)
         {
+            ActualizarTextoControles();    
+
             bool next =
                 Input.GetKeyDown(KeyCode.RightArrow) ||
                 Input.GetKeyDown(KeyCode.JoystickButton5); // 🎮 RB
@@ -51,6 +55,20 @@ public class NoteHUD : MonoBehaviour
 
             if (prev)
                 PreviousNote();
+        }
+    }
+
+    void ActualizarTextoControles()
+    {
+        if (textoCerrarHUD == null) return;
+
+        if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+        {
+            textoCerrarHUD.text = "Cerrar (X)";
+        }
+        else
+        {
+            textoCerrarHUD.text = "Cerrar [TAB] ";
         }
     }
 
@@ -98,6 +116,7 @@ public class NoteHUD : MonoBehaviour
         noteText.text = playerNotes[currentIndex].noteText;
         counterText.text = $"Nota {currentIndex + 1}/{playerNotes.Count}";
        
+       ActualizarTextoControles();
     }
 }
 

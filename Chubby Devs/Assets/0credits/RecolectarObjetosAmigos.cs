@@ -38,7 +38,17 @@ public class RecolectarObjetosAmigos : MonoBehaviour
             if (hit.collider.CompareTag("ObjetosDeAmigos"))
             {
                 objetoDetectado = hit.collider.gameObject;
-                textoInteraccion.text = "Presiona E para recoger";
+
+                //textoInteraccion.text = "Presiona E para recoger";
+                if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+                {
+                    textoInteraccion.text = "Presiona (B) para recoger";
+                }
+                else
+                {
+                    textoInteraccion.text = "Presiona [E] para recoger";
+                }
+
                 textoInteraccion.gameObject.SetActive(true);
             }
         }

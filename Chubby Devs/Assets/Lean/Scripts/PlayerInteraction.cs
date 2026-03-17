@@ -1,10 +1,11 @@
 using UnityEngine;
-
+using TMPro;
 public class PlayerInteraction : MonoBehaviour
 {
     public float rayDistance = 3f;
     public LayerMask interactLayer;
     public GameObject interactionUI;
+    [SerializeField] private TMP_Text textoUI;
 
     private NotePickup currentNote;
 
@@ -25,6 +26,12 @@ public class PlayerInteraction : MonoBehaviour
 
             if (currentNote != null)
             {
+                if (textoUI != null)
+                {
+                    string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
+                    textoUI.text = $"Presiona {tecla} para leer nota";
+                }
+
                 interactionUI.SetActive(true);
 
                 if (recogerInput)
