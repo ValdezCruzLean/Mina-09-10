@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class NPCDialogue : MonoBehaviour
 {
@@ -90,8 +91,21 @@ public class NPCDialogue : MonoBehaviour
         if (playerMovementScript != null)
             playerMovementScript.enabled = false;
 
-        if (npcAnimator != null)
-            npcAnimator.CrossFade(talkStateName, 0.1f);
+       // if (npcAnimator != null)
+           // npcAnimator.CrossFade(talkStateName, 0.1f);
+         StartCoroutine(ShowLine());
+
+    }
+
+    private IEnumerator ShowLine()
+    {
+         dialogueText.text = string.Empty;
+
+         foreach (char ch in dialogueLines[currentLineIndex])
+    {
+        dialogueText.text += ch;
+        yield return new WaitForSeconds(0.05f);
+    }
     }
 
     void AdvanceDialogue()
@@ -99,7 +113,9 @@ public class NPCDialogue : MonoBehaviour
         currentLineIndex++;
         if (currentLineIndex < dialogueLines.Length)
         {
-            dialogueText.text = dialogueLines[currentLineIndex];
+            StopAllCoroutines(); // importante
+            StartCoroutine(ShowLine());
+            //dialogueText.text = dialogueLines[currentLineIndex];
         }
         else
         {
