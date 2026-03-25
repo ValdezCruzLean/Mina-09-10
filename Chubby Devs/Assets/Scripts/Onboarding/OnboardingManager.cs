@@ -13,7 +13,8 @@ public class OnboardingManager : MonoBehaviour
     public float tiempoVisible = 5f; // Cuánto dura el mensaje en pantalla
 
     private Coroutine rutinaOcultar;
-    
+    private Coroutine rutinaEscritura;
+    private bool isTyping = false;
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -22,7 +23,7 @@ public class OnboardingManager : MonoBehaviour
         panelOnboarding.SetActive(false);
     }
 
-    public void MostrarConsejo(string mensaje)
+   /* public void MostrarConsejo(string mensaje)
     {
         if (rutinaOcultar != null) StopCoroutine(rutinaOcultar);
 
@@ -32,6 +33,36 @@ public class OnboardingManager : MonoBehaviour
         panelOnboarding.SetActive(true);
 
         rutinaOcultar = StartCoroutine(OcultarDespuesDeTiempo());
+    }*/
+    public void MostrarConsejo(string mensaje)
+    {
+    // Frenar corrutinas anteriores
+    if (rutinaOcultar != null) StopCoroutine(rutinaOcultar);
+    if (rutinaEscritura != null) StopCoroutine(rutinaEscritura);
+
+    string mensajeAdaptado = AdaptarTexto(mensaje);
+
+    panelOnboarding.SetActive(true);
+
+    // Arranca efecto máquina de escribir
+    rutinaEscritura = StartCoroutine(EscribirTexto(mensajeAdaptado));
+    }
+
+    IEnumerator EscribirTexto(string mensaje)
+    {
+    isTyping = true;
+    textoOnboarding.text = "";
+
+    foreach (char letra in mensaje)
+    {
+        textoOnboarding.text += letra;
+        yield return new WaitForSeconds(0.03f); // más rápido que diálogo
+    }
+
+    isTyping = false;
+
+    // recién cuando termina de escribir, empieza el temporizador
+    rutinaOcultar = StartCoroutine(OcultarDespuesDeTiempo());
     }
 
     private string AdaptarTexto(string original)
