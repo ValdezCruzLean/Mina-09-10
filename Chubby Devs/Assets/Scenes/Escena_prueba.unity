@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.09545213, g: 0.103773594, b: 0.103773594, a: 1}
   m_AmbientGroundColor: {r: 0.028301895, g: 0.028079396, b: 0.027634397, a: 1}
   m_AmbientIntensity: 0.7
-  m_AmbientMode: 1
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: eac2ef371405749e0bd050b4c3272f16, type: 2}
   m_HaloStrength: 0.242
@@ -31604,7 +31604,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 0.3010413, g: 0.31218702, b: 0.38679248, a: 1}
-  m_Intensity: 1.63
+  m_Intensity: 0.46
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -31643,7 +31643,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -31666,13 +31666,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770936450}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -3514.8486, y: -2327.1396, z: 1211.454}
+  m_LocalRotation: {x: -0.09927904, y: 0.9487991, z: -0.2982452, w: -0.03120734}
+  m_LocalPosition: {x: -3514.8232, y: -2327.079, z: 1211.4098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.9, y: 180, z: -11.947}
 --- !u!1001 &771960108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32922,6 +32922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOSFORO (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2685583870744433894, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3251418232408087630, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.239
@@ -32990,6 +32994,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8337217855437655970, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337217855437655970, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 59591fdd61a0f2a4da7f0be2a8262817, type: 2}
+    - target: {fileID: 8337217855437655970, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 59591fdd61a0f2a4da7f0be2a8262817, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
