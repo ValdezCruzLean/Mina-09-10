@@ -27,6 +27,13 @@ public class DesaparicionYuyo : MonoBehaviour
             if (objetoADesaparecer != null)
                 objetoADesaparecer.SetActive(false);
 
+            // --- LÓGICA DE ONBOARDING ---
+            if (OnboardingManager.Instance != null)
+            {
+                OnboardingManager.Instance.MostrarConsejo("Busca indicios de tus amigos.");
+            }
+            // ----------------------------
+
             Vector3 dir = puntoObjetivo.position - personaje.position;
             dir.y = 0f; // solo girar en Y
 
