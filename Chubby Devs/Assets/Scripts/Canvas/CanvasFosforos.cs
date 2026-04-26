@@ -10,6 +10,9 @@ public class CanvasFosforos : MonoBehaviour
     public Lamp Lamp;
     public bool quiereEncenderLampara = false;
 
+    //Onboarding
+    private bool tutorialMapaMostrado = false;
+
     private void Start()
     {
         ActualizarTexto();
@@ -19,7 +22,7 @@ public class CanvasFosforos : MonoBehaviour
     {
         bool encenderInput =
             Input.GetKeyDown(KeyCode.R) ||
-            Input.GetKeyDown(KeyCode.JoystickButton3); // 🎮 B    
+            Input.GetKeyDown(KeyCode.JoystickButton3); 
 
         if (encenderInput)
         {
@@ -27,6 +30,15 @@ public class CanvasFosforos : MonoBehaviour
             {
                 quiereEncenderLampara = true;
                 TimeLight.Instance.MostrarBarraCompleta();
+
+                if (!tutorialMapaMostrado)
+                {
+                    if (OnboardingManager.Instance != null)
+                    {
+                        OnboardingManager.Instance.MostrarConsejo("Abre y cierra el mapa con {MAP}.");
+                        tutorialMapaMostrado = true;
+                    }
+                }
             }
             else
             {

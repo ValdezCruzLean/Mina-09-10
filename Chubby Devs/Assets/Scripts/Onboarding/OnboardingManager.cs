@@ -71,8 +71,9 @@ public class OnboardingManager : MonoBehaviour
         string teclaCerrar = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(X)" : "[TAB]";
         
         string teclaLampara = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(Y)" : "[R]";
+        string teclaMapa = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(Select)" : "[M]";
 
-        return original.Replace("{INTERACT}", teclaAccion).Replace("{CLOSE}", teclaCerrar).Replace("{LIGHT}", teclaLampara);;
+        return original.Replace("{INTERACT}", teclaAccion).Replace("{CLOSE}", teclaCerrar).Replace("{LIGHT}", teclaLampara).Replace("{MAP}", teclaMapa);
     }
 
     IEnumerator OcultarDespuesDeTiempo()
