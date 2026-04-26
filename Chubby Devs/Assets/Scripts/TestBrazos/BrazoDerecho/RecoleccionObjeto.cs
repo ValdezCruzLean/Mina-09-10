@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class RecoleccionObjeto : MonoBehaviour
 {
     [SerializeField] float distancia;
-    [SerializeField] GameObject manoActivador;
+    public GameObject manoActivador;
     public CanvasFosforos canvasFosforos;
     public AnimacionLamparaMovimiento lamparaMovimiento;
     [SerializeField] Text recogerLampara, recogerAceite;
     private bool mensajeLamparaMostrado = false;
+    public bool manoActivadorYaEncendida = false;
 
     private void Update()
     {
@@ -42,6 +43,9 @@ public class RecoleccionObjeto : MonoBehaviour
                 {
                     Destroy(hit.collider.gameObject);
                     manoActivador.SetActive(true);
+
+                    manoActivadorYaEncendida = true;
+
                     lamparaMovimiento.StartAnimation();
                     TimeLight.Instance.MostrarSoloSilueta();
 
