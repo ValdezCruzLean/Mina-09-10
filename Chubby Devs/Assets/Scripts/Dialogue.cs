@@ -30,6 +30,8 @@ public class NPCDialogue : MonoBehaviour
 
     public bool dialogoCompletado { get; private set; }
 
+    private bool isTyping = false;
+
     public RecoleccionObjeto scriptRecoleccion;
 
     void Start()
@@ -85,32 +87,55 @@ public class NPCDialogue : MonoBehaviour
         dialoguePanel.SetActive(true);
         currentLineIndex = 0;
 
-        if (dialogueLines.Length > 0)
-            dialogueText.text = dialogueLines[currentLineIndex];
+        /*if (dialogueLines.Length > 0)
+            dialogueText.text = dialogueLines[currentLineIndex];*/
 
         if (playerMovementScript != null)
             playerMovementScript.enabled = false;
 
        // if (npcAnimator != null)
            // npcAnimator.CrossFade(talkStateName, 0.1f);
+         StopAllCoroutines();
          StartCoroutine(ShowLine());
 
     }
 
     private IEnumerator ShowLine()
     {
-         dialogueText.text = string.Empty;
+        isTyping = true;
+        dialogueText.text = string.Empty;
 
-         foreach (char ch in dialogueLines[currentLineIndex])
-    {
-        dialogueText.text += ch;
-        yield return new WaitForSeconds(0.05f);
-    }
+        foreach (char ch in dialogueLines[currentLineIndex])
+        {
+            dialogueText.text += ch;
+            yield return new WaitForSeconds(0.05f);
+        }
+        isTyping = false;
     }
 
     void AdvanceDialogue()
     {
-        currentLineIndex++;
+        if (isTyping)
+        {
+            StopAllCoroutines();
+            dialogueText.text = dialogueLines[currentLineIndex]; 
+            isTyping = false; 
+        }
+        else
+        {
+            currentLineIndex++;
+            if (currentLineIndex < dialogueLines.Length)
+            {
+                StopAllCoroutines();
+                StartCoroutine(ShowLine());
+            }
+            else
+            {
+                EndDialogue();
+            }
+        }
+
+        /*currentLineIndex++;
         if (currentLineIndex < dialogueLines.Length)
         {
             StopAllCoroutines(); // importante
@@ -120,7 +145,7 @@ public class NPCDialogue : MonoBehaviour
         else
         {
             EndDialogue();
-        }
+        }*/
     }
 
     void EndDialogue()
@@ -136,7 +161,24 @@ public class NPCDialogue : MonoBehaviour
 
         dialogoCompletado = true;
 
-        ActivarObjetivoLampara();
+        //ActivarObjetivoLampara();
+        if (!manoActivadorEstaActiva()) 
+        {
+            ActivarObjetivoLampara();
+        }
+    }
+
+    bool manoActivadorEstaActiva()
+    {
+        // Buscamos el objeto manoActivador que está en tu script RecoleccionObjeto
+        if (scriptRecoleccion != null)
+        {
+            // Usamos una referencia a la variable manoActivador del otro script
+            // Si ya está activa, significa que ya recogimos la lámpara
+            // Nota: Asegúrate que 'manoActivador' en RecoleccionObjeto sea 'public' o usa una variable de control
+            return scriptRecoleccion.manoActivadorYaEncendida; 
+        }
+        return false;
     }
 
     void ActivarObjetivoLampara()
@@ -163,6 +205,8 @@ public class NPCDialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+
+            StopAllCoroutines();
 
             if (isDialogueActive)
                 EndDialogue();
