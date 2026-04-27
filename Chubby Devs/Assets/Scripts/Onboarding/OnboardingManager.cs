@@ -36,36 +36,57 @@ public class OnboardingManager : MonoBehaviour
     }*/
     public void MostrarConsejo(string mensaje)
     {
-    // Frenar corrutinas anteriores
-    if (rutinaOcultar != null) StopCoroutine(rutinaOcultar);
-    if (rutinaEscritura != null) StopCoroutine(rutinaEscritura);
+        // Frenar corrutinas anteriores
+        if (rutinaOcultar != null) StopCoroutine(rutinaOcultar);
+        if (rutinaEscritura != null) StopCoroutine(rutinaEscritura);
 
-    string mensajeAdaptado = AdaptarTexto(mensaje);
+        //string mensajeAdaptado = AdaptarTexto(mensaje);
+        string mensajeFinal = ProcesarTodasLasEtiquetas(mensaje);
 
-    panelOnboarding.SetActive(true);
+        panelOnboarding.SetActive(true);
 
-    // Arranca efecto máquina de escribir
-    rutinaEscritura = StartCoroutine(EscribirTexto(mensajeAdaptado));
+        // Arranca efecto máquina de escribir
+        //rutinaEscritura = StartCoroutine(EscribirTexto(mensajeAdaptado));
+        rutinaEscritura = StartCoroutine(EscribirTexto(mensajeFinal));
     }
 
     IEnumerator EscribirTexto(string mensaje)
     {
-    isTyping = true;
-    textoOnboarding.text = "";
+        isTyping = true;
+        textoOnboarding.text = "";
 
-    foreach (char letra in mensaje)
+        foreach (char letra in mensaje)
+        {
+            textoOnboarding.text += letra;
+            yield return new WaitForSeconds(0.03f); // más rápido que diálogo
+        }
+
+        isTyping = false;
+
+        // recién cuando termina de escribir, empieza el temporizador
+        rutinaOcultar = StartCoroutine(OcultarDespuesDeTiempo());
+    }
+
+    private string ProcesarTodasLasEtiquetas(string original)
     {
-        textoOnboarding.text += letra;
-        yield return new WaitForSeconds(0.03f); // más rápido que diálogo
+        bool esJoystick = ScriptGameManager.CurrentDevice == InputDevice.Joystick;
+
+        string interact = esJoystick ? "(B)" : "[E]";
+        string cerrar = esJoystick ? "(X)" : "[TAB]";
+        string luz = esJoystick ? "(Y)" : "[R]";
+        string mapa = esJoystick ? "(Select)" : "[M]";
+        string prev = esJoystick ? "LB" : "←";
+        string next = esJoystick ? "RB" : "→";
+
+        return original.Replace("{INTERACT}", interact)
+                       .Replace("{CLOSE}", cerrar)
+                       .Replace("{LIGHT}", luz)
+                       .Replace("{MAP}", mapa)
+                       .Replace("{PREV}", prev)
+                       .Replace("{NEXT}", next);
     }
 
-    isTyping = false;
-
-    // recién cuando termina de escribir, empieza el temporizador
-    rutinaOcultar = StartCoroutine(OcultarDespuesDeTiempo());
-    }
-
-    private string AdaptarTexto(string original)
+    /*private string AdaptarTexto(string original)
     {
         string teclaAccion = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
         string teclaCerrar = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(X)" : "[TAB]";
@@ -74,7 +95,15 @@ public class OnboardingManager : MonoBehaviour
         string teclaMapa = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(Select)" : "[M]";
 
         return original.Replace("{INTERACT}", teclaAccion).Replace("{CLOSE}", teclaCerrar).Replace("{LIGHT}", teclaLampara).Replace("{MAP}", teclaMapa);
-    }
+    }*/
+
+    /*private string AdaptarTextoNotas(string original)
+    {
+        string anterior = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "LB" : "←";
+        string siguiente = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "RB" : "→";
+        
+        return original.Replace("{PREV}", anterior).Replace("{NEXT}", siguiente);
+    }*/
 
     IEnumerator OcultarDespuesDeTiempo()
     {
