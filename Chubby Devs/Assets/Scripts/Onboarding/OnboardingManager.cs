@@ -71,12 +71,19 @@ public class OnboardingManager : MonoBehaviour
     {
         bool esJoystick = ScriptGameManager.CurrentDevice == InputDevice.Joystick;
 
-        string interact = esJoystick ? "(B)" : "[E]";
+        /*string interact = esJoystick ? "(B)" : "[E]";
         string cerrar = esJoystick ? "(X)" : "[TAB]";
         string luz = esJoystick ? "(Y)" : "[R]";
         string mapa = esJoystick ? "(Select)" : "[M]";
         string prev = esJoystick ? "LB" : "←";
-        string next = esJoystick ? "RB" : "→";
+        string next = esJoystick ? "RB" : "→";*/
+
+        string interact = esJoystick ? "<sprite name=\"Icon_BotonB\">" : "<sprite name=\"Icon_E\">";
+        string cerrar = esJoystick ? "<sprite name=\"Icon_BotonX\">" : "<sprite name=\"Icon_TAB\">";
+        string luz = esJoystick ? "<sprite name=\"Icon_BotonY\">" : "<sprite name=\"Icon_R\">";
+        string mapa = esJoystick ? "<sprite name=\"Icon_Select\">" : "<sprite name=\"Icon_M\">";
+        string prev = esJoystick ? "<sprite name=\"Icon_LB\">" : "<sprite name=\"Icon_FlechaIzq\">";
+        string next = esJoystick ? "<sprite name=\"Icon_RB\">" : "<sprite name=\"Icon_FlechaDer\">";
 
         return original.Replace("{INTERACT}", interact)
                        .Replace("{CLOSE}", cerrar)

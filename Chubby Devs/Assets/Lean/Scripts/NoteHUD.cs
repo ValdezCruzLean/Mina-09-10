@@ -70,16 +70,24 @@ public class NoteHUD : MonoBehaviour
 
         if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
         {
-            textoCerrarHUD.text = "Cerrar (X)";
+            /*textoCerrarHUD.text = "Cerrar (X)";
 
             if (textoFlechaIzq != null) textoFlechaIzq.text = "(LB)";
-            if (textoFlechaDer != null) textoFlechaDer.text = "(RB)";
+            if (textoFlechaDer != null) textoFlechaDer.text = "(RB)";*/
+
+            textoCerrarHUD.text = "Cerrar <sprite name=\"Icon_BotonX\">";
+            textoFlechaIzq.text = "<sprite name=\"Icon_LB\">";
+            textoFlechaDer.text = "<sprite name=\"Icon_RB\">";
         }
         else
         {
-            textoCerrarHUD.text = "Cerrar [TAB] ";
+            /*textoCerrarHUD.text = "Cerrar [TAB] ";
             if (textoFlechaIzq != null) textoFlechaIzq.text = "[←]"; 
-            if (textoFlechaDer != null) textoFlechaDer.text = "[→]";
+            if (textoFlechaDer != null) textoFlechaDer.text = "[→]";*/
+
+            textoCerrarHUD.text = "Cerrar <sprite name=\"Icon_TAB\">";
+            textoFlechaIzq.text = "<sprite name=\"Icon_FlechaIzq\">";
+            textoFlechaDer.text = "<sprite name=\"Icon_FlechaDer\">";
         }
     }
 
