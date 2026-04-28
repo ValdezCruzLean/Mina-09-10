@@ -121,7 +121,7 @@ public class NoteHUD : MonoBehaviour
             {
                 string mensaje = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
                     ? "Abre/Cierra notas con {CLOSE}. Alterna con {PREV} y {NEXT}." 
-                    : "Abre/Cierra notas con {CLOSE}. Alterna con [←] y [→]";
+                    : "Abre/Cierra notas con {CLOSE}. Alterna con {PREV} y {NEXT}";
 
                 OnboardingManager.Instance.MostrarConsejo(mensaje);
                 tutorialNotasMostrado = true;
