@@ -11,6 +11,7 @@ public class NPCDialogue : MonoBehaviour
     public TextMeshProUGUI continuarDialogoText;
 
     public GameObject interactionPrompt;
+    public GameObject imagenUI;
     public TextMeshProUGUI interactionText;
 
 
@@ -51,12 +52,22 @@ public class NPCDialogue : MonoBehaviour
         if (playerInRange && !isDialogueActive)
         {
             interactionPrompt.SetActive(true);
-            string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
-            interactionText.text = $"Presiona {tecla} para hablar";
+            imagenUI.SetActive(true);
+            //string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
+            //interactionText.text = $"Presiona {tecla} para hablar";
+            if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+            {
+                interactionText.text = "Presiona <sprite name=\"Icon_BotonB\"> para hablar";
+            }
+            else
+            {
+                interactionText.text = "Presiona <sprite name=\"Icon_E\"> para hablar";
+            }
         }
         else
         {
             interactionPrompt.SetActive(false);
+            imagenUI.SetActive(false);
         }    
             
 
@@ -76,8 +87,16 @@ public class NPCDialogue : MonoBehaviour
     {
         if (continuarDialogoText != null)
         {
-            string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
-            continuarDialogoText.text = $"Presiona {tecla} para continuar";
+            //string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
+            //continuarDialogoText.text = $"Presiona {tecla} para continuar";
+            if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+            {
+                continuarDialogoText.text = "Presiona <sprite name=\"Icon_BotonB\"> para continuar";
+            }
+            else
+            {
+                continuarDialogoText.text = "Presiona <sprite name=\"Icon_E\"> para continuar";
+            }
         }
     }
 
