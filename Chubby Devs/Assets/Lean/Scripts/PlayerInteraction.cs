@@ -5,6 +5,7 @@ public class PlayerInteraction : MonoBehaviour
     public float rayDistance = 3f;
     public LayerMask interactLayer;
     public GameObject interactionUI;
+    public GameObject imagenUI;
     [SerializeField] private TMP_Text textoUI;
 
     private NotePickup currentNote;
@@ -28,16 +29,27 @@ public class PlayerInteraction : MonoBehaviour
             {
                 if (textoUI != null)
                 {
-                    string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
-                    textoUI.text = $"Presiona {tecla} para leer nota";
+                    //string tecla = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) ? "(B)" : "[E]";
+                    //textoUI.text = $"Presiona {tecla} para leer nota";
+
+                    if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+                    {
+                        textoUI.text = "Presiona <sprite name=\"Icon_BotonB\"> para leer nota";
+                    }
+                    else
+                    {
+                        textoUI.text = "Presiona <sprite name=\"Icon_E\"> para leer nota";
+                    }
                 }
 
                 interactionUI.SetActive(true);
+                imagenUI.SetActive(true);
 
                 if (recogerInput)
                 {
                     currentNote.PickUp();
                     interactionUI.SetActive(false);
+                    imagenUI.SetActive(false);
                     currentNote = null;
                 }
 
@@ -46,6 +58,7 @@ public class PlayerInteraction : MonoBehaviour
         }
 
         interactionUI.SetActive(false);
+        imagenUI.SetActive(false);
         currentNote = null;
     }
     void OnDrawGizmosSelected()

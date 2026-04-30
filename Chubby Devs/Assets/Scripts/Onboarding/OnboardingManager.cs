@@ -14,7 +14,7 @@ public class OnboardingManager : MonoBehaviour
 
     private Coroutine rutinaOcultar;
     private Coroutine rutinaEscritura;
-    private bool isTyping = false;
+    //private bool isTyping = false;
     void Awake()
     {
         if (Instance == null) Instance = this;

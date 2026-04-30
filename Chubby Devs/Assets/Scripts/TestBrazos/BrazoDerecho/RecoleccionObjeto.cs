@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using TMPro;
 
 public class RecoleccionObjeto : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class RecoleccionObjeto : MonoBehaviour
     public GameObject manoActivador;
     public CanvasFosforos canvasFosforos;
     public AnimacionLamparaMovimiento lamparaMovimiento;
-    [SerializeField] Text recogerLampara, recogerAceite;
+    //[SerializeField] Text recogerLampara, recogerAceite;
+    [SerializeField] TextMeshProUGUI recogerLampara, recogerAceite;
+    public GameObject imagenUI;
     private bool mensajeLamparaMostrado = false;
     public bool manoActivadorYaEncendida = false;
 
@@ -33,11 +36,21 @@ public class RecoleccionObjeto : MonoBehaviour
         {
             if (hit.collider.CompareTag("LamparaViejo"))
             {
-                recogerLampara.text = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
+                /*recogerLampara.text = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
                     ? "Presiona (B) para recoger" 
-                    : "Presiona [E] para recoger";
+                    : "Presiona [E] para recoger";*/
+                
+                if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+                {
+                    recogerLampara.text = "Presiona <sprite name=\"Icon_BotonB\"> para recoger";
+                }
+                else
+                {
+                    recogerLampara.text = "Presiona <sprite name=\"Icon_E\"> para recoger";
+                }
 
                 recogerLampara.gameObject.SetActive(true);
+                imagenUI.gameObject.SetActive(true);
 
                 if (recogerInput)
                 {
@@ -58,11 +71,22 @@ public class RecoleccionObjeto : MonoBehaviour
 
             if (hit.collider.CompareTag("Fosforo"))
             {
-                recogerAceite.text = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
+                /*recogerAceite.text = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
                     ? "Recoger aceite (B)" 
-                    : "Recoger aceite [E]";
+                    : "Recoger aceite [E]";*/
+
+                if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+                {
+                    recogerAceite.text = "Recoger aceite <sprite name=\"Icon_BotonB\">";
+                }
+                else
+                {
+                    recogerAceite.text = "Recoger aceite <sprite name=\"Icon_E\">";
+                }
 
                 recogerAceite.gameObject.SetActive(true);
+                imagenUI.gameObject.SetActive(true);
+
 
                 if (recogerInput && canvasFosforos.cantidadFosforos < canvasFosforos.limiteFosforo)
                 {
