@@ -2442,6 +2442,9 @@ PrefabInstance:
       addedObject: {fileID: 557868205}
     - targetCorrespondingSourceObject: {fileID: 7205527703805995890, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 448181994}
+    - targetCorrespondingSourceObject: {fileID: 7205527703805995890, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1663128693}
     - targetCorrespondingSourceObject: {fileID: 7205527703805995890, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
@@ -18955,6 +18958,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445139983}
   m_Mesh: {fileID: 1766760885979826231, guid: e11b87f458b517144bce9708a483e250, type: 3}
+--- !u!1 &448181993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 448181994}
+  - component: {fileID: 448181996}
+  - component: {fileID: 448181995}
+  m_Layer: 5
+  m_Name: ImagenHablarYuyo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &448181994
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448181993}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00003814698}
+  m_LocalScale: {x: 5.966484, y: 1.0972, z: 1.0972}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2121204704}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 735.9999, y: -295}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &448181995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448181993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb6bcca09d9b3734fbe24affb63c302c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &448181996
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448181993}
+  m_CullTransparentMesh: 1
 --- !u!1001 &448300086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48067,6 +48145,7 @@ MonoBehaviour:
   distanciaRay: 3
   camaraJugador: {fileID: 1082819078}
   textoInteraccion: {fileID: 1945803225}
+  imagenUI: {fileID: 1606659981}
   puntosASumar: 1
 --- !u!82 &1082819080
 AudioSource:
@@ -69181,6 +69260,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7012241372324832266, guid: e5180085fe38f344a95f9382fc6e9a19, type: 3}
   m_PrefabInstance: {fileID: 1605671478}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1606659981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606659982}
+  - component: {fileID: 1606659984}
+  - component: {fileID: 1606659983}
+  m_Layer: 5
+  m_Name: ImagenRecogerObjeto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1606659982
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606659981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5.966484, y: 1.0972, z: 1.0972}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2042145479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 736, y: -295}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1606659983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606659981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb6bcca09d9b3734fbe24affb63c302c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1606659984
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606659981}
+  m_CullTransparentMesh: 1
 --- !u!1 &1607238148
 GameObject:
   m_ObjectHideFlags: 0
@@ -94040,7 +94194,7 @@ MonoBehaviour:
   dialogueText: {fileID: 74222587}
   continuarDialogoText: {fileID: 544339465}
   interactionPrompt: {fileID: 1705254918}
-  imagenUI: {fileID: 557868204}
+  imagenUI: {fileID: 448181993}
   interactionText: {fileID: 1705254920}
   dialogueLines:
   - "Player: \n\nBuenas tardes, se\xF1or. Mi nombre es Mendoza. Busco a mis amigos.
@@ -102065,6 +102219,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 30853242167566198, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 30853242167566198, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30853242167566198, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30853242167566198, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 30853242167566198, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 30853242167566198, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 75331058503186206, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -102105,6 +102283,14 @@ PrefabInstance:
       propertyPath: primerBotonOpciones
       value: 
       objectReference: {fileID: 616534067}
+    - target: {fileID: 784792051985435763, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 739
+      objectReference: {fileID: 0}
+    - target: {fileID: 784792051985435763, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 244
+      objectReference: {fileID: 0}
     - target: {fileID: 815368588113149989, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.391794
@@ -102669,6 +102855,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1323376318169703812, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
       insertIndex: 5
       addedObject: {fileID: 1656631626}
+    - targetCorrespondingSourceObject: {fileID: 1323376318169703812, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
+      insertIndex: 7
+      addedObject: {fileID: 1606659982}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f93d8c744d45ef64db758f7d68cb80f3, type: 3}
 --- !u!1 &2652503340997856675

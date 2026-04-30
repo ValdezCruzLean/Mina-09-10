@@ -9,6 +9,7 @@ public class RecolectarObjetosAmigos : MonoBehaviour
     
     public Camera camaraJugador;         // La camara del jugador
     public TMP_Text textoInteraccion;    // texto de Presiona E para recoger
+    public GameObject imagenUI;
 
     
     public int puntosASumar = 1;
@@ -17,6 +18,7 @@ public class RecolectarObjetosAmigos : MonoBehaviour
     void Start()
     {
         textoInteraccion.gameObject.SetActive(false);
+        imagenUI.gameObject.SetActive(false);
     }
 
     void Update()
@@ -29,6 +31,7 @@ public class RecolectarObjetosAmigos : MonoBehaviour
     {
         objetoDetectado = null;
         textoInteraccion.gameObject.SetActive(false);
+        imagenUI.gameObject.SetActive(false);
 
         Ray rayo = new Ray(camaraJugador.transform.position, camaraJugador.transform.forward);
         RaycastHit hit;
@@ -40,16 +43,26 @@ public class RecolectarObjetosAmigos : MonoBehaviour
                 objetoDetectado = hit.collider.gameObject;
 
                 //textoInteraccion.text = "Presiona E para recoger";
-                if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+                /*if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
                 {
                     textoInteraccion.text = "Presiona (B) para recoger";
                 }
                 else
                 {
                     textoInteraccion.text = "Presiona [E] para recoger";
+                }*/
+
+                if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+                {
+                    textoInteraccion.text = "Presiona <sprite name=\"Icon_BotonB\"> para recoger";
+                }
+                else
+                {
+                    textoInteraccion.text = "Presiona <sprite name=\"Icon_E\"> para recoger";
                 }
 
                 textoInteraccion.gameObject.SetActive(true);
+                imagenUI.gameObject.SetActive(true);
             }
         }
     }
@@ -66,6 +79,7 @@ public class RecolectarObjetosAmigos : MonoBehaviour
 
             // Oculta el mensaje
             textoInteraccion.gameObject.SetActive(false);
+            imagenUI.gameObject.SetActive(false);
 
             // Desactiva el objeto
             objetoDetectado.SetActive(false);

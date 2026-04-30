@@ -21,6 +21,7 @@ public class RecoleccionObjeto : MonoBehaviour
     {
         recogerLampara.gameObject.SetActive(false);
         recogerAceite.gameObject.SetActive(false);
+        imagenUI.SetActive(false);
 
         bool recogerInput =
             Input.GetKeyDown(KeyCode.E) ||
@@ -66,10 +67,11 @@ public class RecoleccionObjeto : MonoBehaviour
                     {
                         OnboardingManager.Instance.MostrarConsejo("Recoge el aceite.");
                     }
+                    imagenUI.SetActive(false);
                 }
             }
 
-            if (hit.collider.CompareTag("Fosforo"))
+            if (hit.collider.CompareTag("Fosforo") && manoActivadorYaEncendida)
             {
                 /*recogerAceite.text = (ScriptGameManager.CurrentDevice == InputDevice.Joystick) 
                     ? "Recoger aceite (B)" 
@@ -98,6 +100,8 @@ public class RecoleccionObjeto : MonoBehaviour
                         OnboardingManager.Instance.MostrarConsejo("Aceite obtenido. Presiona {LIGHT} para encender la lámpara.");
                         mensajeLamparaMostrado = true;
                     }
+
+                    imagenUI.SetActive(false);
                 }
             }
         }
