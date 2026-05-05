@@ -26,7 +26,7 @@ public class NPCDialogue : MonoBehaviour
     public string talkStateName = "Talk";
 
     private int currentLineIndex = 0;
-    private bool playerInRange = false;
+    //private bool playerInRange = false;
     private bool isDialogueActive = false;
 
     public bool dialogoCompletado { get; private set; }
@@ -34,6 +34,12 @@ public class NPCDialogue : MonoBehaviour
     private bool isTyping = false;
 
     public RecoleccionObjeto scriptRecoleccion;
+
+    [Header("Settings")]
+    [SerializeField] float distanciaInteraccion = 1.5f;
+    //[SerializeField] LayerMask npcLayer;
+    [SerializeField] string npcTag = "Yuyo";
+    private bool isPlayerLookingAtNPC = false;
 
     void Start()
     {
@@ -48,8 +54,7 @@ public class NPCDialogue : MonoBehaviour
             Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
 
 
-
-        if (playerInRange && !isDialogueActive)
+        /*if (!isDialogueActive)
         {
             interactionPrompt.SetActive(true);
             imagenUI.SetActive(true);
@@ -68,7 +73,53 @@ public class NPCDialogue : MonoBehaviour
         {
             interactionPrompt.SetActive(false);
             imagenUI.SetActive(false);
-        }    
+        } */
+
+           if (!isDialogueActive)
+        {
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, distanciaInteraccion))
+            {
+                if (hit.collider.CompareTag(npcTag))
+                {
+                    if (hit.collider.gameObject == this.gameObject)
+                    {
+                        isPlayerLookingAtNPC = true;
+                    }
+                    else
+                    {
+                        isPlayerLookingAtNPC = false;
+                    }
+                }
+                else
+                {
+                    isPlayerLookingAtNPC = false;
+                }
+            }
+            else
+            {
+                isPlayerLookingAtNPC = false;
+            }
+        }
+
+        // --- MANEJO DE UI ---
+        if (isPlayerLookingAtNPC && !isDialogueActive)
+        {
+            interactionPrompt.SetActive(true);
+            imagenUI.SetActive(true);
+
+            if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
+                interactionText.text = "Presiona <sprite name=\"Icon_BotonB\"> para hablar";
+            else
+                interactionText.text = "Presiona <sprite name=\"Icon_E\"> para hablar";
+        }
+        else
+        {
+            interactionPrompt.SetActive(false);
+            if(!isDialogueActive) imagenUI.SetActive(false);
+        }
             
 
         if (isDialogueActive)
@@ -76,10 +127,14 @@ public class NPCDialogue : MonoBehaviour
             ActualizarTextoContinuar();
         }
 
-        if (playerInRange && interaccionInput)
+        if (interaccionInput)
         {
-            if (!isDialogueActive) StartDialogue();
-            else AdvanceDialogue();
+            /*if (!isDialogueActive) StartDialogue();
+            else AdvanceDialogue();*/
+            if (isPlayerLookingAtNPC && !isDialogueActive) 
+                StartDialogue();
+            else if (isDialogueActive) 
+                AdvanceDialogue();
         }
     }
 
@@ -213,7 +268,7 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
             playerInRange = true;
@@ -235,5 +290,5 @@ public class NPCDialogue : MonoBehaviour
             if (npcAnimator != null)
                 npcAnimator.CrossFade(idleStateName, 0.2f);
         }
-    }
+    }*/
 }
