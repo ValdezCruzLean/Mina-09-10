@@ -14,7 +14,7 @@ public class HUD : MonoBehaviour
     public GameObject objetoAEliminar;
     public GameObject objetoAudio;
 
-
+    private bool mensajeFinalMostrado = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +38,12 @@ public class HUD : MonoBehaviour
                 //Debug.Log("Continuará...");
                 objetoAEliminar.SetActive(false);
                 objetoAudio.SetActive(true);
+
+                if (OnboardingManager.Instance != null && !mensajeFinalMostrado)
+                {
+                    OnboardingManager.Instance.MostrarConsejo("Sigue los gritos.");
+                    mensajeFinalMostrado = true;
+                }
             }
 
         }
