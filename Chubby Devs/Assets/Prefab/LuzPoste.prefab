@@ -136,13 +136,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miLuz: {fileID: 9138525859754477090}
   miFoco: {fileID: 2668540387745954486}
-  luzMin: 300
+  luzMin: 0
   luzMax: 1200
   colorDeLaLuz: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   brilloMin: 0
-  brilloMax: 5
+  brilloMax: 10
   velocidadMin: 0.05
   velocidadMax: 0.2
+  tiempoEncendidaMin: 2
+  tiempoEncendidaMax: 7
+  parpadeosPorFalla: 5
 --- !u!1 &2611037916047082778
 GameObject:
   m_ObjectHideFlags: 0
