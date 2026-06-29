@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public enum InputDevice { KeyboardMouse, Joystick }
 
@@ -27,6 +28,10 @@ public class ScriptGameManager : MonoBehaviour
     private int puntosVida = 100;
   
     public static InputDevice CurrentDevice;
+
+    [Header("Eventos de Zona")]
+    public UnityEvent OnObjetosCompletados; 
+    public int objetosNecesariosParaDesbloquear = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +94,11 @@ public class ScriptGameManager : MonoBehaviour
         objetosTotalesEncontrados += puntosASumar;
         Debug.Log(objetosTotalesEncontrados);
         hud.ActualizarObjetosEncontrados(objetosTotalesEncontrados);
+
+        if (objetosTotalesEncontrados >= objetosNecesariosParaDesbloquear)
+        {
+            OnObjetosCompletados?.Invoke(); 
+        }
 
         if (objetosTotalesEncontrados >= 50)
         {
