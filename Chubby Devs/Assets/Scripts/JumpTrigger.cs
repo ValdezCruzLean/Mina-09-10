@@ -29,7 +29,10 @@ public class JumpTrigger : MonoBehaviour
 
     public float bloodDelay = 0.20f;
 
-
+    public void ActivarJumpscareManualmente()
+    {
+        OnTriggerEnter(null); 
+    }
     void OnTriggerEnter(Collider other)
     {
         Scream.Play();
