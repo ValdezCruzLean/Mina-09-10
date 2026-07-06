@@ -7,6 +7,11 @@ public class EnemigoAparece : MonoBehaviour
     public Transform jugador;
     public float distanciaAparicion = 10f;
     public float tiempoEntreApariciones = 15f; 
+
+    [Header("Mecánica de Lámpara")]
+    public Lamp lamparaJugador; 
+    public float distanciaApagarLuz = 3.5f;
+    private bool yaSaboteoEnEstaAparicion = false;
     
     private NavMeshAgent agente;
     private Renderer[] renderers;
@@ -49,6 +54,32 @@ public class EnemigoAparece : MonoBehaviour
         if (iaActivada && estaAcechando && agente.enabled && agente.isOnNavMesh && jugador != null)
         {
             agente.SetDestination(jugador.position);
+
+            ChequearDistanciaLampara();
+        }
+    }
+
+    void ChequearDistanciaLampara()
+    {
+        if (lamparaJugador == null || yaSaboteoEnEstaAparicion) return;
+
+        float distanciaActual = Vector3.Distance(transform.position, jugador.position);
+
+        if (distanciaActual <= distanciaApagarLuz)
+        {
+            if (lamparaJugador.lamparaEncendida)
+            {
+                yaSaboteoEnEstaAparicion = true;
+
+                lamparaJugador.Invoke("ApagarLuz", 0f); 
+
+                if (lamparaJugador.canvasFosforos != null)
+                {
+                    lamparaJugador.canvasFosforos.RestarFosforo();
+                }
+
+                Debug.Log("¡La bruja sopló tu lámpara y perdiste un fósforo/aceite por proximidad!");
+            }
         }
     }
 
@@ -57,6 +88,8 @@ public class EnemigoAparece : MonoBehaviour
         while (true)
         {
             TeletransportarCercaDelJugador();
+
+            yaSaboteoEnEstaAparicion = false;
 
             CambiarVisibilidad(true);
             estaAcechando = true;
@@ -122,7 +155,7 @@ public class EnemigoAparece : MonoBehaviour
             agente.enabled = false;
 
             if (miCollider != null) miCollider.enabled = false;
-            
+
             miJumpscare.ActivarJumpscareManualmente();
         }
     }

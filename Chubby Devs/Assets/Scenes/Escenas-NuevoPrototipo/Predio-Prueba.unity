@@ -18848,6 +18848,8 @@ MonoBehaviour:
   jugador: {fileID: 817032546}
   distanciaAparicion: 15
   tiempoEntreApariciones: 10
+  lamparaJugador: {fileID: 1949272041}
+  distanciaApagarLuz: 3.5
 --- !u!195 &441550003
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -81506,6 +81508,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4059975097012581161, guid: 7f1f1f69581e0734b861f842200a0205, type: 3}
   m_PrefabInstance: {fileID: 635676015}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1949272041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4401351141538030273, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 28385870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479a913f1970a7040a24e22dc2b8dc53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &1951408570
 MeshCollider:
   m_ObjectHideFlags: 0
