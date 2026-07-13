@@ -42,6 +42,13 @@ public class TimeLight : MonoBehaviour
          ActualizarBarra();
     }
 
+    public void VaciarTemporizador()
+    {
+        seconds = tiempoMaximo; 
+        readyToReset = true;   
+        ActualizarBarra();  
+    }
+
     public void IniciarTiempo()
     {
         readyToReset = false;
