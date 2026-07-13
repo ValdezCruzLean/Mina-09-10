@@ -8,10 +8,19 @@ public class EnemigoAparece : MonoBehaviour
     public float distanciaAparicion = 10f;
     public float tiempoEntreApariciones = 15f; 
 
-    [Header("Mecánica de Lámpara")]
+    /*[Header("Mecánica de Lámpara")]
     public Lamp lamparaJugador; 
-    public float distanciaApagarLuz = 3.5f;
-    private bool yaSaboteoEnEstaAparicion = false;
+    public float distanciaApagarLuz = 3.5f;*/
+
+    [Header("Mecánica de Ataques por Cercanía")]
+    public float distanciaEfecto = 3.5f;
+    public Lamp lamparaJugador;
+    public EfectoVisionJugador efectoVision;
+    public EfectoConfusionCamara confusionCamara;
+    //public EfectoControlesInvertidos efectoControles;
+    //private bool yaSaboteoEnEstaAparicion = false;
+    private int ataqueElegido; 
+    private bool yaAtacoEnEstaAparicion = false;
     
     private NavMeshAgent agente;
     private Renderer[] renderers;
@@ -55,11 +64,12 @@ public class EnemigoAparece : MonoBehaviour
         {
             agente.SetDestination(jugador.position);
 
-            ChequearDistanciaLampara();
+            //ChequearDistanciaLampara();
+            ChequearDistanciaAtaque();
         }
     }
 
-    void ChequearDistanciaLampara()
+    /*void ChequearDistanciaLampara()
     {
         if (lamparaJugador == null || yaSaboteoEnEstaAparicion) return;
 
@@ -81,6 +91,76 @@ public class EnemigoAparece : MonoBehaviour
                 Debug.Log("¡La bruja sopló tu lámpara y perdiste un fósforo/aceite por proximidad!");
             }
         }
+    }*/
+
+    void ChequearDistanciaAtaque()
+    {
+        if (yaAtacoEnEstaAparicion) return;
+
+        float distanciaActual = Vector3.Distance(transform.position, jugador.position);
+
+        if (distanciaActual <= distanciaEfecto)
+        {
+            yaAtacoEnEstaAparicion = true;
+
+            switch (ataqueElegido)
+            {
+                case 0:
+                    AtaqueApagarLampara();
+                    break;
+                case 1:
+                    AtaqueAfectarVision();
+                    break;
+                case 2:
+                    AtaqueInvertirControles();
+                    break;
+            }
+        }
+    }
+
+    void AtaqueApagarLampara()
+    {
+        if (lamparaJugador != null && lamparaJugador.lamparaEncendida)
+        {
+            lamparaJugador.Invoke("ApagarLuz", 0f); 
+
+            if (lamparaJugador.canvasFosforos != null)
+            {
+                lamparaJugador.canvasFosforos.RestarFosforo();
+            }
+            
+            if (TimeLight.Instance != null)
+            {
+                TimeLight.Instance.VaciarTemporizador();
+            }
+            Debug.Log("🎲 [Probabilidad] La bruja eligió: ¡Apagar Lámpara!");
+        }
+    }
+
+    void AtaqueAfectarVision()
+    {
+        Debug.Log("🎲 [Probabilidad] La bruja eligió: ¡Cegar al jugador!");
+        if (efectoVision != null)
+        {
+            efectoVision.IniciarCeguera();
+        }
+    }
+
+    //Afecta la camara para dar la impresion de una confusion o mareo
+    void AtaqueInvertirControles()
+    {
+        Debug.Log("🎲 [Probabilidad] La bruja eligió: ¡Invertir controles!");
+
+        /*if (efectoControles != null)
+        {
+            efectoControles.ActivarInversion(4f); 
+        }*/
+        if (confusionCamara != null)
+        {
+            // Duración: 3.5 segundos | Intensidad: 0.15f (puedes subirlo si quieres que tiemble más)
+            confusionCamara.ActivarSacudida(3.5f, 0.15f); 
+        }
+
     }
 
     IEnumerator CicloApariciones()
@@ -89,7 +169,9 @@ public class EnemigoAparece : MonoBehaviour
         {
             TeletransportarCercaDelJugador();
 
-            yaSaboteoEnEstaAparicion = false;
+            //yaSaboteoEnEstaAparicion = false;
+            ataqueElegido = Random.Range(0, 3); 
+            yaAtacoEnEstaAparicion = false;
 
             CambiarVisibilidad(true);
             estaAcechando = true;
