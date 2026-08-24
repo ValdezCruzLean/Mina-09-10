@@ -193,7 +193,15 @@ public class EnemigoAparece : MonoBehaviour
         Vector3 posicionObjetivo = new Vector3(jugador.position.x + circuloAleatorio.x, jugador.position.y, jugador.position.z + circuloAleatorio.y);
 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(posicionObjetivo, out hit, 5f, NavMesh.AllAreas))
+        /*if (NavMesh.SamplePosition(posicionObjetivo, out hit, 5f, NavMesh.AllAreas))
+        {
+            agente.enabled = true; 
+            agente.Warp(hit.position);
+            agente.enabled = false; 
+        }*/
+        int mascaraPermitida = agente != null ? agente.areaMask : NavMesh.AllAreas;
+
+        if (NavMesh.SamplePosition(posicionObjetivo, out hit, 5f, mascaraPermitida))
         {
             agente.enabled = true; 
             agente.Warp(hit.position);

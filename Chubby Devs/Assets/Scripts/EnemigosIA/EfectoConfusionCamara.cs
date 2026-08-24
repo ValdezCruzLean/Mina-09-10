@@ -17,20 +17,26 @@ public class EfectoConfusionCamara : MonoBehaviour
         tiempoRestante = duracion;
         if (!estaSacudiendo)
         {
-            StartCoroutine(RutinaSacudida(intensidad));
+            StartCoroutine(RutinaSacudida(duracion, intensidad));
         }
     }
 
-    IEnumerator RutinaSacudida(float intensidad)
+    IEnumerator RutinaSacudida(float duracionInicial, float intensidadInicial)
     {
         estaSacudiendo = true;
         Debug.Log("¡Cámara perturbada por la bruja!");
 
         while (tiempoRestante > 0)
         {
-            float offsetX = Random.Range(-1f, 1f) * intensidad;
+            float factorFade = tiempoRestante / duracionInicial;
+            float intensidadActual = intensidadInicial * factorFade;
+
+            /*float offsetX = Random.Range(-1f, 1f) * intensidad;
             float offsetY = Random.Range(-1f, 1f) * intensidad;
-            float offsetZ = Random.Range(-1f, 1f) * intensidad;
+            float offsetZ = Random.Range(-1f, 1f) * intensidad;*/
+            float offsetX = Random.Range(-1f, 1f) * intensidadActual;
+            float offsetY = Random.Range(-1f, 1f) * intensidadActual;
+            float offsetZ = Random.Range(-1f, 1f) * intensidadActual;
 
             transform.localPosition = posicionOriginalLocal + new Vector3(offsetX, offsetY, offsetZ);
 
