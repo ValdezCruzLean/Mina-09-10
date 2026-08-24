@@ -4350,7 +4350,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55f16ac360a7be34cb866f6e0235b23a, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -6080529336875730413, guid: 55f16ac360a7be34cb866f6e0235b23a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18943,9 +18943,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 817032546}
-  distanciaAparicion: 15
+  distanciaAparicion: 13
   tiempoEntreApariciones: 10
-  distanciaEfecto: 3.5
+  distanciaEfecto: 5
   lamparaJugador: {fileID: 1949272041}
   efectoVision: {fileID: 1082819088}
   confusionCamara: {fileID: 1082819094}
@@ -18969,7 +18969,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
 --- !u!114 &441550009
 MonoBehaviour:
@@ -23811,7 +23811,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544339463}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23820,7 +23820,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 709, y: -130}
+  m_AnchoredPosition: {x: 624.10004, y: -105}
   m_SizeDelta: {x: -1500, y: -260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544339465
@@ -23908,7 +23908,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -350.21716, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -58183,6 +58183,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f1f1f69581e0734b861f842200a0205, type: 3}
+--- !u!1 &1261768286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261768288}
+  - component: {fileID: 1261768287}
+  m_Layer: 0
+  m_Name: ZonaBruja
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1261768287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261768286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_Size: {x: 126.76794, y: 61.702602, z: 435.725}
+  m_Center: {x: 16.055294, y: -4.633745, z: 79.535904}
+  m_Area: 3
+  m_AffectedAgents: ffffffff
+--- !u!4 &1261768288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261768286}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.10690986, z: -0, w: 0.9942687}
+  m_LocalPosition: {x: 647.85, y: 0.8, z: 398.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 12.274, z: 0}
 --- !u!1 &1266719090 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4508745970580934961, guid: cba193b54b1822640b8f4dc5a7029c05, type: 3}
@@ -62871,6 +62920,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6997866439178777831, guid: 074a96117f3d4ee4eaf8c9e1c8076cd4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 272fc63b10a0bf245a10ece19c4a4a3c, type: 3}
+    - target: {fileID: 6997866439178777831, guid: 074a96117f3d4ee4eaf8c9e1c8076cd4, type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997866439178777831, guid: 074a96117f3d4ee4eaf8c9e1c8076cd4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 272fc63b10a0bf245a10ece19c4a4a3c, type: 3}
+    - target: {fileID: 6997866439178777831, guid: 074a96117f3d4ee4eaf8c9e1c8076cd4, type: 3}
+      propertyPath: rolloffMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997866439178777831, guid: 074a96117f3d4ee4eaf8c9e1c8076cd4, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 6540675007259744681, guid: 17991264f2997e14687869e221f1aa8d, type: 2}
     - target: {fileID: 7178606157481191148, guid: 074a96117f3d4ee4eaf8c9e1c8076cd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 623.7586
@@ -94106,6 +94175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652898297143}
   - component: {fileID: 2044051119}
+  - component: {fileID: 919132148890689422}
   m_Layer: 0
   m_Name: DepartamentotoUnity (1)
   m_TagString: Untagged
@@ -94113,6 +94183,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 18
   m_IsActive: 1
+--- !u!114 &919132148890689422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148890689421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 3
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &919132149020357437
 GameObject:
   m_ObjectHideFlags: 0
@@ -137883,3 +137973,4 @@ SceneRoots:
   - {fileID: 480792299}
   - {fileID: 1379540524}
   - {fileID: 1401501637}
+  - {fileID: 1261768288}

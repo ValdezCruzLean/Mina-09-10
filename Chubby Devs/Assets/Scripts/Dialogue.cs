@@ -53,6 +53,10 @@ public class NPCDialogue : MonoBehaviour
             Input.GetKeyDown(KeyCode.E) ||
             Input.GetKeyDown(KeyCode.JoystickButton1); // 🎮 B
 
+        bool saltarInput = 
+            Input.GetKeyDown(KeyCode.Y) || 
+            Input.GetKeyDown(KeyCode.JoystickButton8);
+
 
         /*if (!isDialogueActive)
         {
@@ -125,6 +129,10 @@ public class NPCDialogue : MonoBehaviour
         if (isDialogueActive)
         {
             ActualizarTextoContinuar();
+            if (saltarInput)
+            {
+                SaltarDialogoCompleto();
+            }
         }
 
         if (interaccionInput)
@@ -146,13 +154,22 @@ public class NPCDialogue : MonoBehaviour
             //continuarDialogoText.text = $"Presiona {tecla} para continuar";
             if (ScriptGameManager.CurrentDevice == InputDevice.Joystick)
             {
-                continuarDialogoText.text = "Presiona <sprite name=\"Icon_BotonB\"> para continuar";
+                //continuarDialogoText.text = "Presiona <sprite name=\"Icon_BotonB\"> para continuar";
+                continuarDialogoText.text = "Presiona <sprite name=\"Icon_BotonB\"> para continuar\n<size=80%><color=#aaaaaa>Presiona [L3] para saltar</color></size>";
             }
             else
             {
-                continuarDialogoText.text = "Presiona <sprite name=\"Icon_E\"> para continuar";
+                //continuarDialogoText.text = "Presiona <sprite name=\"Icon_E\"> para continuar";
+                continuarDialogoText.text = "Presiona <sprite name=\"Icon_E\"> para continuar\n<size=80%><color=#aaaaaa>Presiona [Y] para saltar</color></size>";
             }
         }
+    }
+
+    void SaltarDialogoCompleto()
+    {
+        StopAllCoroutines();
+        isTyping = false;
+        EndDialogue();
     }
 
     void StartDialogue()
