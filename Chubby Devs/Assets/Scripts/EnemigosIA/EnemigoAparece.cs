@@ -31,6 +31,7 @@ public class EnemigoAparece : MonoBehaviour
 
     private bool iaActivada = false;
     private Collider miCollider;
+    private AudioSource miAudioSource;
 
     void Start()
     {
@@ -39,6 +40,8 @@ public class EnemigoAparece : MonoBehaviour
 
         miJumpscare = GetComponent<JumpTrigger>();
         miCollider = GetComponent<Collider>();
+
+        miAudioSource = GetComponent<AudioSource>();
 
         //StartCoroutine(CicloApariciones());
         CambiarVisibilidad(false);
@@ -175,6 +178,11 @@ public class EnemigoAparece : MonoBehaviour
 
             CambiarVisibilidad(true);
             estaAcechando = true;
+
+            if (miAudioSource != null)
+            {
+                miAudioSource.Play();
+            }
             
             yield return new WaitForSeconds(12f);
 
