@@ -28,9 +28,19 @@ public class JumpTrigger : MonoBehaviour
     public float bloodVisibleTime = 0.25f;
 
     public float bloodDelay = 0.20f;
+    public EfectoVisionJugador efectoVision;
 
     public void ActivarJumpscareManualmente()
     {
+        if (efectoVision != null)
+        {
+            efectoVision.LimpiarCegueraInmediata();
+        }
+
+        if (JumpCam != null)
+        {
+            JumpCam.SetActive(true);
+        }
         OnTriggerEnter(null); 
     }
     void OnTriggerEnter(Collider other)
@@ -94,15 +104,12 @@ public class JumpTrigger : MonoBehaviour
 
     IEnumerator ShowBloodSplash()
     {
-        // Intentar obtener CanvasGroup (funciona aunque el objeto esté inactivo)
         CanvasGroup cg = bloodSplash.GetComponent<CanvasGroup>();
         if (cg == null)
         {
-            // si no tiene CanvasGroup, lo añadimos (opcional)
             cg = bloodSplash.AddComponent<CanvasGroup>();
         }
 
-        // Asegurarnos que la imagen empieza invisible
         cg.alpha = 0f;
         bloodSplash.SetActive(true);
 
@@ -116,7 +123,6 @@ public class JumpTrigger : MonoBehaviour
         }
         cg.alpha = 1f;
 
-        // Mantener visible un rato
         yield return new WaitForSeconds(bloodVisibleTime);
 
         // Fade out
