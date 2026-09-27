@@ -54,10 +54,14 @@ public class DetectorRadio : MonoBehaviour
 
             if (enemigo.activeInHierarchy)
             {
-                float distancia = Vector3.Distance(transform.position, enemigo.transform.position);
-                if (distancia < distanciaMasCercana)
+                Renderer rend = enemigo.GetComponentInChildren<Renderer>();
+                if (rend != null && rend.enabled)
                 {
-                    distanciaMasCercana = distancia;
+                    float distancia = Vector3.Distance(transform.position, enemigo.transform.position);
+                    if (distancia < distanciaMasCercana)
+                    {
+                        distanciaMasCercana = distancia;
+                    }
                 }
             }
         }
