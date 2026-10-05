@@ -51,4 +51,18 @@ public class EfectoVisionJugador : MonoBehaviour
         
         estaCegado = false;
     }
+
+    public void LimpiarCegueraInmediata()
+    {
+        StopAllCoroutines();
+
+        if (panelCeguera != null)
+        {
+            panelCeguera.gameObject.SetActive(false);
+            
+            /*Color c = panelCeguera.color;
+            c.a = 0f;
+            panelCeguera.color = c;*/
+        }
+    }
 }
