@@ -11,10 +11,16 @@ public class ColocarEspinas : MonoBehaviour
 
     private GameObject previewActual;
     private bool colocandoEspinas = false;
+    public bool puedeColocar = false;
 
     void Update()
     {
         if (inventario == null)
+        {
+            return;
+        }
+        
+        if (!puedeColocar)
         {
             return;
         }

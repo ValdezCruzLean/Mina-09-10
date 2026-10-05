@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3346794834990353168}
   - component: {fileID: 1949987711419607576}
   - component: {fileID: 5216940432837146489}
+  - component: {fileID: 1465119525888010670}
   m_Layer: 0
   m_Name: EspinasColocadas
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -391.2472, y: -61.635582, z: 306.68817}
-  m_LocalScale: {x: 0.48735, y: 0.48735, z: 0.48735}
+  m_LocalScale: {x: 0.97840387, y: 0.97840387, z: 0.97840387}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,9 +103,21 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1465119525888010670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686398772814736238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8effeae11383479439c7865ea65a2ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

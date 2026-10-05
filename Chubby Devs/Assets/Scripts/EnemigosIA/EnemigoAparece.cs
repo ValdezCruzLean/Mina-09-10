@@ -24,6 +24,13 @@ public class EnemigoAparece : MonoBehaviour
     
     private NavMeshAgent agente;
     private Renderer[] renderers;
+    [Header("Persecución Final")]
+    public InventarioJugador inventario;
+    public float velocidadPersecucionFinal = 6f;
+    public float giroPersecucionFinal = 720f;
+
+    private Coroutine cicloApariciones;
+    private bool persecucionFinal = false;
     //private bool estaAcechando = true;
     private bool estaAcechando = false;
 
@@ -32,6 +39,13 @@ public class EnemigoAparece : MonoBehaviour
     private bool iaActivada = false;
     private Collider miCollider;
     private AudioSource miAudioSource;
+
+    private bool encuentroFinalIniciado = false;
+    /*[Header("Mecánica de Trampa")]
+    public string parametroAnimacionAtrapada = "Atrapada";
+    private bool estaAtrapada = false;*/
+    private bool atrapada = false;
+    public float distanciaTrampa = 1.5f;
 
     void Start()
     {
@@ -53,48 +67,127 @@ public class EnemigoAparece : MonoBehaviour
         if (!iaActivada)
         {
             iaActivada = true;
-            StartCoroutine(CicloApariciones());
+            //StartCoroutine(CicloApariciones());
+            cicloApariciones = StartCoroutine(CicloApariciones());
         }
     }
+    public void IniciarPersecucionFinal()
+    {
+        if (persecucionFinal)
+        {
+            return;
+        }
+
+        persecucionFinal = true;
+
+        if (cicloApariciones != null)
+        {
+            StopCoroutine(cicloApariciones);
+        }
+
+        CambiarVisibilidad(true);
+
+        estaAcechando = true;
+
+        agente.speed = velocidadPersecucionFinal;
+        agente.angularSpeed = giroPersecucionFinal;
+        agente.acceleration = 30f;
+        agente.isStopped = false;
+
+        if (miAudioSource != null)
+        {
+            miAudioSource.Play();
+        }
+
+        Debug.Log("¡¡¡PERSECUCIÓN FINAL INICIADA!!!");
+    }
+
+    public void TerminarPersecucionFinal()
+    {
+        if (!persecucionFinal)
+        {
+            return;
+        }
+
+        persecucionFinal = false;
+        encuentroFinalIniciado = true;
+        estaAcechando = false;
+
+        if (agente != null)
+        {
+            agente.isStopped = true;
+        }
+
+        Debug.Log("Persecución final terminada. Comienza el encuentro con la bruja.");
+    }
+ 
+    public void AtraparBruja()
+    {
+        if (atrapada)
+        {
+            return;
+        }
+
+        atrapada = true;
+
+        estaAcechando = false;
+
+        if (agente != null)
+        {
+            agente.isStopped = true;
+            agente.velocity = Vector3.zero;
+        }
+
+        Debug.Log("¡La bruja quedó atrapada en las espinas!");
+        }
 
     void Update()
     {
-        /*if (estaAcechando && agente.enabled && agente.isOnNavMesh && jugador != null)
+        if (!persecucionFinal && !encuentroFinalIniciado && inventario != null &&
+        inventario.objetoSlot1 != null &&
+        inventario.objetoSlot2 != null &&
+        inventario.objetoSlot3 != null)
         {
-            agente.SetDestination(jugador.position);
-        }*/
+            IniciarPersecucionFinal();
+        }
+        
         if (iaActivada && estaAcechando && agente.enabled && agente.isOnNavMesh && jugador != null)
         {
             agente.SetDestination(jugador.position);
 
-            //ChequearDistanciaLampara();
-            ChequearDistanciaAtaque();
-        }
-    }
-
-    /*void ChequearDistanciaLampara()
-    {
-        if (lamparaJugador == null || yaSaboteoEnEstaAparicion) return;
-
-        float distanciaActual = Vector3.Distance(transform.position, jugador.position);
-
-        if (distanciaActual <= distanciaApagarLuz)
-        {
-            if (lamparaJugador.lamparaEncendida)
+            //ChequearDistanciaAtaque();
+            if (persecucionFinal)
             {
-                yaSaboteoEnEstaAparicion = true;
-
-                lamparaJugador.Invoke("ApagarLuz", 0f); 
-
-                if (lamparaJugador.canvasFosforos != null)
-                {
-                    lamparaJugador.canvasFosforos.RestarFosforo();
-                }
-
-                Debug.Log("¡La bruja sopló tu lámpara y perdiste un fósforo/aceite por proximidad!");
+                ComprobarEspinas();
+            }
+            else
+            {
+                ChequearDistanciaAtaque();
             }
         }
-    }*/
+    }
+    void ComprobarEspinas()
+{
+    if (atrapada)
+    {
+        return;
+    }
+
+    TrampaEspinas trampa = FindFirstObjectByType<TrampaEspinas>();
+
+    if (trampa == null)
+    {
+        return;
+    }
+
+    float distancia = Vector3.Distance(transform.position, trampa.transform.position);
+
+    if (distancia <= distanciaTrampa)
+    {
+        AtraparBruja();
+    }
+}
+
 
     void ChequearDistanciaAtaque()
     {
@@ -239,6 +332,8 @@ public class EnemigoAparece : MonoBehaviour
         {
             EjecutarSusto();
         }*/
+        //if (estaAtrapada) return;
+
         if (iaActivada && (collision.gameObject.CompareTag("Player") || collision.transform == jugador))
         {
             EjecutarSusto();
